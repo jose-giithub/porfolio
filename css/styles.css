@@ -180,45 +180,58 @@ height: 80px;
 .card_img{/*original */
   width: 100%;
   height: 150px;
-  background-image:url(../img/2-original.png) ;
-  background-size: cover;/*Para que se adapte la imagen al recuadro*/
+  background-image:url(../img/generica.png) ;
+  background-color: white; /* color fondo */
+    background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el contenedor */
   border: solid 4px cadetblue;
   }
-.card_img-java{
-width: 100%;
-height: 150px;
-background-image:url(../img/java2.png) ;
-background-color:white;/*color fondo foto*/
-background-size: cover;/*Para que se adapte la imagen al recuadro*/
-border: solid 4px cadetblue;
-}
+  .card_img-java {
+    width: 100%;
+    height: 150px;
+    background-image: url(../img/logoJava.png);
+    background-color: white; /* color fondo */
+    background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el contenedor */
+    border: solid 4px cadetblue;
+  }
 .card_img-html{
 width: 100%;
 height: 150px;
 background-image:url(../img/html-css.png) ;
-background-color:white;/*color fondo foto*/
-background-size: cover;/*Para que se adapte la imagen al recuadro*/
+background-color: white; /* color fondo */
+background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
+background-repeat: no-repeat; /* Evita que la imagen se repita */
+background-position: center; /* Centra la imagen en el contenedor */
 border: solid 4px cadetblue;
 }
 .card-img-js{
   width: 100%;
   height: 150px;
   background-image:url(../img/js.png) ;
-  background-color:white;/*color fondo foto*/
-  background-size: cover;/*Para que se adapte la imagen al recuadro*/
+  background-color: white; /* color fondo */
+    background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el contenedor */
   border: solid 4px cadetblue;
   }
   .card_img-php{
     width: 100%;
     height: 150px;
-    background-image:url(../img/php4.png) ;
-    background-color:white;/*color fondo foto*/
-    background-size: cover;/*Para que se adapte la imagen al recuadro*/
+    background-image:url(../img/php.png) ;
+    background-color: white; /* color fondo */
+    background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el contenedor */
     border: solid 4px cadetblue;
   }
 
 .card_title{
   padding: 20px;
+  font-size: larger;
+  color: white;
   
 }
 .card_proyecto_links{/*logos */
@@ -271,15 +284,14 @@ text-decoration: none;
 .contact{
   /* margin-left: 20px; */
 }
-.divider-contacto{
-height: 4px;
-width: 90%;
-margin-top: 0;
-/* margin-bottom: 2em; */
-margin-left: auto;
+.divider{
+height: 8px;
+width: 50%;
+margin-top: 15px; /* añade espacio externo por encima del contenedor de la imagen */
+margin-bottom: 15px;
+margin-left: 0;
 margin-right: auto;
-background-color: rgb(75, 240, 14);
-
+background-color: rgb(227, 246, 9);
 }
 
 .container{
