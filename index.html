@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/6359741856.js" crossorigin="anonymous"></script><!--Fuesnte de estilos para el porfolio-->
+</head>
+<body>
+
+    <div class="wrapper"><!--Primera parte-->
+      <header>
+        <nav class="navbar">
+          <div class="brand">
+            <h2>J<span>ose</span> </h2>
+          </div>
+       
+          <ul class="menu">
+            <li ><a class="active" href="index.html">Home</a></li>
+            <li><a href="#info_personal">Sobre mi</a></li>
+            <li><a href="#porfolio">Porfolio</a></li>
+            <!-- <li><a href="contacto.html">Contacto</a></li> -->
+             <!--<i class="fa-solid fa-magnifying-glass" style="color: #ffffff;" id="icon-search"></i>-->
+          </ul>
+          
+        </nav>
+      </header>
+
+      <!--Texto info personal he imagen -->
+      <main class="main">
+        <div class="infor-content" >
+          <h1>Bienvenido a mi porfolio. Mi nombre es <span>  J.L. Rodríguez </span></h1>
+          <h3><p>Soy programador junior</p></h3>
+          <a download href="https://www.linkedin.com/feed/"><!-- En dowload le pones el nombre del archivo a descargar y se descarga solo-->
+            <button class="download-cv">Ir a mi linkedin </button>
+          </a>
+        </div>
+        <!---->
+        <img id="imgMain" src="./img/joseSimpoms.png" alt="homer simpson"> <!--alt texto alternativo apra la imagen-->
+      </main>
+    </div><!--Final de wrapper -->
+
+    <!--**********Segunda parte debajo del texto de presentacion e imagen -->
+    <div class="about">
+      <img id="imgSegunda" src="./img/joseSimpoms.png" alt="">
+    
+
+    <div class="about-info">
+      <h2 id="info_personal">Sobre mi</h2>
+      <div class="divider"></div><!--PAra crear una ralla debajo del titulo "Sobre mi"-->
+      <h4><p> Soy un apasionado estudiante de programación. 
+        Me he embarcado en el emocionante viaje de aprender lenguajes como Java, JavaScript, PHP, HTML, SQL y CSS.
+         Me encanta todo lo que esté relacionado con crear cosas.</h4>
+       </p>
+      <h4><p>Aprieta el botón para descubrir mis habilidades.
+      </p></h4>
+      <button class="download-cv"><a href="info_personal.html" style="text-decoration: none ; color: black;">Saber más</a></button>
+    </div>
+    </div> <!--final del abaut-->
+
+  <!---->
+  <!--*****************inicio parte 3 .  portafolio-->
+  <div class="porfolio" id="porfolio">
+    <div class="portfolio_headings">
+      <h2>Mi porfolio</h2>
+      <div class="divider"></div><!--para crear una ralla debajo del titulo "-->
+         <!--*********Boton buscar-->
+         <div class="search-bar">
+          <div class="language-selection">
+            <label><input type="checkbox" name="language" value="html"> HTML/CSS</label>
+            <label><input type="checkbox" name="language" value="java"> Java</label>
+             <label><input type="checkbox" name="language" value="php"> PHP</label>
+             <label><input type="checkbox" name="language" value="javascript"> JavaScript</label>
+          </div>
+          <button id="filter-button">Filtrar</button>
+    
+        </div>
+    </div>
+   
+    <div class="container">
+
+      <!--******************copia 1-->
+      <div class="card" data-language="html"><!--data-language para filtrar-->
+        <div class="card_img-html"></div>
+        
+        <div class="card_title">
+          <h2>Descripción</h2>
+          <p>Mi porfolio creado desde 0 con HTML, CSS y un poco de JavaScript.</p>
+        </div>
+        <div class="card_proyecto_links"><!--*********icono de -->
+          <!--dentro del href se pone el link del githob donde esta subido mi trabajo -->
+          <!--tambien se puede que al tocar se abre otra bentana con la propiedad target -->
+          <a href="https://github.com/jose-giithub/porfolio" target="_blank">codigo  <i class="fa-brands fa-github"></i></a>
+          <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a>
+          <a href="">img<i class="fa-solid fa-code"></i></a> -->
+        </div>
+        
+        <div class="proyects_details_content"><!--*********boton -->
+          <button id="botonCards" class="project-details-button"> 
+            <a href="https://github.com/jose-giithub/porfolio" style="text-decoration: none; color: black;" >Ir al proyecto
+            </a>
+          </button>
+        </div>
+
+      </div><!--FINAL copia 1-->
+     
+
+      <!--******************copia 2 java-->
+      <div class="card" data-language="java">
+        <div class="card_img-java"></div>
+        
+        <div class="card_title">
+          <h2>Descripción</h2>
+          <p>Sin contenido</p>
+          <br><br>
+        </div>
+      
+        <div class="card_proyecto_links"><!--*********icono de -->
+          <!--dentro del href se pone el link del githob donde esta subido mi trabajo -->
+          <!--tambien se puede que al tocar se abre otra bentana con la propiedad target -->
+          <a href="Aqui iria el link de github" target="_blank">codigo   <i class="fa-brands fa-github"></i></a>
+          
+          <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
+          <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
+        </div>
+        
+
+        <div class="proyects_details_content"><!--*********boton -->
+          <button id="botonCards" class="project-details-button"> 
+            <a href="" style="text-decoration: none; color: black;" >Ir al proyecto
+            </a>
+          </button>
+        </div>
+
+      </div><!--FINAL copia 2-->
+
+      <!--******************copia 3-->
+      <div class="card" data-language="javascript">
+        <div class="card-img-js"></div>
+        
+        <div class="card_title">
+          <h2>Descripción</h2>
+          <p>Famoso juego conocido como SQWORD. Compite para ser el mejor.</p>
+        </div>
+      
+        <div class="card_proyecto_links"><!--*********icono de -->
+          <!--dentro del href se pone el link del githob donde esta subido mi trabajo -->
+          <!--tambien se puede que al tocar se abre otra bentana con la propiedad target -->
+          <a href="https://github.com/jose-giithub/DevChalleng_SQWORD" target="_blank">codigo
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
+          <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
+        </div>
+        <div class="proyects_details_content"><!--*********boton -->
+          <button id="botonCards" class="project-details-button"> 
+            <a href="" style="text-decoration: none; color: black;" >Ir al proyecto
+            </a>
+          </button>
+        </div>
+      </div><!--FINAL copia 3-->
+
+      <!--******************copia 4-->
+      <div class="card" data-language="php">
+        <div class="card_img-php"></div>
+        
+        <div class="card_title">
+          <h2>Descripción</h2>
+          <p>Mi primer login con Laravel usando Jetstream </p>
+        </div>
+      
+        <div class="card_proyecto_links"><!--*********icono de -->
+          <!--dentro del href se pone el link del githob donde esta subido mi trabajo -->
+          <!--tambien se puede que al tocar se abre otra bentana con la propiedad target -->
+          <a href="Aqui iria el link de github" target="_blank">codigo
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
+          <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
+        </div>
+        <div class="proyects_details_content"><!--*********boton -->
+          <button id="botonCards" class="project-details-button"> 
+            <a href="" style="text-decoration: none; color: black;" >Ir al proyecto</a>   
+          </button>
+        </div>
+
+      </div><!--FINAL copia 4-->
+
+      <!--******************copia 5-->
+      <div class="card" data-language="nada">
+        <div class="card_img"></div>
+        
+        <div class="card_title">
+          <h2>Descripción</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Veniam.</p>
+        </div>
+      
+        <div class="card_proyecto_links"><!--*********icono de -->
+          <!--dentro del href se pone el link del githob donde esta subido mi trabajo -->
+          <!--tambien se puede que al tocar se abre otra bentana con la propiedad target -->
+          <a href="Aqui iria el link de github" target="_blank">codigo<i class="fa-brands fa-github"></i></a>
+          
+          <a href=""> info<i class="fa-solid fa-globe"></i> </a>
+          <a href="">img<i class="fa-solid fa-code"></i></a>
+        </div>
+        
+
+        <div class="proyects_details_content"><!--*********boton -->
+          <button  id="botonCards" class="project-details-button"> 
+            <a href="" style="text-decoration: none; color: black;" >Ir al proyecto
+            </a>
+          </button>
+        </div>
+
+      </div><!--FINAL copia 5-->
+
+      <!--******************copia 6-->
+      <div class="card" data-language="nada">
+        <div class="card_img"></div>
+        
+        <div class="card_title">
+          <h2>Descripción</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Veniam.</p>
+        </div>
+      
+        <div class="card_proyecto_links"><!--*********icono de -->
+          <!--dentro del href se pone el link del githob donde esta subido mi trabajo -->
+          <!--tambien se puede que al tocar se abre otra bentana con la propiedad target -->
+          <a href="Aqui iria el link de github" target="_blank">codigo<i class="fa-brands fa-github"></i></a>
+          
+          <a href=""> info<i class="fa-solid fa-globe"></i> </a>
+          <a href="">img<i class="fa-solid fa-code"></i></a>
+        </div>
+        
+
+        <div class="proyects_details_content"><!--*********boton -->
+          <button  id="botonCards" class="project-details-button"> 
+            <a href="" style="text-decoration: none; color: black;" >Ir al proyecto
+            </a>
+          </button>
+        </div>
+
+      </div><!--FINAL copia 6-->
+
+      
+    </div>
+ 
+  
+    <script src="js/porfolio.js" defer></script>
+</body>
+</html>
