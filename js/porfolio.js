@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById('filter-button').addEventListener('click', function() {
+  document.getElementById('botonFiltro').addEventListener('click', function() {
     var checkboxes = document.querySelectorAll('input[name="language"]:checked');
     var selectedLanguages = Array.from(checkboxes).map(function(checkbox) {
       return checkbox.value.replace('_', ','); 

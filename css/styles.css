@@ -7,7 +7,7 @@
 }
 
 body { /* div donde esta todos los elementos */
-  font-family: 'Montserrat', sans-serif;
+  font-family: sans-serif;
   overflow-x: hidden;
 
 }
@@ -56,7 +56,7 @@ color: white;
 }
 
 .menu a:hover{
-  background-color: rgb(190, 80, 117);
+  background-color: rgb(227, 246, 9);
   color: black;  /*color texto nav cuando estas encima*/
   transition: ease-in .5s;/*efecto cuando pasas el raton encima de las pestañas del nav*/
 }
@@ -70,6 +70,8 @@ color: white;
   width: 70vw;
   height: 70vh;
   display: grid;
+  color: white;
+  font-size: 20px;
   grid-template-columns: repeat(2,1fr);
   align-items: center;/*aliniado con la imagen*/
 }
@@ -81,7 +83,9 @@ span{
   color:  rgb(227, 246, 9);
 }
 
-#imgMain{}
+#imgMain{
+  background-color: white;
+}
 /*********Estilo boton*/
 .download-cv , .project-details-button {
 padding: 10px 20px;
@@ -96,7 +100,7 @@ box-shadow: 1px 3px 11px -5px rgba(red, green, blue, .69);
 }
 
 .download-cv:hover{/*Cuando el cursor esta encima del boton el cambia de color*/
-  background-color: rgb(190, 80, 117);
+  background-color: #00ff00;
   box-shadow: none;
 }
 
@@ -150,7 +154,7 @@ color: aliceblue;
 }
 /***************Fin Estilos about*/
 /************estilos de portafolio*/
-.portfolio_headings{/*Contenedor del titulotitulo*/
+.portfolio_headings{/*Contenedor del titulo*/
 width: 100vw;
 padding: 5em;
 height: 80px;
@@ -168,6 +172,41 @@ height: 80px;
   justify-content: center;
 
 }
+/***************Estilos selectores de busqueda*/
+/* Estilo base para el label que actuará como contenedor del checkbox */
+.custom-checkbox {
+  position: relative;
+  padding-left: 35px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+
+
+
+
+
+/* Al pasar el mouse sobre el checkbox personalizado, cambia el fondo */
+.custom-checkbox:hover input ~ .checkmark {
+  background-color:  #00ff00;
+}
+
+.checkmark{
+  color: white;
+}
+
+#botonCards{/*Estilos boton de las cards*/
+  margin-bottom: 10px;
+}
+#botonFiltro:hover{ /*Cuando pasas por el boton cambia de color*/
+  background-color: #00ff00;
+  color: black;  /*color texto nav cuando estas encima*/
+  transition: ease-in .5s;/*efecto cuando pasas el raton encima de las pestañas del nav*/
+}
+
+/***************Final Estilos selectores de busqueda*/
+
 /**************Estilo de las cartas del abaut*/
 .card{/*Contenedor de la carta*/
   width: 250px;
@@ -264,11 +303,20 @@ justify-content: center;
 margin-top: 1em;
 text-decoration: none;
 }
-#botonCards{/*Estilos boton de las cards*/
-  margin-bottom: 10px;
+#botonFiltro{
+  padding: 10px 20px;
+background-color:  rgb(227, 246, 9);
+border: none;
+border-radius: 20px;
+margin-top: 10px;
+cursor: pointer;/*Para que aparezca la manita*/
+-webkit-box-shadow: 1px 3px 11px  -5px;
+-moz-box-shadow:1px 3px 11px  -5px;
+box-shadow: 1px 3px 11px -5px rgba(red, green, blue, .69);
 }
+
 .project-details-button:hover{ /*Cuando pasas por el boton cambia de color*/
-  background-color: rgb(190, 80, 117);
+  background-color: #00ff00;
   color: black;  /*color texto nav cuando estas encima*/
   transition: ease-in .5s;/*efecto cuando pasas el raton encima de las pestañas del nav*/
 }
