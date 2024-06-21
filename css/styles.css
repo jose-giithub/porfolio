@@ -30,23 +30,23 @@ color: rgb(227, 246, 9);
 
 
 /********************nav*/
-.navbar , #navbarNav{
+.navbar{
   display: flex;/* que se coloque a la derecha del titulo */
   justify-content: space-between;
   padding: 2em;
 }
-.menu , .navbar-nav{
+.menu{
 /*que se coloque todo en linia*/
   display: flex;
   width: 50%;
   /*que se separen los elemenos del nav*/
   justify-content: space-around;
 }
-.menu li , .navbar-nav li{
+.menu li{
   list-style: none;
 }
-.menu a  , .navbar-nav a{/* dentro de las pestañas */
-  color: red;
+.menu a {/* dentro de las pestañas */
+  color: white;
   text-decoration: none;
   /*Espacio entre pestañas*/
   padding: 10px 20px;
@@ -60,10 +60,41 @@ color: white;
   color: black;  /*color texto nav cuando estas encima*/
   transition: ease-in .5s;/*efecto cuando pasas el raton encima de las pestañas del nav*/
 }
+/* Estilo del botón de hamburguesa */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .hamburger {
+      display: block;
+  }
 
-/**********buscardor*/
+  .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+  }
 
+  .menu li {
+      text-align: center;
+      padding: 10px 0;
+  }
 
+  .menu a {
+      padding: 10px;
+  }
+
+  .menu.show {
+      display: flex;
+  }
+}
+/********************fin nav*/
 /********************main*/
 .main{/*contenedor de informacion*/
   margin: 0 auto;
@@ -86,6 +117,7 @@ span{
 #imgMain{
   background-color: white;
 }
+/*********FINAL wrapper*/
 /*********Estilo boton*/
 .download-cv , .project-details-button {
 padding: 10px 20px;

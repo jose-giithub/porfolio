@@ -1,4 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // boton desplegable navbar
+  // Capturo el boton y el menu
+  const hamburger = document.querySelector('.hamburger');
+  const menu = document.querySelector('.menu');
+  // Evento onclick del icono de hamburguesa
+  hamburger.addEventListener('click', function () {
+    // Mostramos el menu modificando la clase
+    menu.classList.toggle('show');
+    // Accesibilidad. Esta parte es solo para teconologias de asistencia
+    const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+    this.setAttribute('aria-expanded', !expanded);
+});
   document.getElementById('botonFiltro').addEventListener('click', function() {
     var checkboxes = document.querySelectorAll('input[name="language"]:checked');
     var selectedLanguages = Array.from(checkboxes).map(function(checkbox) {
