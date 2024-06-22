@@ -1,69 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');/*Fuente */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap"); /*Fuente */
 
-* {/*Toda lapagina */
+* {
+  /*Toda lapagina */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body { /* div donde esta todos los elementos */
+body {
+  /* div donde esta todos los elementos */
   font-family: sans-serif;
   overflow-x: hidden;
-
 }
 /*********estilo general de todo*/
 .wrapper {
-width: 100%;
-height: 100vh;
-background-color: #2a2929;
-color: wheat;
-
+  width: 100%;
+  height: 100vh;
+  background-color: #2a2929; 
+  color: wheat;
 }
 /***********titulo*/
-.brand  {
+.brand {
   color: rgb(227, 246, 9);
   /*Ponemos en linia las letras del nav con el titulo*/
   margin-top: -7px;
   padding-left: 50px;
-  }
-
-.brand span {
-color: rgb(227, 246, 9);
 }
 
+.brand span {
+  color: rgb(227, 246, 9);
+}
 
 /********************nav*/
-.navbar{
-  display: flex;/* que se coloque a la derecha del titulo */
+.navbar {
+  display: flex; /* que se coloque a la derecha del titulo */
   justify-content: space-between;
   padding: 2em;
   align-items: center; /* Asegura que todos los elementos estén alineados verticalmente */
 }
-.menu{
-/*que se coloque todo en linia*/
+.menu {
+  /*que se coloque todo en linia*/
   display: flex;
   padding-right: 60px;
   width: 50%;
   /*que se separen los elemenos del nav*/
   justify-content: space-around;
 }
-.menu li{
+.menu li {
   list-style: none;
 }
-.menu a {/* dentro de las pestañas */
+.menu a {
+  /* dentro de las pestañas */
   color: white;
   text-decoration: none;
   /*Espacio entre pestañas*/
   padding: 10px 10px;
 }
-.menu .active{/*Cuando pasas el raton se activa el color del nav */
-color: white;
+.menu .active {
+  /*Cuando pasas el raton se activa el color del nav */
+  color: white;
 }
 
-.menu a:hover{
+.menu a:hover {
   background-color: rgb(227, 246, 9);
-  color: black;  /*color texto nav cuando estas encima*/
-  transition: ease-in .5s;/*efecto cuando pasas el raton encima de las pestañas del nav*/
+  color: black; /*color texto nav cuando estas encima*/
+  transition: ease-in 0.5s; /*efecto cuando pasas el raton encima de las pestañas del nav*/
 }
 /* Estilo del botón de hamburguesa */
 .hamburger {
@@ -79,96 +80,110 @@ color: white;
 /********************fin nav*/
 
 /********************main*/
-.main{/*contenedor de informacion*/
+.main {
+  /*contenedor de informacion*/
   margin-left: 10%;
-  background-color: blue;
+  background-color: #2a2929;
   color: white;
-  width:80%;
+  width: 80%;
   height: 70vh;
   display: flex;
   font-size: 20px;
   align-items: center; /* Asegura que los elementos hijos ocupen toda la altura */
-  justify-content: space-between; /* Separa máximo los elementos hijo */
+  justify-content: start; /* Separa máximo los elementos hijo */
 }
 .infor-content {
-  height: 100%; /* Ocupa toda la altura del contenedor `.main` */
+  
+  height: 85%; /* Ocupa toda la altura del contenedor `.main` */
   width: 60%; /* 60% del espacio del contenedor `.main` */
-  background-color: red; /* Color para visualización */
-  padding: 0; /* Eliminar cualquier padding para que el texto toque los bordes */
+  background-color: #2a2929; 
+  display: flex;
+  flex-direction: column;
+  margin-right: 75px;
 }
-h1{
+h1 {
+  line-height: 1.6;  /* Aumenta la altura de línea a 1.6 veces el tamaño del texto */
   font-size: 2.5em; /* Ajustar según necesidad */
-    margin: 0; /* Elimina márgenes adicionales */
+  margin: 0px; 
 }
 
-span{
-  color:  rgb(227, 246, 9);
+span {
+  color: rgb(227, 246, 9);
 }
 h3 {
   font-size: 1.2em; /* Ajustar según necesidad */
 }
+p {
+  margin-top: 1em; /* Añade espacio superior */
+}
+.download-cv{
+  float: right;
+margin-right: 70px;
+}
 
-
-#imgMain{
- width: 40%; /* 40% del espacio del contenedor `.main` */
-    background-color: white;
-   margin: 0;
-    height: 100%; /* Mantiene la proporción de la imagen */
+#imgMain {
+  width: 40%; /* 40% del espacio del contenedor `.main` */
+  background-color: white;
+  margin: 0;
+  height: 100%; /* Mantiene la proporción de la imagen */
 }
 /*********FINAL wrapper*/
 
 /* Estilos responsive */
 @media (max-width: 768px) {
   .hamburger {
-      display: block;
+    display: block;
   }
-/* ***HEADER NAV */
+  /* ***HEADER NAV */
   .menu {
-      display: none;
-      flex-direction: column;
-      position: absolute; /* Posicionamiento absoluto para el menú */
-      width: 100%; /* Ocupa todo el ancho del viewport */
-      top: 60px; /* Abajo del navbar, ajustar según la altura de tu navbar */
-      left: 0; /* Alineado a la izquierda */
-      background-color: #2a2929; /* Fondo, ajustar según tu color */
+    display: none;
+    flex-direction: column;
+    position: absolute; /* Posicionamiento absoluto para el menú */
+    width: 100%; /* Ocupa todo el ancho del viewport */
+    top: 60px; /* Abajo del navbar, ajustar según la altura de tu navbar */
+    left: 0; /* Alineado a la izquierda */
+    background-color: #2a2929; /* Fondo, ajustar según tu color */
   }
 
   .menu li {
-      text-align: center;
-      padding: 10px 0;
+    text-align: center;
+    padding: 10px 0;
   }
 
   .menu a {
-      padding: 10px;
+    padding: 10px;
   }
 
   .menu.show {
-      display: flex;
+    display: flex;
   }
   /* FINAL DEL HEADER NAV */
 }
 /*********Estilo boton*/
-.download-cv , .project-details-button {
-padding: 10px 20px;
-background-color:  rgb(227, 246, 9);
-border: none;
-border-radius: 20px;
-margin-top: 10px;
-cursor: pointer;/*Para que aparezca la manita*/
--webkit-box-shadow: 1px 3px 11px  -5px;
--moz-box-shadow:1px 3px 11px  -5px;
-box-shadow: 1px 3px 11px -5px rgba(red, green, blue, .69);
+.download-cv,
+.project-details-button {
+  padding: 10px 20px;
+  background-color: rgb(227, 246, 9);
+  border: none;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer; /*Para que aparezca la manita*/
+  -webkit-box-shadow: 1px 3px 11px -5px;
+  -moz-box-shadow: 1px 3px 11px -5px;
+  box-shadow: 1px 3px 11px -5px rgba(red, green, blue, 0.69);
 }
 
-.download-cv:hover{/*Cuando el cursor esta encima del boton el cambia de color*/
-  background-color: #00ff00;
+.download-cv:hover {
+  /*Cuando el cursor esta encima del boton el cambia de color*/
+  background-color: #5eacd9;
   box-shadow: none;
+  transition: ease-in 0.5s; 
 }
 
 /*******Estilo imagen*/
-.main img{
+.main img {
   width: 300px;
-  border: 4px solid  rgb(227, 246, 9);
+  border: 4px solid rgb(227, 246, 9);
   height: 340px;
   z-index: 1;
 }
@@ -185,7 +200,7 @@ box-shadow: 1px 3px 11px -5px rgba(red, green, blue, .69);
   grid-column: 2 / 6; /* Ajusta según sea necesario */
   max-width: 100%; /* Controla el tamaño máximo de la imagen */
   height: auto; /* Mantiene la proporción de la imagen */
-  border: 4px solid  rgb(227, 246, 9);
+  border: 4px solid rgb(227, 246, 9);
 }
 
 .about-info {
@@ -195,7 +210,8 @@ box-shadow: 1px 3px 11px -5px rgba(red, green, blue, .69);
 
 /* ...otros estilos... */
 
-@media (max-width: 768px) { /* Ajusta el valor según tus necesidades */
+@media (max-width: 768px) {
+  /* Ajusta el valor según tus necesidades */
   .about {
     grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
   }
@@ -208,30 +224,30 @@ box-shadow: 1px 3px 11px -5px rgba(red, green, blue, .69);
     grid-column: 1 / -1; /* La información ocupa toda la columna */
   }
 }
-.porfolio{
-width: 10mw;
-background-color: #2a2929;
-color: aliceblue;
+.porfolio {
+  width: 10mw;
+  background-color: #2a2929;
+  color: aliceblue;
 }
 /***************Fin Estilos about*/
 /************estilos de portafolio*/
-.portfolio_headings{/*Contenedor del titulo*/
-width: 100vw;
-padding: 5em;
-height: 80px;
-
+.portfolio_headings {
+  /*Contenedor del titulo*/
+  width: 100vw;
+  padding: 5em;
+  height: 80px;
 }
-.portfolio_headings h2{/*titulo*/
+.portfolio_headings h2 {
+  /*titulo*/
   font-size: 1.5em;
   margin-top: 0px;
 }
-.portfolio .container{
+.portfolio .container {
   width: 80vw;
   height: 80vh;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-
 }
 /***************Estilos selectores de busqueda*/
 /* Estilo base para el label que actuará como contenedor del checkbox */
@@ -244,109 +260,110 @@ height: 80px;
   user-select: none;
 }
 
-
-
-
-
 /* Al pasar el mouse sobre el checkbox personalizado, cambia el fondo */
 .custom-checkbox:hover input ~ .checkmark {
-  background-color:  #00ff00;
+  background-color: #5eacd9;
+  transition: ease-in 0.5s; 
 }
 
-.checkmark{
+.checkmark {
   color: white;
 }
 
-#botonCards{/*Estilos boton de las cards*/
+#botonCards {
+  /*Estilos boton de las cards*/
   margin-bottom: 10px;
 }
-#botonFiltro:hover{ /*Cuando pasas por el boton cambia de color*/
-  background-color: #00ff00;
-  color: black;  /*color texto nav cuando estas encima*/
-  transition: ease-in .5s;/*efecto cuando pasas el raton encima de las pestañas del nav*/
+#botonFiltro:hover {
+  /*Cuando pasas por el boton cambia de color*/
+  background-color: #5eacd9;
+  color: black; /*color texto nav cuando estas encima*/
+  transition: ease-in 0.5s; /*efecto cuando pasas el raton encima de las pestañas del nav*/
 }
 
 /***************Final Estilos selectores de busqueda*/
 
 /**************Estilo de las cartas del abaut*/
-.card{/*Contenedor de la carta*/
+.card {
+  /*Contenedor de la carta*/
   width: 250px;
   color: aliceblue;
   background-color: cadetblue;
-  margin: 1em ;
+  margin: 1em;
   float: left;
-
 }
-.card_img{/*original */
+.card_img {
+  /*original */
   width: 100%;
   height: 150px;
-  background-image:url(../img/generica.png) ;
+  background-image: url(../img/generica.png);
   background-color: white; /* color fondo */
-    background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen en el contenedor */
+  background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el contenedor */
   border: solid 4px cadetblue;
-  }
-  .card_img-java {
-    width: 100%;
-    height: 150px;
-    background-image: url(../img/logoJava.png);
-    background-color: white; /* color fondo */
-    background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen en el contenedor */
-    border: solid 4px cadetblue;
-  }
-.card_img-html{
-width: 100%;
-height: 150px;
-background-image:url(../img/html-css.png) ;
-background-color: white; /* color fondo */
-background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
-background-repeat: no-repeat; /* Evita que la imagen se repita */
-background-position: center; /* Centra la imagen en el contenedor */
-border: solid 4px cadetblue;
 }
-.card-img-js{
+.card_img-java {
   width: 100%;
   height: 150px;
-  background-image:url(../img/js.png) ;
+  background-image: url(../img/logoJava.png);
   background-color: white; /* color fondo */
-    background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen en el contenedor */
+  background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el contenedor */
   border: solid 4px cadetblue;
-  }
-  .card_img-php{
-    width: 100%;
-    height: 150px;
-    background-image:url(../img/php.png) ;
-    background-color: white; /* color fondo */
-    background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen en el contenedor */
-    border: solid 4px cadetblue;
-  }
+}
+.card_img-html {
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/html-css.png);
+  background-color: white; /* color fondo */
+  background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el contenedor */
+  border: solid 4px cadetblue;
+}
+.card-img-js {
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/js.png);
+  background-color: white; /* color fondo */
+  background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el contenedor */
+  border: solid 4px cadetblue;
+}
+.card_img-php {
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/php.png);
+  background-color: white; /* color fondo */
+  background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el contenedor */
+  border: solid 4px cadetblue;
+}
 
-.card_title{
+.card_title {
   padding: 20px;
   font-size: larger;
   color: white;
-  
 }
-.card_proyecto_links{/*logos */
-display: flex;
-justify-content: space-evenly;
+.card_proyecto_links {
+  /*logos */
+  display: flex;
+  justify-content: space-evenly;
 }
-.card_proyecto_links a {/*titulo de las cartas*/
+.card_proyecto_links a {
+  /*titulo de las cartas*/
   color: white;
   text-decoration: none;
 }
-.card_proyecto_links i {/*logos cartas*/
-font-size: 1.5em;
-
+.card_proyecto_links i {
+  /*logos cartas*/
+  font-size: 1.5em;
 }
-.card .project-details{
+.card .project-details {
   margin: 0 auto;
   margin: 1em;
   width: 70%;
@@ -358,97 +375,95 @@ font-size: 1.5em;
   text-decoration: none;
 }
 .proyects_details_content {
-display: flex;
-width: 100%;
-justify-content: center;
-margin-top: 1em;
-text-decoration: none;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1em;
+  text-decoration: none;
 }
-#botonFiltro{
+#botonFiltro {
   padding: 10px 20px;
-background-color:  rgb(227, 246, 9);
-border: none;
-border-radius: 20px;
-margin-top: 10px;
-cursor: pointer;/*Para que aparezca la manita*/
--webkit-box-shadow: 1px 3px 11px  -5px;
--moz-box-shadow:1px 3px 11px  -5px;
-box-shadow: 1px 3px 11px -5px rgba(red, green, blue, .69);
+  background-color: rgb(227, 246, 9);
+  border: none;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer; /*Para que aparezca la manita*/
+  -webkit-box-shadow: 1px 3px 11px -5px;
+  -moz-box-shadow: 1px 3px 11px -5px;
+  box-shadow: 1px 3px 11px -5px rgba(red, green, blue, 0.69);
 }
 
-.project-details-button:hover{ /*Cuando pasas por el boton cambia de color*/
-  background-color: #00ff00;
-  color: black;  /*color texto nav cuando estas encima*/
-  transition: ease-in .5s;/*efecto cuando pasas el raton encima de las pestañas del nav*/
+.project-details-button:hover {
+  /*Cuando pasas por el boton cambia de color*/
+  background-color: #5eacd9;
+  color: black; /*color texto nav cuando estas encima*/
+  transition: ease-in 0.5s; /*efecto cuando pasas el raton encima de las pestañas del nav*/
 }
 /************************Estilos del formulario de contacto*/
-.contact-section{
+.contact-section {
   background-color: #65817d;
-
 }
-.contact-headigs h2{
+.contact-headigs h2 {
   /* font-size: 1.5em; */
-  
 }
-.contact{
+.contact {
   /* margin-left: 20px; */
 }
-.divider{
-height: 8px;
-width: 50%;
-margin-top: 15px; /* añade espacio externo por encima del contenedor de la imagen */
-margin-bottom: 15px;
-margin-left: 0;
-margin-right: auto;
-background-color: rgb(227, 246, 9);
+.divider {
+  height: 8px;
+  width: 50%;
+  margin-top: 15px; /* añade espacio externo por encima del contenedor de la imagen */
+  margin-bottom: 15px;
+  margin-left: 0;
+  margin-right: auto;
+  background-color: rgb(227, 246, 9);
 }
 
-.container{
-  display: flex;/*par que las card esten  en el centro*/
+.container {
+  display: flex; /*par que las card esten  en el centro*/
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;/*par que las card esten  en el centro*/
+  flex-wrap: wrap; /*par que las card esten  en el centro*/
   padding: 3em;
   margin: 0 auto;
   max-width: 100%; /* Cambia width por max-width */
   box-sizing: border-box; /* Agrega esto para incluir el padding en el ancho */
 }
-.container-contact img{
+.container-contact img {
   width: 750px;
   height: 700px;
   bottom: 0px;
-  background-size: cover;/*Para que se adapte la imagen al recuadro */
+  background-size: cover; /*Para que se adapte la imagen al recuadro */
 }
-.contact-form{
+.contact-form {
   width: 100%;
   height: 350px;
 }
-.form{
+.form {
   display: flex;
   flex-direction: column;
   width: 30vw;
   margin-top: 2em;
   margin-left: auto; /* Centra horizontalmente el div */
   margin-right: auto; /* Centra horizontalmente el div */
-
 }
-.form input{
+.form input {
   padding: 10px 20px;
   margin-bottom: 1em;
-  background:  #2a2929;;
+  background: #2a2929;
   border: none;
   border-bottom: 1px solid white;
   color: white;
 }
-.form textarea{
+.form textarea {
   height: 150px;
-  background:  #2a2929;;
+  background: #2a2929;
   color: white;
   padding: 1.5em;
   border: 1px solid white;
 }
 
-.btn-submit{
+.btn-submit {
   padding: 10px 20px;
   margin: 1em;
   border: none;
@@ -456,10 +471,10 @@ background-color: rgb(227, 246, 9);
   background-color: rgb(75, 240, 14);
   border-radius: 20px;
   cursor: pointer;
-  box-shadow: 1px 3px 11px -5px rgba(red, green, blue, alpha) ;
- 
+  box-shadow: 1px 3px 11px -5px rgba(red, green, blue, alpha);
 }
-.btn-submit:hover {/*Color boton cuando pasas el raton*/
+.btn-submit:hover {
+  /*Color boton cuando pasas el raton*/
   background-color: rgb(190, 80, 117);
   box-shadow: none;
 }
@@ -468,70 +483,79 @@ background-color: rgb(227, 246, 9);
 .habilidad {
   margin-bottom: 20px; /* Espacio entre habilidades */
 }
-.habilidad-text{
-  font-family: 'Montserrat', sans-serif;
+.habilidad-text {
+  font-family: "Montserrat", sans-serif;
   color: black;
 }
-
 
 /* Establece el ancho de la barra según el nivel */
 .barra-nivel-110 {
   height: 20px; /* Altura de la barra */
   width: 100%;
-  background-color: #8c01af; 
+  background-color: #8c01af;
 }
 .barra-nivel-100 {
   height: 20px; /* Altura de la barra */
   width: 90%;
-  background-color: #fd0303; 
+  background-color: #fd0303;
 }
 .barra-nivel-80 {
   height: 20px; /* Altura de la barra */
   width: 80%;
-  background-color: #f19413; 
+  background-color: #f19413;
 }
 
 /*Estilos abaut-conocimientos***************/
-.about-Conocimientos{
+.about-Conocimientos {
   background-color: #2a2929;
-  
 }
 
-
-.h4-conocimientos{
+.h4-conocimientos {
   color: white;
   margin-bottom: 10px;
-  
 }
-.h4-conocimientos samp{
+.h4-conocimientos samp {
   color: #f19413;
   font-size: larger;
   font-family: "Comic Sans MS", sans-serif;
 }
-.Conocimientos-icono{
-  color:white;
-  
+.Conocimientos-icono {
+  color: white;
 }
 
 /******************iconos*/
-.Conocimientos{
+.Conocimientos {
   display: inline-block;
   width: 150px;
   text-align: center;
   margin-right: 10px; /* Puedes ajustar este valor según tus preferencias */
   margin-bottom: 50px;
-  
- 
 }
 
-.Conocimientos i {/* Estilo  iconos  */
+.Conocimientos i {
+  /* Estilo  iconos  */
   font-size: 3.2em; /* Tamaño iconos*/
-  
 }
 
-
-.Conocimientos h4 {/* Estilo  títulos */
+.Conocimientos h4 {
+  /* Estilo  títulos */
   margin-bottom: 0.5em; /* espacio entre  títulos y los iconos */
 }
-
-
+.padre{
+  background-color:blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+}
+.hijo1{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.hijo2{
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+}
