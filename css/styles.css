@@ -93,14 +93,16 @@ body {
   justify-content: start; /* Separa máximo los elementos hijo */
 }
 .infor-content {
-  
-  height: 85%; /* Ocupa toda la altura del contenedor `.main` */
+  height: 100%; /* Ocupa toda la altura del contenedor `.main` */
   width: 60%; /* 60% del espacio del contenedor `.main` */
   background-color: #2a2929; 
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
   margin-right: 75px;
 }
+
 h1 {
   line-height: 1.6;  /* Aumenta la altura de línea a 1.6 veces el tamaño del texto */
   font-size: 2.5em; /* Ajustar según necesidad */
@@ -120,13 +122,12 @@ p {
   float: right;
 margin-right: 70px;
 }
-
 #imgMain {
+  height:100%; /* Mantiene la proporción de la imagen */
   width: 40%; /* 40% del espacio del contenedor `.main` */
-  background-color: white;
   margin: 0;
-  height: 100%; /* Mantiene la proporción de la imagen */
 }
+
 /*********FINAL wrapper*/
 
 /* Estilos responsive */
@@ -137,28 +138,87 @@ margin-right: 70px;
   /* ***HEADER NAV */
   .menu {
     display: none;
-    flex-direction: column;
+    flex-direction: row;
     position: absolute; /* Posicionamiento absoluto para el menú */
     width: 100%; /* Ocupa todo el ancho del viewport */
     top: 60px; /* Abajo del navbar, ajustar según la altura de tu navbar */
     left: 0; /* Alineado a la izquierda */
-    background-color: #2a2929; /* Fondo, ajustar según tu color */
+    background-color: #2a2929; 
+    color: black;
   }
 
   .menu li {
+    font-size: 12px;
+ 
     text-align: center;
-    padding: 10px 0;
+    padding:2px 0;
+    display: flex;
+
   }
 
   .menu a {
+   margin: 10px auto;
+    width: 80px;
+    height: auto;
+    background-color: rgb(227, 246, 9);
     padding: 10px;
+    color: black !important;
   }
-
+  .menu a:hover {
+    /*Cuando el cursor esta encima del boton el cambia de color*/
+    background-color: #5eacd9;
+    box-shadow: none;
+    transition: ease-in 0.5s; 
+  }
   .menu.show {
     display: flex;
   }
   /* FINAL DEL HEADER NAV */
+  /* INICIO DE INFO Y FOTO PORTADA */
+  .main {
+    font-size: 16px; 
+    margin-top: 30px;
+    flex-direction: column; /* Cambia la dirección de flex para apilar los elementos */
+    margin-left: 0; /* Elimina el margen izquierdo para utilizar mejor el espacio */
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  .infor-content, #imgMain {
+    width: 80%; /* Ambos contenedores ocupan el ancho completo en pantallas pequeñas */
+    margin-right: 0; /* Elimina el margen derecho */
+  }
+  h1 {
+    line-height: 1;  /* Aumenta la altura de línea a 1.6 veces el tamaño del texto */
+    font-size: 2em;
+    margin: 0px; 
+  }
+
+  h3 {
+    font-size: 1em; /* Ajustar según necesidad */
+  }
+
+  .download-cv {
+    float: none; /* Elimina el float para botones en pantallas pequeñas */
+    display: block; /* Asegura que el botón ocupe su propio espacio */
+    margin: 10px auto; /* Centra el botón horizontalmente */
+  }
 }
+
+/* Media Query para pantallas de móviles */
+@media (max-width: 480px) {
+  .main {
+    font-size: 16px; /* Reduce el tamaño de la fuente para adaptarse a pantallas más pequeñas */
+  }
+
+  h1 {
+    font-size: 2em; /* Reduce el tamaño para adaptarse a pantallas más pequeñas */
+  }
+
+  h3 {
+    font-size: 1em; /* Ajusta el tamaño de la fuente */
+  }
+}
+
 /*********Estilo boton*/
 .download-cv,
 .project-details-button {

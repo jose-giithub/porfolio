@@ -5,8 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector('.menu');
   // Evento onclick del icono de hamburguesa
   hamburger.addEventListener('click', function () {
+    console.log('click');
     // Mostramos el menu modificando la clase
     menu.classList.toggle('show');
+    console.log(menu.classList);
     // Accesibilidad. Esta parte es solo para teconologias de asistencia
     const expanded = this.getAttribute('aria-expanded') === 'true' || false;
     this.setAttribute('aria-expanded', !expanded);
