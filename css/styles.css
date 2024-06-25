@@ -41,7 +41,7 @@ body {
 .menu {
   /*que se coloque todo en linia*/
   display: flex;
-  padding-right: 60px;
+  padding-right: 40px;
   width: 50%;
   /*que se separen los elemenos del nav*/
   justify-content: space-around;
@@ -132,6 +132,9 @@ margin-right: 70px;
 
 /* Estilos responsive */
 @media (max-width: 768px) {
+  .brand{
+    padding-left: 0px;
+  }
   .hamburger {
     display: block;
   }
@@ -140,20 +143,20 @@ margin-right: 70px;
     display: none;
     flex-direction: row;
     position: absolute; /* Posicionamiento absoluto para el menú */
-    width: 100%; /* Ocupa todo el ancho del viewport */
+    width: 90%; /* Ocupa todo el ancho del viewport */
     top: 60px; /* Abajo del navbar, ajustar según la altura de tu navbar */
     left: 0; /* Alineado a la izquierda */
     background-color: #2a2929; 
     color: black;
+    margin-left: 30px;
   }
 
   .menu li {
+    /* background-color: blueviolet; */
     font-size: 12px;
- 
     text-align: center;
-    padding:2px 0;
+    padding:12px 0;
     display: flex;
-
   }
 
   .menu a {
@@ -161,7 +164,7 @@ margin-right: 70px;
     width: 80px;
     height: auto;
     background-color: rgb(227, 246, 9);
-    padding: 10px;
+    padding: 5px;
     color: black !important;
   }
   .menu a:hover {
@@ -176,6 +179,7 @@ margin-right: 70px;
   /* FINAL DEL HEADER NAV */
   /* INICIO DE INFO Y FOTO PORTADA */
   .main {
+    height: auto;
     font-size: 16px; 
     margin-top: 30px;
     flex-direction: column; /* Cambia la dirección de flex para apilar los elementos */
@@ -186,6 +190,9 @@ margin-right: 70px;
   .infor-content, #imgMain {
     width: 80%; /* Ambos contenedores ocupan el ancho completo en pantallas pequeñas */
     margin-right: 0; /* Elimina el margen derecho */
+  }
+  .infor-content a{
+    text-decoration: none;
   }
   h1 {
     line-height: 1;  /* Aumenta la altura de línea a 1.6 veces el tamaño del texto */
