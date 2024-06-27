@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
+  <!-- <link rel="stylesheet" href="css/stylesResponsive.css"> -->
   <script src="https://kit.fontawesome.com/6359741856.js" crossorigin="anonymous"></script>
   <!--Fuesnte de estilos para el porfolio-->
 
@@ -13,47 +14,45 @@
 
 <body>
   
+
   <div class="wrapper"><!--Primera parte-->
     <header>
       <nav class="navbar">
-        <div class="brand">
-          <h2>J<span>ose</span> </h2>
-    
-        </div>
-        <ul class="menu">
-          <li ><a class="active" href="index.html">Home</a></li>
-          <li><a href="#info_personal">Sobre mi</a></li>
-          <li><a href="index.html#porfolio">Porfolio</a></li>
-          <!-- <li><a href="contacto.html">Contacto</a></li> -->
-        </ul>
+          <div class="brand">
+              <h2>J<span>ose</span></h2>
+          </div>
+          <!-- Boton con icono que solo se muestra en pantallas pequeñas -->
+          <button class="hamburger" aria-label="Menu" aria-expanded="false">&#9776;</button>
+          <ul class="menu">
+              <li><a id="active" class="active" href="index.html">Home</a></li>
+              <li><a href="info_personal.html">Sobre mí</a></li>
+              <li><a href="info_personal.html">CV</a></li>
+              <li><a href="#porfolio">Porfolio</a></li>
+          </ul>
       </nav>
-    </header>
+  </header>
     <!--Texto info personal he imagen -->
     <main class="main">
       <div class="infor-content" id="info_personal">
-        <h1>Habilidades <span> Capacidades</span> </h1>
+        <h1>Habilidades  y<span> Capacidades</span> </h1>
         <p>¿Quieres saber mas? no lo dudes descarga mi CV </p>
         <a download href="documentos/CV-Jose.pdf"><!-- En dowload le pones el nombre del archivo a descargar y se descarga solo-->
           <button class="download-cv">Descargar cv </button>
         </a>
       </div>
       <!---->
-      <img src="./img/habilidades.png" alt="homer simpson maracas" style="height: 360px; width: auto; margin-left: 50px;"> <!--alt texto alternativo apra la imagen-->
+      <img id="imgHabilidades" src="./img/habilidades250x250.png" alt="Cubo de rubik"> <!--alt texto alternativo apra la imagen-->
     </main>
   </div><!--Final de wrapper -->
   
   <!--**********Segunda parte debajo del texto de presentacion e imagen -->
   <div class="about">
-    <img src="./img/estadistica.png" alt="homer simpson comer rosquillas" style="height: 70%; width:auto;">
- 
-  
-<!--Habilidades y conocimientos-->
-
-<!--******************Habilidades -->
-  <div class="about-info">
     <h2 >Mis habilidades</h2>
     <div class="divider"></div><!-- ralla debajo del titulo-->
-   
+    <!-- <img src="./img/estadistica300x230.png" alt="4 Siluetas de personas bailando" > -->
+ 
+<!--Habilidades y conocimientos-->
+  <div class="divPAdreHabilidades">
     <div class="habilidad"><!--Barras de Habilidades 1-->
      <h4> <span class="habilidad-text">Tenacidad</span> </h4>
       <div class="barra-nivel-110"></div>
@@ -71,12 +70,12 @@
 
     <div class="habilidad"><!--Barras de Habilidades 4-->
       <h4>  <span class="habilidad-text">Adaptabilidad</span>
-      <div class="barra-nivel-80"></div></h4>
+      <div class="barra-nivel-85"></div></h4>
     </div><!--Fin Barras de Habilidades 4-->
 
     <div class="habilidad"><!--Barras de Habilidades 5-->
-      <h4>  <span class="habilidad-text">Disciplinado</span>
-      <div class="barra-nivel-100"></div></h4>
+      <h4>  <span class="habilidad-text">Disciplina</span>
+      <div class="barra-nivel-105"></div></h4>
     </div><!--Fin Barras de Habilidades 5-->
 
     <!-- Agrega más habilidades según sea necesario -->
@@ -86,19 +85,14 @@
   </div>
   </div> <!--final  abaut-infor-->
    
-
-<!---->
 <!--********** Inicio de Conocimientos -->
 <div class="about-Conocimientos">
- 
-
 <div class="about-info">
-  
-  <h2 style="color: white;">Mis Conocimientos</h2>
+  <h2>Mis Conocimientos</h2>
   <div class=" divider"></div><!--PAra crear una ralla debajo del titulo "Sobre mi"-->
   <h4 class="h4-conocimientos">Soy programador<samp> junior </samp>de: </h4> 
   </div>
-  
+  <div id="padreIconosLenguajes">
   <div class="Conocimientos"><!--Conocimientos html 1-->  
    <h4> <span class="Conocimientos-icono">HTML</span> </h4>
     <div class="HTML"><i class="fa-brands fa-html5" style="color: #c46a03;"></i>
@@ -127,9 +121,8 @@
 
    <div class="Conocimientos"><!--Conocimientos 6  SQL-->
     <h4> <span class="Conocimientos-icono">Java</span> </h4>
-     <div class="Java"><i class="fa-brands fa-java" style="color: #3d5785;"></i></div>
+     <div class="Java"><i class="fa-brands fa-java" style="color: #ffffff;"></i></div>
    </div><!--Conocimientos 5-->
-
 </div>
 </div> <!--final  abaut-infor-->
 
