@@ -14,18 +14,17 @@ body {
 }
 /*********estilo general de todo*/
 .wrapper {
-  background-color: red;
   width: 100%;
-  height: 90vh;
-  /* background-color: #2a2929;  */
-  color: wheat;
+  height: auto;
+  background-color: #2a2929; 
+  color:white;
 }
 /***********titulo*/
 .brand {
   color: rgb(227, 246, 9);
   /*Ponemos en linia las letras del nav con el titulo*/
   margin-top: -7px;
-  padding-left: 115px;
+  padding-left: 8%;
 }
 
 .brand span {
@@ -82,16 +81,13 @@ body {
 
 /********************main*/
 .main {
-
   /*contenedor de informacion*/
   margin-left: 10%;
-  /* background-color: #2a2929; */
-  background-color: blue;
+  background-color: #2a2929;
   color: white;
   width: 80%;
-  height: 80%;
-  max-width: 100vw;
-  max-height: 100vh;
+  /* max-width: 100vw;
+  max-height: 100vh; */
   display: flex;
   font-size: 20px;
   align-items: center; /* Asegura que los elementos hijos ocupen toda la altura */
@@ -99,10 +95,7 @@ body {
   /* overflow: hidden; */
 }
 .infor-content {
-  background-color: orange;
-  height: 80%;
-  width: 60%; 
-  /* background-color: #2a2929;  */
+  background-color: #2a2929; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -128,12 +121,16 @@ p {
 }
 
 #imgMain {
-  height:100%; /* Mantiene la proporción de la imagen */
   width: auto; /* 40% del espacio del contenedor `.main` */
   margin: 0;
   margin-left: 35px;
 }
+/*******Estilo imagen*/
+.main img {
+ 
+  border: 4px solid rgb(227, 246, 9);
 
+}
 /*********Estilo botones*/
 .download-cv {
   text-decoration: none;
@@ -143,7 +140,7 @@ p {
   border-radius: 20px;
   cursor: pointer; /*Para que aparezca la manita*/
 margin-left: 40%;
-margin-top: 5% ;
+margin-top: 2% ;
 }
 .download-cv:hover, 
 .botonSaberMas.download-cv:hover
@@ -156,21 +153,18 @@ margin-top: 5% ;
   box-shadow: none;
   transition: ease-in 0.5s; 
 }
-/*******Estilo imagen*/
-.main img {
-  width: 300px;
-  border: 4px solid rgb(227, 246, 9);
-  height: 340px;
-  z-index: 1;
-}
+
 /*********FINAL wrapper*/
 
 /***************Estilos about*/
 .about {
-  background-color: green;
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-gap: 90px; /* Añade un espacio entre las celdas del grid */
+  /* grid-template-columns: repeat(10, 1fr); */
+  height: auto;
+ /* Añade un espacio entre las celdas del grid */
+  grid-gap: 10px; 
   width: 80%;
   align-items: center;
   /* Lo separo del lado derecho */
@@ -179,43 +173,50 @@ margin-top: 5% ;
 }
 
 .about img {
-  background-color: yellow;
   grid-column: 1 / 6; /* Ajusta según sea necesario */
-  max-width: 100%; /* Controla el tamaño máximo de la imagen */
-  height: auto; /* Mantiene la proporción de la imagen */
+ width: 99%;
+  height: 99%; /* Mantiene la proporción de la imagen */
   border: 4px solid rgb(227, 246, 9);
 }
 
 .about-info {
-  margin-right: 100px;
-  background-color: aquamarine;
-  grid-column: 6 / 13; /* Ajusta según sea necesario, asegúrate de que suma 10 columnas en total */
-  padding: 3em;
-  height: 80%;
+  /* margin-right: 100px; */
+  line-height: 1.6;
+  grid-column: 6 / 12; /* Ajusta según sea necesario, asegúrate de que suma 10 columnas en total */
+  padding: 5px;
+  height: 95%;
+  display: grid;
+  margin-left: 10px;
 }
+
 .botonSaberMas{
-    text-decoration: none;
-    padding: 10px 20px;
+  /* width: 20%; */
     background-color: rgb(227, 246, 9);
     border: none;
+    /* padding: 10px 10px; */
+    height: 35px;
+    width: 150px;
     border-radius: 20px;
     cursor: pointer; /*Para que aparezca la manita*/
-  margin-left: 40%;
-  margin-top: 10px;
+  margin-left: 30%;
+margin-top: 50px;
+  /* margin-top: 25px; */
+}
+.botonSaberMas a{
+  text-decoration: none;
+  color: black;
 }
 /***************Fin Estilos about*/
 
 /****************** INICIO PORFOLIO  */
 .porfolio {
-  background-color:gray;
   width: auto;
-  /* background-color: #2a2929; */
+  background-color: #2a2929;
   color: aliceblue;
 }
 
 /************estilos de portafolio*/
 .portfolio_headings {
-  background-color: aquamarine;
   /*Contenedor del titulo*/
   margin-left: 10%;
   width: 80%;
@@ -259,7 +260,6 @@ margin-top: 20px;
 /* ******** INICIO CARDS*/
 /* contenedor padre de todas las cards */
 .container {
-  background-color: red;
   display: flex; /*par que las card esten  en el centro*/
   justify-content: center;
   align-items: center;
@@ -312,7 +312,6 @@ height: 450px;
   color: black;
 }
 .proyects_details_content {
-  background-color: #5eacd9;
   display: flex;
   width: 99%;
   height: auto;
@@ -500,25 +499,6 @@ height: 450px;
   /* Estilo  títulos */
   margin-bottom: 0.5em; /* espacio entre  títulos y los iconos */
 }
-.padre{
-  background-color:blue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 500px;
-  height: 500px;
-}
-.hijo1{
-  width: 100px;
-  height: 100px;
-  background-color: red;
-}
-.hijo2{
-  width: 100px;
-  height: 100px;
-  background-color: yellow;
-}
-
 
 /*********CREO QUE ESTO SE VA A TOMAR VIENTO*/
 .project-details-button {
