@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap"); /*Fuente */
 
 * {
-  /*Toda lapagina */
+  /*Toda la pagina */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,32 +12,32 @@ body {
   font-family: sans-serif;
   overflow-x: hidden;
 }
-button{
+button {
   cursor: pointer;
-  font-family:Tahoma,'Segoe UI', Verdana, sans-serif;
+  font-family: Tahoma, "Segoe UI", Verdana, sans-serif;
   font-weight: bold;
 }
 /* Ralla amarilla */
 .divider {
-    height: 8px;
-    width: 55%;
-    margin-top: 15px; /* añade espacio externo por encima del contenedor de la imagen */
-    margin-bottom: 15px;
-    margin-left: 0;
-    margin-right: auto;
-    background-color: rgb(227, 246, 9);
-  }
+  height: 8px;
+  width: 55%;
+  margin-top: 15px; /* añade espacio externo por encima del contenedor de la imagen */
+  margin-bottom: 15px;
+  margin-left: 0;
+  margin-right: auto;
+  background-color: rgb(227, 246, 9);
+}
 /*********estilo general de todo*/
 .wrapper {
   width: 100%;
   height: auto;
-  background-color: #2a2929; 
-  color:white;
+  background-color: #2a2929;
+  color: white;
 }
 /***********titulo*/
 .brand {
   color: rgb(227, 246, 9);
-  /*Ponemos en linia las letras del nav con el titulo*/
+  /*Ponemos en linea las letras del nav con el titulo*/
   margin-top: -7px;
   padding-left: 8%;
 }
@@ -54,11 +54,11 @@ button{
   align-items: center; /* Asegura que todos los elementos estén alineados verticalmente */
 }
 .menu {
-  /*que se coloque todo en linia*/
+  /*que se coloque todo en linea*/
   display: flex;
   padding-right: 40px;
   width: 50%;
-  /*que se separen los elemenos del nav*/
+  /*que se separen los elementos del nav*/
   justify-content: space-around;
 }
 .menu li {
@@ -72,14 +72,14 @@ button{
   padding: 10px 10px;
 }
 .menu .active {
-  /*Cuando pasas el raton se activa el color del nav */
+  /*Cuando pasas el ratón se activa el color del nav */
   color: white;
 }
 
 .menu a:hover {
   background-color: rgb(227, 246, 9);
   color: black; /*color texto nav cuando estas encima*/
-  transition: ease-in 0.5s; /*efecto cuando pasas el raton encima de las pestañas del nav*/
+  transition: ease-in 0.5s; /*efecto cuando pasas el ratón encima de las pestañas del nav*/
 }
 /* Estilo del botón de hamburguesa */
 .hamburger {
@@ -96,7 +96,7 @@ button{
 
 /********************main*/
 .main {
-  /*contenedor de informacion*/
+  /*contenedor de información*/
   margin-left: 10%;
   background-color: #2a2929;
   color: white;
@@ -109,20 +109,19 @@ button{
   justify-content: start; /* Separa máximo los elementos hijo */
   /* overflow: hidden; */
 }
-.infor-content {
-  background-color: #2a2929; 
+.info-content {
+  background-color: #2a2929;
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
   margin-right: 75px;
-
 }
 
 h1 {
-  line-height: 1.6;  /* Aumenta la altura de línea a 1.6 veces el tamaño del texto */
+  line-height: 1.6; /* Aumenta la altura de línea a 1.6 veces el tamaño del texto */
   font-size: 2.5em; /* Ajustar según necesidad */
-  margin: 0px; 
+  margin: 0px;
 }
 
 span {
@@ -139,34 +138,33 @@ p {
   width: auto; /* 40% del espacio del contenedor `.main` */
   margin: 0;
   margin-left: 35px;
+  outline: none; /* Elimina el borde al enfocar */
 }
 /*******Estilo imagen*/
 .main img {
- 
   border: 4px solid rgb(227, 246, 9);
-
 }
 /*********Estilo botones*/
-.redirectLinkedin {
+.redirectLinkedIn {
   text-decoration: none;
   padding: 10px 20px;
   background-color: rgb(227, 246, 9);
   border: none;
   border-radius: 20px;
   cursor: pointer; /*Para que aparezca la manita*/
-margin-left: 40%;
-margin-top: 2% ;
+  margin-left: 40%;
+  margin-top: 2%;
 }
-.redirectLinkedin:hover, 
-.botonSaberMas.redirectLinkedin-cv:hover
- ,#botonFiltro:hover,
-.custom-checkbox:hover input ~ .textoCheckbox, 
-#botonCards:hover 
-,.botonSaberMas:hover {
+.redirectLinkedIn:hover,
+.botonSaberMas.redirectLinkedIn-cv:hover,
+#botonFiltro:hover,
+.custom-checkbox:hover input ~ .textoCheckbox,
+#botonCards:hover,
+.botonSaberMas:hover {
   /*Cuando el cursor esta encima del boton el cambia de color*/
   background-color: #5eacd9;
   box-shadow: none;
-  transition: ease-in 0.5s; 
+  transition: ease-in 0.5s;
 }
 
 /*********FINAL wrapper*/
@@ -178,18 +176,17 @@ margin-top: 2% ;
   display: grid;
   /* grid-template-columns: repeat(10, 1fr); */
   height: auto;
- /* Añade un espacio entre las celdas del grid */
-  grid-gap: 10px; 
+  /* Añade un espacio entre las celdas del grid */
+  grid-gap: 10px;
   width: 80%;
   align-items: center;
   /* Lo separo del lado derecho */
   margin-left: 10%;
-  
 }
 
 .about img {
   grid-column: 1 / 6; /* Ajusta según sea necesario */
- width: 99%;
+  width: 99%;
   height: auto; /* Mantiene la proporción de la imagen */
   border: 4px solid rgb(227, 246, 9);
 }
@@ -204,20 +201,20 @@ margin-top: 2% ;
   margin-left: 10px;
 }
 
-.botonSaberMas{
+.botonSaberMas {
   /* width: 20%; */
-    background-color: rgb(227, 246, 9);
-    border: none;
-    /* padding: 10px 10px; */
-    height: 35px;
-    width: 150px;
-    border-radius: 20px;
-    cursor: pointer; /*Para que aparezca la manita*/
+  background-color: rgb(227, 246, 9);
+  border: none;
+  /* padding: 10px 10px; */
+  height: 35px;
+  width: 150px;
+  border-radius: 20px;
+  cursor: pointer; /*Para que aparezca la manita*/
   margin-left: 30%;
-margin-top: 50px;
+  margin-top: 50px;
   /* margin-top: 25px; */
 }
-.botonSaberMas a{
+.botonSaberMas a {
   text-decoration: none;
   color: black;
 }
@@ -235,22 +232,21 @@ margin-top: 50px;
   /*Contenedor del titulo*/
   margin-left: 10%;
   width: 80%;
-  padding:10px;
+  padding: 10px;
   height: auto;
 }
 .portfolio_headings h2 {
   /*titulo*/
   font-size: 1.5em;
   margin: 10px 0px 20px 0px;
-
 }
-.search-bar{
-    margin: 0px;
+.search-bar {
+  margin: 0px;
 }
 .language-selection {
-    display: inline;
-    height: auto;
-    width: 60%;
+  display: inline;
+  height: auto;
+  width: 60%;
   /* superior, derecha,inferior, izquierda */
   margin: 30px 0 30px 0;
 }
@@ -258,16 +254,16 @@ margin-top: 50px;
 .custom-checkbox {
   position: relative;
   margin-right: 20px;
-padding: 5px;
+  padding: 5px;
   cursor: pointer;
   font-size: 18px;
   user-select: none;
 }
-.custom-checkbox:hover{
-background-color: #5eacd9;
-box-shadow: none;
-transition: ease-in 0.4s; 
-  }
+.custom-checkbox:hover {
+  background-color: #5eacd9;
+  box-shadow: none;
+  transition: ease-in 0.4s;
+}
 
 .textoCheckbox {
   color: white;
@@ -280,24 +276,27 @@ transition: ease-in 0.4s;
   justify-content: center;
 } */
 #botonFiltro {
- display: block;
+  display: block;
   text-decoration: none;
   padding: 10px 20px;
   background-color: rgb(227, 246, 9);
   border: none;
   border-radius: 20px;
   cursor: pointer; /*Para que aparezca la manita*/
-margin-left: 1%;
-margin-top: 25px;
+  margin-left: 1%;
+  margin-top: 25px;
+}
+#botonFiltro:focus {
+  outline: none; /* Asegura que no haya contorno cuando el botón es enfocado */
 }
 /* ******** INICIO CARDS*/
 /* contenedor padre de todas las cards */
 .container {
-    background-color: #2a2929; 
-  display: flex; /*par que las card esten  en el centro*/
+  background-color: #2a2929;
+  display: flex; /*par que las card estén  en el centro*/
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /*par que las card esten  en el centro*/
+  flex-wrap: wrap; /*par que las card estén  en el centro*/
   padding: 3em;
   margin: 0 auto;
   max-width: 100%; /* Cambia width por max-width */
@@ -307,10 +306,10 @@ margin-top: 25px;
 .card {
   display: grid;
   width: 27%;
-height: 400px;
+  height: 400px;
   color: aliceblue;
   background-color: cadetblue;
-  /* superior, derecha, ingerior e izquierda */
+  /* superior, derecha, inferior e izquierda */
   margin: 10px 15px 20px 15px;
   float: left;
 }
@@ -362,9 +361,8 @@ height: 400px;
   /*Cuando el cursor esta encima del boton el cambia de color*/
   background-color: rgb(246, 100, 9);
   box-shadow: none;
-  transition: ease-in 0.5s; 
+  transition: ease-in 0.5s;
 }
-
 
 .card_img-java {
   width: 100%;
