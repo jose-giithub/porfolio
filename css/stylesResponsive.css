@@ -33,7 +33,7 @@
     font-family: Tahoma, "Segoe UI", Verdana, sans-serif;
     font-weight: bold;
   }
-
+  /* *********infor_personal.html logos CONOCIMIENTOS */
   .divConocimientos {
     /* background-color: blue; */
     width: 80%;
@@ -42,22 +42,23 @@
   #padreIconosLenguajes{
     /* background-color: brown; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 80%;
-    height: 330px;
+    height: auto;
     margin-left: 10%;
-    margin-bottom: 20px;
-
+    margin-bottom: 0px;
   }
-  .Conocimientos{
-    /* background-color: red; */
+
+  .divIcono{
+    /* background-color: blue; */
           /* superior, derecha, inferior, izquierda */
-    margin: 20px 0 10px 0; 
+    margin: 20px 0 30px 0; 
 
   }
 }
 /* Estilos responsive */
 @media (max-width: 768px) {
+
 
   button {
     font-size: 12px;
@@ -270,7 +271,6 @@
 /* Media Query para pantallas de móviles */
 @media (max-width: 600px) {
   /* ***HEADER NAV */
-
   .brand {
     font-size: 12px;
   }
@@ -377,6 +377,7 @@
     /*Estilos boton de las cards*/
     margin-bottom: 5px;
   }
+    /* *********infor_personal.html logos CONOCIMIENTOS */
   .about-Conocimientos {
     /* background-color:pink; */
   }
@@ -384,5 +385,9 @@
     /* background-color: greenyellow; */
     width: 80%;
     margin-left: 8%;
+  }
+  #padreIconosLenguajes{
+    grid-template-columns: 1fr 1fr;
+    height: auto;
   }
 }

@@ -306,12 +306,16 @@ p {
 .card {
   display: grid;
   width: 27%;
-  height: 400px;
+  height: 450px;
   color: aliceblue;
   background-color: cadetblue;
   /* superior, derecha, inferior e izquierda */
   margin: 10px 15px 20px 15px;
   float: left;
+}
+.card a{
+  text-decoration: none;
+  color: black;
 }
 .card_img {
   /*original */
@@ -324,6 +328,7 @@ p {
   border: solid 4px cadetblue;
 }
 .card_title {
+  margin-left: 5px;
   padding: 1px;
   font-size: larger;
   color: white;
@@ -344,6 +349,7 @@ p {
   color: black;
 }
 .proyects_details_content {
+  margin-left: 5px;
   display: flex;
   width: 99%;
   height: auto;
@@ -353,6 +359,10 @@ p {
 }
 
 #botonCards {
+  padding: 5px 15px;
+ text-align: center;
+ justify-content: center;
+ align-items: center;
   height: 45%;
   /*Estilos boton de las cards*/
   margin-bottom: 10px;
@@ -363,11 +373,33 @@ p {
   box-shadow: none;
   transition: ease-in 0.5s;
 }
-
+.card_img-nodeJs {
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/logoNode-js.jpg);
+  /* background-image: url(../img/logoJava.png); */
+  background-color: white; /* color fondo */
+  background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el contenedor */
+  border: solid 4px cadetblue;
+}
+.card_img-laravel {
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/logo-laravel250x83.png);
+  /* background-image: url(../img/logoJava.png); */
+  background-color: white; /* color fondo */
+  background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el contenedor */
+  border: solid 4px cadetblue;
+}
 .card_img-java {
   width: 100%;
   height: 150px;
   background-image: url(../img/logoJava.png);
+  /* background-image: url(../img/logoJava.png); */
   background-color: white; /* color fondo */
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */

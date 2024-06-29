@@ -246,11 +246,14 @@ p {
   width: 90%;
   background-color: #efaa14;
 }
-/*Estilos about-conocimientos***************/
+  /* *********infor_personal.html logos CONOCIMIENTOS */
+
 .about-Conocimientos {
   margin: 0;
   background-color: #2a2929;
 }
+
+/* contenedor titulo barra y texto */
 .divConocimientos {
   margin-top: 20px;
   width: 80%;
@@ -270,33 +273,38 @@ p {
   font-size: larger;
   font-family: "Comic Sans MS", sans-serif;
 }
+/******************ICONOS***********/
+#padreIconosLenguajes{
+  /* background-color: brown; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 80%;
+  height: 250px;
+  margin-left: 10%;
+  margin-bottom: auto;
+}
+/* TITULO ICONOS */
 .Conocimientos-icono {
   color: white;
 }
 
-/******************iconos*/
-#padreIconosLenguajes {
-  width: 99%;
-  margin-left: 5%;
-}
-.Conocimientos {
+.divIcono {
+  /* background-color: blue; */
   display: inline-block;
-  width: auto;
+  /* width: auto; */
   text-align: center;
   /* superior, derecha, inferior, izquierda */
-  margin: 20px 50px 50px 65px;
+  margin: 10px 50px auto 75px;
 }
 
-.Conocimientos i {
-  /* Estilo  iconos  */
+.divIcono i {
   font-size: 3.2em; /* Tamaño iconos*/
 }
 
-.Conocimientos h4 {
-  /* Estilo  títulos */
+.divIcono h4 {
   margin-bottom: 0.5em; /* espacio entre  títulos y los iconos */
 }
-/*  CREO QUE ESTO SE VA A TOMAR POR VIENTO */
+/*********************  Estilos contacto.html ************************/
 .btn-submit {
   padding: 10px 20px;
   margin: 1em;
@@ -308,4 +316,3 @@ p {
   box-shadow: 1px 3px 11px -5px rgba(red, green, blue, alpha);
 }
 
-/*********CREO QUE ESTO SE VA A TOMAR VIENTO*/

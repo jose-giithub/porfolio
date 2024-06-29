@@ -8,7 +8,7 @@
     <!-- <link rel="stylesheet" href="css/styles.css"> -->
     <link rel="stylesheet" href="css/stylesInedex.css" />
     <link rel="stylesheet" href="css/stylesResponsive.css" />
-    <script src="js/porfolio.js"></script>
+    <script src="js/index.js"></script>
     <script src="js/funciones.js"></script>
     <script
       src="https://kit.fontawesome.com/6359741856.js"
@@ -29,10 +29,10 @@
             &#9776;
           </button>
           <ul class="menu">
-            <li><a id="active" class="active" href="index.html">Home</a></li>
+            <li><a id="active" class="active" href="index.html">Inicio</a></li>
             <li><a href="info_personal.html">Sobre mí</a></li>
             <li><a href="info_personal.html">CV</a></li>
-            <li><a href="#porfolio">Porfolio</a></li>
+            <li><a href="#porfolio">Portfolio</a></li>
           </ul>
         </nav>
       </header>
@@ -42,7 +42,7 @@
         <div class="info-content" id="info_personal">
           <h1>
             Mi nombre es <span> J.L. Rodríguez </span> y has llegado a mi
-            porfolio
+            portfolio
           </h1>
           <h3><p>Soy programador junior</p></h3>
           <a class="hrefLinkedIn" download href="https://www.linkedin.com/feed/"
@@ -117,8 +117,42 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <!--******************copia HTML  1-->
+<!-- ////////***************CARDS ******************************************** -->
+    <div class="container" id="porfolio">
+
+        <!--******************copia LARAVEL  1-->
+        <div class="card" data-language="php,html,javascript">
+          <!--data-language para filtrar-->
+          <div class="card_img-laravel"></div>
+          <div class="card_title">
+            <h2>Descripción</h2>
+            <p>
+              Proyecto en Laravel con ecosistema Breeze + PHP, HTML CSS, JavaScript, AQL, bootstrap  y algo de  tailwind.
+            </p>
+          </div>
+          
+          <div class="card_proyecto_links">
+            <!--*********icono de -->
+            <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
+            <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
+            <a href="https://github.com/jose-giithub/FinalProject-Xavi-Jose" target="_blank"
+              >GitHub <i class="fa-brands fa-github"></i
+            ></a>
+            <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a>
+            <a href="">img<i class="fa-solid fa-code"></i></a> -->
+          </div>
+          <div class="proyects_details_content">
+            <!--*********boton -->
+            <button id="botonCards" class="project-details-button">
+              <a
+                href="https://proyecto-final.jose-rodriguez-blanco.es/"
+                >Ir al proyecto
+              </a>
+            </button>
+          </div>
+        </div>
+        <!--FINAL copia Laravel 1-->
+          <!--******************copia HTML  1-->
       <div class="card" data-language="html">
         <!--data-language para filtrar-->
         <div class="card_img-html"></div>
@@ -133,7 +167,7 @@
           <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
           <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
           <a href="https://github.com/jose-giithub/porfolio" target="_blank"
-            >código <i class="fa-brands fa-github"></i
+            >GitHub <i class="fa-brands fa-github"></i
           ></a>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a>
           <a href="">img<i class="fa-solid fa-code"></i></a> -->
@@ -149,6 +183,37 @@
           </button>
         </div>
       </div>
+      <!-- INICIO CARD NODE.JS -->
+      <div class="card" data-language="html,javascript">
+        <!--data-language para filtrar-->
+        <div class="card_img-nodeJs"></div>
+        <div class="card_title">
+          <h2>Descripción</h2>
+          <p>
+            Juego piedra, papel, tijeras, lagarto o Spock para jugar en dos pantallas separadas. Creado con node.js, html css y Bootstrap
+          </p>
+        </div>
+        <div class="card_proyecto_links">
+          <!--*********icono de -->
+          <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
+          <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
+          <a href="https://github.com/jose-giithub/piedra-papel-tijera-lagarto-spock" target="_blank"
+            >GitHub <i class="fa-brands fa-github"></i
+          ></a>
+          <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a>
+          <a href="">img<i class="fa-solid fa-code"></i></a> -->
+        </div>
+        <div class="proyects_details_content">
+          <!--*********boton -->
+          <button id="botonCards" class="project-details-button">
+            <a
+              href="https://dev5piedra-papel.jose-rodriguez-blanco.es/"
+              >Ir al proyecto
+            </a>
+          </button>
+        </div>
+      </div>
+       <!-- FINAL CARD NODE.JS -->
       <!--FINAL copia HTML 1-->
       <!--******************copia HTML  2-->
       <div class="card" data-language="html">
@@ -168,7 +233,7 @@
             href="https://github.com/jose-giithub/Animaciones-CSS"
             target="_blank"
           >
-            código
+          GitHub
             <i class="fa-brands fa-github"></i
           ></a>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a>
@@ -194,8 +259,7 @@
         <div class="card_title">
           <h2>Descripción</h2>
           <p>
-            Juego del laberinto realizado en java. Se juega por consola y es un
-            retorno al pasado.
+            Juego busca minas personalizado, titulado 'Cazador de puntos'. Creado con Java en interdice gráfica Scene Builder.
           </p>
         </div>
         <div class="card_proyecto_links">
@@ -203,9 +267,9 @@
           <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
           <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
           <a
-            href="https://github.com/jose-giithub/Proyecte_UF3_laberinto/tree/main"
+            href="https://github.com/jose-giithub/Cazador-de-punts"
             target="_blank"
-            >código <i class="fa-brands fa-github"></i
+            >GitHub <i class="fa-brands fa-github"></i
           ></a>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
           <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
@@ -213,7 +277,7 @@
         <div class="proyects_details_content">
           <!--*********boton -->
           <button id="botonCards" class="project-details-button">
-            <a href="" style="text-decoration: none; color: black"
+            <a href="https://github.com/jose-giithub/Cazador-de-punts"
               >Ir al proyecto
             </a>
           </button>
@@ -237,7 +301,7 @@
           <a
             href="https://github.com/jose-giithub/DevChalleng_SQWORD"
             target="_blank"
-            >código
+            >GitHub
             <i class="fa-brands fa-github"></i>
           </a>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
@@ -272,7 +336,7 @@
           <a
             href="https://github.com/jose-giithub/Ahorcado-JavaScript"
             target="_blank"
-            >código
+            >GitHub
             <i class="fa-brands fa-github"></i>
           </a>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
@@ -308,7 +372,7 @@
             href="https://github.com/jose-giithub/-rbol-de-navidad-JavaScript/tree/main"
             target="_blank"
           >
-            código
+          GitHub
             <i class="fa-brands fa-github"></i>
           </a>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
@@ -337,7 +401,7 @@
           <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
           <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
           <a href="https://github.com/jose-giithub/LaravelLogin" target="_blank"
-            >código
+            >GitHub
             <i class="fa-brands fa-github"></i>
           </a>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
@@ -371,7 +435,7 @@
           <a
             href="https://github.com/jose-giithub/LaravelFullCalendar"
             target="_blank"
-            >código
+            >GitHub
             <i class="fa-brands fa-github"></i>
           </a>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
