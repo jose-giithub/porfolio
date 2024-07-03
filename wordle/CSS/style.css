@@ -1,0 +1,70 @@
+
+body{
+ background-color: rgb(185, 174, 160);
+}
+/* ESTILOS FORMULARIO */
+#formulario{
+max-width: 400px;
+background-color:  rgb(189, 194, 142);;
+}
+
+/*ESTILO CUADRICULA DINÁMICA */
+#cuadricula {
+    display: flex;
+    width: 430px; /* Tamaño total de la cuadrícula (5 * 80px) */
+    height: 450px; /* Tamaño total de la cuadrícula (5 * 80px) */
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Centra el contenedor en la página */
+  }
+  
+  /*ESTILO CUADRICULA DINÁMICA */
+#cuadricula {
+    display: flex;
+    width: 430px; /* Tamaño total de la cuadrícula (5 * 80px) */
+    height: 450px; /* Tamaño total de la cuadrícula (5 * 80px) */
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Centra el contenedor en la página */
+  }
+  
+  .cell {
+    width: 70px; /* Ajusta el ancho según tus preferencias */
+    height: 70px; /* Ajusta la altura según tus preferencias */
+    text-align: center;
+    background-color:white;
+    font-size: 50px; /* Ajusta el tamaño de la fuente según tus preferencias */
+    text-transform: uppercase;
+    color: #000;
+    border: solid 3px black;
+    margin: 1px 1px 1px 1px;
+  }
+
+  
+/* VERIFICAR LETRAS */
+.perfect {
+    background-color: #6aaa64; /* Verde para letras correctas */
+  }
+  
+  .coincide {
+    background-color: #c9b458; /* Amarillo para letras coincides en la palabra pero en posición incorrecta */
+  }
+
+  
+  .noCoincide {
+    background-color: #787c7e; /* Un tono de gris */
+  }
+
+
+
+ /* FINAL ESTILOS INSTRUCCIONES  */
+ /* ESTILOS TECLADO VIRTUAL */
+
+  .btn {
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+  }
+
