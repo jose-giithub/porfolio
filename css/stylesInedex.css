@@ -306,7 +306,7 @@ p {
 .card {
   display: grid;
   width: 27%;
-  height: 450px;
+  height: 500px;
   color: aliceblue;
   background-color: cadetblue;
   /* superior, derecha, inferior e izquierda */
