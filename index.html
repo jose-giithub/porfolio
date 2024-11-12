@@ -12,10 +12,9 @@
     <link rel="stylesheet" href="css/stylesResponsive.css" />
     <script src="js/index.js"></script>
     <script src="js/funciones.js"></script>
-    <script
-      src="https://kit.fontawesome.com/6359741856.js"
-      crossorigin="anonymous"
-    ></script>
+    <!-- cdn JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/6359741856.js"crossorigin="anonymous"></script>
     <!--Fuente de estilos para el porfolio-->
   </head>
   <body>
@@ -47,7 +46,7 @@
             portfolio
           </h1>
           <h3><p>Soy programador junior</p></h3>
-          <a class="hrefLinkedIn" download href="https://www.linkedin.com/feed/"
+          <a class="hrefLinkedIn" download href="https://www.linkedin.com/in/j-l-rodriguez-blanco/"  target="_blank"
             ><!-- En download le pones el nombre del archivo a descargar y se descarga solo-->
             <button class="redirectLinkedIn">Ir a mi LinkedIn</button>
           </a>
@@ -142,6 +141,9 @@
             <a href="https://github.com/jose-giithub/FinalProject-Xavi-Jose" target="_blank"
               >GitHub <i class="fa-brands fa-github"></i
             ></a>
+            <span class="infoCard laravelProyecto" data-info-texto="Este es el proyecto Laravel...">
+              <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+            </span>
             <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a>
             <a href="">img<i class="fa-solid fa-code"></i></a> -->
           </div>
@@ -435,6 +437,9 @@
           GitHub
             <i class="fa-brands fa-github"></i>
           </a>
+          <span class="infoCard arbolNavidad" data-info-texto="Este es el proyecto en JavaScript">
+            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+          </span>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
           <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
         </div>
@@ -472,21 +477,36 @@
           <a
             href="https://github.com/jose-giithub/LaravelFullCalendar"
             target="_blank"
-            >GitHub
-            <i class="fa-brands fa-github"></i>
+            >GitHub<i class="fa-brands fa-github"></i>
           </a>
+          <!-- Icono de info con la descripción del proyecto -->
+          <span class="infoCard infoFullCalendar" data-info-texto=" Este proyecto utiliza el framework Laravel y un ecosistema llamado Jetstream para gestionar el inicio de sesión de los usuarios. 
+          Una vez el usuario accede con su nombre y contraseña, dispone de un calendario personal para gestionar eventos. Este calendario está basado en la librería FullCalendar, la cual ha sido personalizada para estar en español, 
+          mostrar las fechas en el formato dd.mm.yyyy y permitir la configuración de los eventos, como el color, duración (en minutos, horas o días) y opciones para añadir, eliminar o modificar eventos. El lenguaje principal es PHP, complementado con HTML, CSS, JavaScript y Bootstrap.">
+            Info<i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+          </span>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
           <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
         </div>
         <div class="proyects_details_content">
           <!--*********boton -->
           <button id="botonCards" class="project-details-button">
-            <a href=""  target="_blank"
+            <a href="https://github.com/jose-giithub/LaravelFullCalendar"  target="_blank"
               >Ir al proyecto</a>
           </button>
         </div>
       </div>
       <!--FINAL copia php 2-->
+    </div>
+  <!-- modal para mostrar la info de cada card  -->
+    <div class="modalContainer" id="modalContainer" style="display: none;">
+      <div class="modal">
+        <h1>Descripción del proyecto:</h1>
+        <!-- El texto se añade dinamicamente desde index.js capturando el texto desde  span class="infoCard infoFullCalendar" data-info-texto de cada card-->
+        <p>
+        </p>
+        <button id="bootonClose">Cerrar</button>
+      </div>
     </div>
 
   </body>

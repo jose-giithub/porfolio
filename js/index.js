@@ -28,9 +28,19 @@ botonFiltro.addEventListener('click', function () {//evento click del boton
   filterProjects(selectedLanguages);
 });
 
-  
 
-    
+// capturo el boton info que se clickea
+$(".infoCard").click(function() {
+  const infoTexto = $(this).data("info-texto"); // Obtener el texto de data-info-texto
+  $("#modalContainer .modal p").text(infoTexto); // Cambiar el contenido del modal
+  $("#modalContainer").show(); // Mostrar el modal
+});
+
+// Evento para cerrar el modal
+$("#bootonClose").click(function() {
+  $("#modalContainer").hide(); // Ocultar el modal
+});
+
   });//fin del DOMContentLoaded
 
 

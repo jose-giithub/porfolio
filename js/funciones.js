@@ -53,3 +53,5 @@ function mostrarGif(imgMasGif) {
 function mostrarFoto(imgMasGif, imagenEstatica) {
   imgMasGif.src = imagenEstatica;
 }
+
+

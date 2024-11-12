@@ -336,7 +336,7 @@ p {
 .card_proyecto_links {
   /*logos */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .card_proyecto_links a {
   /*titulo de las cartas*/
@@ -347,6 +347,7 @@ p {
   /*logos cartas*/
   font-size: 1.6em;
   color: black;
+  margin: 10px;
 }
 .proyects_details_content {
   margin-left: 5px;
@@ -438,6 +439,49 @@ p {
 }
 .project-details-button {
   text-decoration: none;
+  padding: 10px 20px;
+  background-color: rgb(227, 246, 9);
+  border: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+/* //////**********Estilos modal */
+.infoCard{
+  cursor: pointer;
+  color: white;
+}
+
+/* Contenedor principal del modal */
+.modalContainer {
+  display: none; /* Ocultar el modal inicialmente */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos del modal */
+.modal {
+  width: 50%;
+  padding: 20px;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  background-color: rgba(255, 255, 255); /* Fondo semitransparente */
+  color: black;
+  border-radius: 8px;
+  text-align: center;
+}
+ .modal h1{
+  font-size: 1.2em;
+}
+
+/* Botón para cerrar el modal */
+#bootonClose {
   padding: 10px 20px;
   background-color: rgb(227, 246, 9);
   border: none;
