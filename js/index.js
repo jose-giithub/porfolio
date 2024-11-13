@@ -30,17 +30,23 @@ botonFiltro.addEventListener('click', function () {//evento click del boton
 
 
 
-// capturo el boton info que se clickea
+ /**
+  * Al hacer click sobre el icono info de cada card, se muestra un modal con la información del proyecto
+   * Cambiar el texto del modal por el texto obtenido
+   * Caputra el texto que tiene como atributo data-info-texto en la etiqueta span incluye saltos de línea
+   * Lo convierte en una etiqueta html y lo añade al modal
+   */
 $(".infoCard").click(function() {
     // Obtener el texto de data-info-texto y Reemplazar cada punto y aparte con un salto de línea en HTML
     const infoTexto = $(this).data("info-texto").replace(/\n/g, "<br>");
-    
-    // Cambiar el contenido del modal y mostrarlo
-    $("#modalContainer .modal p").html(infoTexto);
-  $("#modalContainer").show(); // Mostrar el modal
+    $("#modalContainer .modal p").html(infoTexto);//añado el texto al modal
+    $("#modalContainer").show(); // Mostrar el modal
 });
 
-// Evento para cerrar el modal
+/**
+ * Al hacer click sobre el botón de cerrar del modal, se oculta el modal
+ * Boton con id bootonClose
+ */
 $("#bootonClose").click(function() {
   $("#modalContainer").hide(); // Ocultar el modal
 });
