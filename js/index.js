@@ -29,10 +29,14 @@ botonFiltro.addEventListener('click', function () {//evento click del boton
 });
 
 
+
 // capturo el boton info que se clickea
 $(".infoCard").click(function() {
-  const infoTexto = $(this).data("info-texto"); // Obtener el texto de data-info-texto
-  $("#modalContainer .modal p").text(infoTexto); // Cambiar el contenido del modal
+    // Obtener el texto de data-info-texto y Reemplazar cada punto y aparte con un salto de línea en HTML
+    const infoTexto = $(this).data("info-texto").replace(/\n/g, "<br>");
+    
+    // Cambiar el contenido del modal y mostrarlo
+    $("#modalContainer .modal p").html(infoTexto);
   $("#modalContainer").show(); // Mostrar el modal
 });
 

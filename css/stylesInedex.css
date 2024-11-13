@@ -465,7 +465,10 @@ p {
   justify-content: center;
   align-items: center;
 }
-
+/* Texto del modal */
+.modalContainer .modal p {
+  text-align: left !important;
+}
 /* Estilos del modal */
 .modal {
   width: 50%;
