@@ -1,0 +1,6 @@
+# Ignorar archivo README copy.md con apuntes personales. Dejo el README.md con la info no problemática
+README copy.md
+
+# Ignorar archivo docker-compose copy.yaml   con apuntes personales. Dejo el docker-compose.yaml con la info no problemática
+docker-compose copy.yaml
+docker-compose copy 2.yaml
