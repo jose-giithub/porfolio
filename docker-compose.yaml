@@ -1,18 +1,20 @@
 services:
-  animacioncss:
-    container_name: porfolio
+  portfolio:
+    container_name: ejemploContainerPortfolio
     image: nginx:alpine
     # Rutas. Asegure que los archivos están en la ruta especificada
     volumes:
-      - .:/usr/share/nginx/html
-      - ./images:/usr/share/nginx/html/img
+     # la carpeta 'www' como directorio web del contenedor
+      - ./www:/usr/share/nginx/html:ro  
+      # Monta la configuración personalizada de Nginx
+      - ./default.conf:/etc/nginx/conf.d/default.conf:ro
     restart: unless-stopped
     ports:
       - '80'  # Solo expongo el puerto 80
     networks:
-      - proxiable
+      - ejemploNetworks
 
 
 networks:
-  proxiable:
+  ejemploNetworks:
     external: true
