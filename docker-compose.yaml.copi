@@ -1,0 +1,18 @@
+services:
+  animacioncss:
+    container_name: porfolio
+    image: nginx:alpine
+    # Rutas. Asegure que los archivos están en la ruta especificada
+    volumes:
+      - .:/usr/share/nginx/html
+      - ./images:/usr/share/nginx/html/img
+    restart: unless-stopped
+    ports:
+      - '80'  # Solo expongo el puerto 80
+    networks:
+      - proxiable
+
+
+networks:
+  proxiable:
+    external: true

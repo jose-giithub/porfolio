@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <!-- Favicon  -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons8-star-16.png">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/stylesResponsive.css" />
+    <script src="js/infoPersonal.js"></script>
+    <script src="js/funciones.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6359741856.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      crossorigin="anonymous"
+    />
+    <!--Fuente de estilos para el porfolio-->
+    <title>Informació personal</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!--Primera parte-->
+      <header>
+        <nav class="navbar">
+          <div class="brand">
+            <h2>J<span>ose</span></h2>
+          </div>
+          <!-- Boton con icono que solo se muestra en pantallas pequeñas -->
+          <button class="hamburger" aria-label="Menu" aria-expanded="false">
+            &#9776;
+          </button>
+          <ul class="menu">
+            <li><a id="active" class="active" href="index.html">Inicio</a></li>
+            <li><a href="info_personal.html">Sobre mí</a></li>
+            <li><a href="index.html#porfolio">Porfolio</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!--Texto info personal he imagen -->
+      <main class="main">
+        <div class="info-content" id="info_personal">
+          <h1>Habilidades y<span> Capacidades</span></h1>
+          <h3><p>¿Quieres saber mas? no lo dudes descarga mi CV</p></h3>
+          <a class="downloadCv" download href="documentos/CV-Jose.pdf">
+            <button class="download-cv">Descargar cv</button>
+          </a>
+        </div>
+        <!--  Gif cabecera, src="./img/placeholder.png"  es la imagen estática que se muestra si no pasas el ratón por encima-->
+        <img
+          id="imgHabilidades"
+          src="./img/fotoCuboRubik2.png"
+          data-gif="./img/gifCuboRubik.gif"
+          alt="Cubo de Rubik"
+        />
+      </main>
+      <br />
+    </div>
+    <!--Final de wrapper -->
+
+    <!--**********Segunda parte debajo del texto de presentación e imagen -->
+    <div class="about">
+      <h2>Mis habilidades</h2>
+      <div class="divider"></div>
+      <!-- ralla debajo del titulo-->
+      <!-- <img src="./img/estadistica300x230.png" alt="4 Siluetas de personas bailando" > -->
+
+      <!--Habilidades y conocimientos-->
+      <div class="divPAdreHabilidades">
+        <div class="habilidad">
+          <!--Barras de Habilidades 1-->
+          <h4><span class="habilidad-text">Tenacidad</span></h4>
+          <div class="barra-nivel-110"></div>
+        </div>
+        <!--Fin Barras de Habilidades 1-->
+
+        <div class="habilidad">
+          <!--Barras de Habilidades 2-->
+          <h4>
+            <span class="habilidad-text">Predisposición</span>
+            <div class="barra-nivel-100"></div>
+          </h4>
+        </div>
+        <!--Fin Barras de Habilidades 2-->
+
+        <div class="habilidad">
+          <!--Barras de Habilidades 3-->
+          <h4>
+            <span class="habilidad-text">Flexibilidad</span>
+            <div class="barra-nivel-80"></div>
+          </h4>
+        </div>
+        <!--Fin Barras de Habilidades 3-->
+
+        <div class="habilidad">
+          <!--Barras de Habilidades 4-->
+          <h4>
+            <span class="habilidad-text">Adaptabilidad</span>
+            <div class="barra-nivel-85"></div>
+          </h4>
+        </div>
+        <!--Fin Barras de Habilidades 4-->
+
+        <div class="habilidad">
+          <!--Barras de Habilidades 5-->
+          <h4>
+            <span class="habilidad-text">Disciplina</span>
+            <div class="barra-nivel-105"></div>
+          </h4>
+        </div>
+        <!--Fin Barras de Habilidades 5-->
+
+        <!-- Agrega más habilidades según sea necesario -->
+        <!--**********boton -->
+        <!-- <button class="download-cv">Saber mas</button>-->
+        <!--**********boton -->
+      </div>
+    </div>
+    <!--final  about-info-->
+
+    <!--********** Inicio de Conocimientos -->
+    <div class="about-Conocimientos">
+      <div class="divConocimientos">
+        <h2>Mis Conocimientos</h2>
+        <div class="divider"></div>
+        <!--PAra crear una ralla debajo del titulo "Sobre mi"-->
+        <h4 class="h4-conocimientos">
+          Soy programador<samp> junior </samp>de:
+        </h4>
+      </div>
+      <div id="padreIconosLenguajes">
+        <!--****Conocimientos nuevo***-->
+        <div class="divIcono">
+          <!--Conocimientos html-->
+          <h4><span class="Conocimientos-icono">HTML</span></h4>
+          <div class="HTML">
+            <i class="fa-brands fa-html5" style="color: #c46a03"></i>
+          </div>
+        </div>
+        <!--****Conocimientos nuevo***-->
+        <div class="divIcono">
+          <!--Conocimientos  css-->
+          <h4><span class="Conocimientos-icono">CSS</span></h4>
+          <div class="HTML">
+            <i class="fa-brands fa-css3-alt" style="color: #2a36ea"></i>
+          </div>
+        </div>
+        <!--****Conocimientos nuevo***-->
+        <div class="divIcono">
+          <!--Conocimientos   Bootstrap-->
+          <h4><span class="Conocimientos-icono">Bootstrap</span></h4>
+          <div class="bootstrap">
+            <i class="fa-brands fa-bootstrap" style="color: #845df9"></i>
+          </div>
+        </div>
+        <!--****Conocimientos nuevo***-->
+        <div class="divIcono">
+          <!--Conocimientos  javaScript-->
+          <h4><span class="Conocimientos-icono">JavaScript</span></h4>
+          <div class="JavaScript">
+            <i class="fa-brands fa-js" style="color: #defb04"></i>
+          </div>
+        </div>
+        <!--****Conocimientos nuevo***-->
+        <div class="divIcono">
+          <!--Conocimientos   Bootstrap-->
+          <h4><span class="Conocimientos-icono">Node-js</span></h4>
+          <div class="nodeJs">
+            <i class="fa-brands fa-node" style="color: #2caf2e"></i>
+          </div>
+        </div>
+        <!--****Conocimientos nuevo***-->
+        <div class="divIcono">
+          <!--Conocimientos  php-->
+          <h4><span class="Conocimientos-icono">PhP</span></h4>
+          <div class="PhP">
+            <i class="fa-brands fa-php" style="color: #0074b2"></i>
+          </div>
+        </div>
+        <!--****Conocimientos nuevo***-->
+        <div class="divIcono">
+          <!--Conocimientos  Laravel-->
+          <h4><span class="Conocimientos-icono">Laravel</span></h4>
+          <div class="laravel">
+            <i class="fa-brands fa-laravel" style="color: #c01616"></i>
+          </div>
+        </div>
+        <!--****Conocimientos nuevo***-->
+        <div class="divIcono">
+          <!--Conocimientos  SQL-->
+          <h4><span class="Conocimientos-icono">SQL</span></h4>
+          <div class="SQL">
+            <i class="fa-solid fa-database" style="color: #005eff"></i>
+          </div>
+        </div>
+        <!--****Conocimientos nuevo***-->
+        <div class="divIcono">
+          <!--Conocimientos  java-->
+          <h4><span class="Conocimientos-icono">Java</span></h4>
+          <div class="Java">
+            <i class="fa-brands fa-java" style="color: #ffffff"></i>
+          </div>
+        </div>
+        <!--****Conocimientos nuevo***-->
+        <div class="divIcono">
+          <!--Conocimientos  Docker-->
+          <h4><span class="Conocimientos-icono">Docker</span></h4>
+          <div class="docker">
+            <i class="fa-brands fa-docker" style="color: #3487f4"></i>
+          </div>
+        </div>
+
+        <!--****Conocimientos nuevo***-->
+      </div>
+    </div>
+    <!--final  about-info-->
+  </body>
+</html>

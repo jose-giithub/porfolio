@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon  -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons8-star-16.png">
+    <title>Portfolio</title>
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="stylesheet" href="css/stylesInedex.css" />
+    <link rel="stylesheet" href="css/stylesResponsive.css" />
+      <!-- cdn JQuery -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/funciones.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6359741856.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--Fuente de estilos para el porfolio-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--Primera parte-->
+      <header>
+        <nav class="navbar">
+          <div class="brand">
+            <h2>J<span>ose</span></h2>
+          </div>
+          <!-- Boton con icono que solo se muestra en pantallas pequeñas -->
+          <button class="hamburger" aria-label="Menu" aria-expanded="false">
+            &#9776;
+          </button>
+          <ul class="menu">
+            <li><a id="active" class="active" href="index.html">Inicio</a></li>
+            <li><a href="info_personal.html">Sobre mí</a></li>
+            <li><a href="info_personal.html">CV</a></li>
+            <li><a href="#porfolio">Portfolio</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!--Texto info personal he imagen -->
+      <main class="main">
+        <div class="info-content" id="info_personal">
+          <h1>
+            Mi nombre es <span> Jose L. Rodríguez </span> y has llegado a mi
+            portfolio
+          </h1>
+          <h3><p>Soy programador junior</p></h3>
+          <a class="hrefLinkedIn" download href="https://www.linkedin.com/in/j-l-rodriguez-blanco/"  target="_blank"
+            ><!-- En download le pones el nombre del archivo a descargar y se descarga solo-->
+            <button class="redirectLinkedIn">Ir a mi LinkedIn</button>
+          </a>
+        </div>
+        <!---->
+        <img
+          id="imgMain"
+          src="./img/joseSimpsoms 300x300.png"
+          alt="homer Simpson"
+        />
+        <!--alt texto alternativo para la imagen-->
+      </main>
+      <br />
+    </div>
+    <!--Final de wrapper -->
+
+    <!--**********Segunda parte debajo del texto de presentación e imagen -->
+    <div class="about">
+      <img id="imgSegunda" src="./img/joseSimpoms2 300x300.png" alt="" />
+
+      <div class="about-info">
+        <h2 id="info_personal">Sobre mí</h2>
+        <div id="divider" class="divider"></div>
+        <!--PAra crear una ralla debajo del titulo "Sobre mi"-->
+        <h4>
+          <p>
+            Soy un apasionado estudiante de programación. Me he embarcado en el
+            emocionante viaje de aprender lenguajes como Java, JavaScript, PHP,
+            HTML, SQL y CSS. Me encanta todo lo que esté relacionado con crear
+            cosas.
+          </p>
+        </h4>
+        <h4><p>Aprieta el botón para descubrir mis habilidades.</p></h4>
+        <button class="botonSaberMas">
+          <a href="info_personal.html">Saber más</a>
+        </button>
+      </div>
+    </div>
+    <!--final del about-->
+
+    <!--*****************inicio parte 3 .  portafolio-->
+    <div class="porfolio" id="porfolio">
+      <div class="portfolio_headings">
+        <h2>Mi portfolio</h2>
+        <div class="divider"></div>
+        <!--para crear una ralla debajo del titulo "-->
+        <!--*********Boton buscar-->
+        <div class="search-bar">
+          <div id="checkboxs" class="language-selection">
+            <label class="custom-checkbox">
+              <input type="checkbox" name="language" value="html" />
+              <span class="textoCheckbox">HTML/CSS</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" name="language" value="java" />
+              <span class="textoCheckbox">Java</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" name="language" value="php" />
+              <span class="textoCheckbox">PHP</span>
+            </label>
+
+            <label class="custom-checkbox">
+              <input type="checkbox" name="language" value="javascript" />
+              <span class="textoCheckbox">JavaScript</span>
+            </label>
+          </div>
+          <button id="botonFiltro">Filtrar</button>
+        </div>
+      </div>
+    </div>
+<!-- ////////***************CARDS ******************************************** -->
+    <div class="container" id="porfolio">
+
+         <!--******************copia LARAVEL  1-->
+        <div class="card" data-language="php,html,javascript">
+          <!--data-language para filtrar-->
+          <div class="card_img-laravel"></div>
+          <div class="card_title">
+            <h2>Proyecto final</h2>
+            <br>
+            <h4>Descripción</h5>
+            <p>
+              Proyecto final usando el Framework  Laravel con ecosistema Breeze + PHP, HTML CSS, JavaScript, AQL, bootstrap  y algo de  tailwind.
+            </p>
+          </div>
+          
+          <div class="card_proyecto_links">
+            <!--*********icono de -->
+            <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
+            <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
+            <a href="https://github.com/jose-giithub/FinalProject-Xavi-Jose" target="_blank"
+              >GitHub <i class="fa-brands fa-github"></i
+            ></a>
+            <span class="infoCard laravelProyecto" data-info-texto="Proyecto final de grado, realizado en colaboración con Francès Xavier Campos y desarrollado con el framework Laravel,
+             utilizando el ecosistema Laravel Breeze para la gestión de usuarios.
+            La web también incorpora una integración de mapas mediante la API de Google Maps y una base de datos gestionada con phpMyAdmin. 
+            Está diseñado en PHP, HTML, CSS, JavaScript, Bootstrap y Tailwind, y cuenta con un entorno en Docker junto con Nginx Proxy Manager.
+            
+            ¿Para qué es esta web?
+            Este sitio conecta a propietarios de talleres con clientes potenciales, ofreciendo a los mecánicos una plataforma donde publicitar sus servicios y ofertas. Los usuarios pueden registrar sus vehículos para mantener un historial y acceder fácilmente a servicios mecánicos.">
+              <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+            </span>
+            <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a>
+            <a href="">img<i class="fa-solid fa-code"></i></a> -->
+          </div>
+          <div class="proyects_details_content">
+            <!--*********boton -->
+            <button id="botonCards" class="project-details-button">
+              <a
+                href="https://proyecto-final.jose-rodriguez-blanco.es/" target="_blank"
+                >Ir al proyecto
+              </a>
+            </button>
+          </div>
+        </div>
+        <!--FINAL copia Laravel 1-->
+          <!--******************copia HTML  1-->
+      <div class="card" data-language="html">
+        <!--data-language para filtrar-->
+        <div class="card_img-html"></div>
+        <div class="card_title">
+          <h2>Mi Portfolio</h2>
+          <br>
+          <h4>Descripción</h5>
+          <p>
+            Este portfolio donde estas ahora mismo, creado desde 0 con HTML, CSS y un poco de JavaScript puros donde musetro algunos
+            de mis trabajos.
+          </p>
+        </div>
+        <div class="card_proyecto_links">
+          <!--*********icono de -->
+          <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
+          <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
+          <a href="https://github.com/jose-giithub/porfolio" target="_blank"
+            >GitHub <i class="fa-brands fa-github"></i
+          ></a>
+          <span class="infoCard portFolio" data-info-texto="Este proyecto es un portfolio personal diseñado desde cero usando HTML, CSS, JavaScript, jQuery y Docker.
+          Incluye distintas secciones donde puedes encontrar mis redes sociales, mi currículum y una muestra de algunos de mis proyectos escolares, con opciones para filtrar según el lenguaje de programación..">
+            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+          </span>
+          <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a>
+          <a href="">img<i class="fa-solid fa-code"></i></a> -->
+        </div>
+        <div class="proyects_details_content">
+          <!--*********boton -->
+          <button id="botonCards" class="project-details-button">
+            <a
+              href="#"
+              target="_blank"
+              >Ir al proyecto
+            </a>
+          </button>
+        </div>
+      </div>
+      <!-- *******INICIO CARD NODE.JS -->
+      <div class="card" data-language="html,javascript">
+        <!--data-language para filtrar-->
+        <div class="card_img-nodeJs"></div>
+        <div class="card_title">
+          <h2>Piedra, papel, tijeras, ++</h2>
+          <br>
+          <h4>Descripción</h5>
+          <p>
+            Juego piedra, papel, tijeras, lagarto o Spock para jugar en dos pantallas separadas. Creado con node.js, html css y Bootstrap
+          </p>
+        </div>
+        <div class="card_proyecto_links">
+          <!--*********icono de -->
+          <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
+          <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
+          <a href="https://github.com/jose-giithub/piedra-papel-tijera-lagarto-spock" target="_blank"
+            >GitHub <i class="fa-brands fa-github"></i
+          ></a>
+          <span class="infoCard nodeJs" data-info-texto="Todo el mundo conoce el clásico juego de 'Piedra, Papel o Tijeras', pero ¿has probado 'Piedra, Papel, Tijeras, Lagarto, Spock'?
+          Este proyecto está desarrollado con el framework Node.js, utilizando HTML, CSS, Bootstrap y presupuestos JavaScript.
+
+          ¿Cómo jugar?
+          Simplemente abre la URL y compártela con alguien con quien quieras jugar en tiempo real. ¡Listo para disfrutar!">
+            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+          </span>
+          <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a>
+          <a href="">img<i class="fa-solid fa-code"></i></a> -->
+        </div>
+        <div class="proyects_details_content">
+          <!--*********boton -->
+          <button id="botonCards" class="project-details-button">
+            <a
+              href="https://piedra-pepel-tijeras.jose-rodriguez-blanco.es/" target="_blank"
+              >Ir al proyecto
+            </a>
+          </button>
+        </div>
+      </div>
+       <!-- FINAL CARD NODE.JS -->
+         <!--******************copia javascript wordle-->
+      <div class="card" data-language="javascript">
+        <div class="card-img-js"></div>
+
+        <div class="card_title">
+          <h2>Juego WORDLE</h2>
+          <br>
+          <h4>Descripción</h5>
+          <p>WORDLE, en catalán. Creado con Html, JavaScript, CSS.
+             Ademas se guarda la info en local storage para guardar tus puntuaciones.</p>
+        </div>
+
+        <div class="card_proyecto_links">
+          <!--*********icono de -->
+          <!--dentro del href se pone el link del GitHub  donde esta subido mi trabajo -->
+          <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
+          <a
+            href="https://github.com/jose-giithub/Proyecto-UF3-WordleIBC-"
+            target="_blank"
+            >GitHub
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <span class="infoCard wordle" data-info-texto="¿Conoces el juego WORDLE? Aquí tienes el mio.
+          Proyecto creado con la Colaboración de Cosmin Calin. Juego creado desde 0 en html, CSS y JavasCript.
+          Tiene un formulario y luego puedes jugar tus partidas y los datos de estas son guardados en LocalStorage para tener un registro de ellas. Las palabras a descubrir están en catalán.">
+            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+          </span>
+          <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
+          <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
+        </div>
+        <div class="proyects_details_content">
+          <!--*********boton -->
+          <button id="botonCards" class="project-details-button">
+            <!-- <a href="https://wordle.jose-rodriguez-blanco.es/"  target="_blank"
+              >Ir al proyecto
+            </a> -->
+            <a href="wordle/index.html"  target="_blank"
+              >Ir al proyecto
+            </a>
+          </button>
+        </div>
+      </div>
+      <!--FINAL copia javascript  wordle-->
+      <!--FINAL copia HTML 1-->
+      <!--******************copia HTML  2-->
+      <div class="card" data-language="html">
+        <!--data-language para filtrar-->
+        <div class="card_img-html"></div>
+
+        <div class="card_title">
+          <h2>Animaciones CSS</h2>
+          <br>
+          <h4>Descripción</h5>
+          <p>Pequeña ejemplo de web dockerizada con HTML y animaciones CSS.</p>
+          <br />
+        </div>
+        <div class="card_proyecto_links">
+          <!--*********icono de -->
+          <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
+          <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
+          <a
+            href="https://github.com/jose-giithub/Animaciones-CSS"
+            target="_blank"
+          >
+          GitHub
+            <i class="fa-brands fa-github"></i
+          ></a>
+          <span class="infoCard animacionCss" data-info-texto="Bonita actividad en HTML y CSS donde se muestra una sucesión de animaciones CSS.">
+            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+          </span>
+          <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a>
+          <a href="">img<i class="fa-solid fa-code"></i></a> -->
+        </div>
+        <div class="proyects_details_content">
+          <!--*********boton -->
+          <button id="botonCards" class="project-details-button">
+            <!-- <a
+              href="https://animacioncss.jose-rodriguez-blanco.es/"
+              target="_blank">Ir al proyecto
+            </a> -->
+            <a
+              href="animacionCss\index.html"
+              target="_blank">Ir al proyecto
+            </a>
+          </button>
+        </div>
+      </div>
+      <!--FINAL copia HTML 2-->
+
+      <!--******************copia 2 java-->
+      <div class="card" data-language="java">
+        <div class="card_img-java"></div>
+
+        <div class="card_title">
+          <h2>Juego Cazador de puntos</h2>
+          <br>
+          <h4>Descripción</h5>
+          <p>
+            Juego busca minas personalizado, titulado 'Cazador de puntos'. Creado con Java en interdice gráfica Scene Builder.
+          </p>
+        </div>
+        <div class="card_proyecto_links">
+          <!--*********icono de -->
+          <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
+          <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
+          <a
+            href="https://github.com/jose-giithub/Cazador-de-punts"
+            target="_blank"
+            >GitHub <i class="fa-brands fa-github"></i
+          ></a>
+          <span  style="text-align: left;" class="infoCard cazaPuntos" data-info-texto="Juego desarrollado en Java, utilizando JavaFX y la herramienta gráfica SceneBuilder. 
+
+          Reglas del juego:
+          • Al inicio, todas las casillas muestran un símbolo de interrogación y el botón Reiniciar pantalla muestra el texto Empezar.
+          • Al hacer clic en una casilla, se revela el contenido detrás. Este contenido se genera aleatoriamente al iniciar la partida.
+          • La partida termina si aparece una 'X'.
+          • Puedes pulsar Reiniciar pantalla en cualquier momento, y las casillas volverán a mostrar el interrogante y su contenido será reordenado aleatoriamente sin perder puntos.
+          ¿Cuál será tu récord?">
+            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+          </span>
+          <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
+          <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
+        </div>
+        <div class="proyects_details_content">
+          <!--*********boton -->
+          <button id="botonCards" class="project-details-button">
+            <a href="https://github.com/jose-giithub/Cazador-de-punts" target="_blank"
+              >Ir al proyecto
+            </a>
+          </button>
+        </div>
+      </div>
+      <!--FINAL copia 2-->
+
+      <!--******************copia javascript 1-->
+      <div class="card" data-language="javascript">
+        <div class="card-img-js"></div>
+
+        <div class="card_title">
+          <h2>Juego SQWORD</h2>
+          <br>
+          <h4>Descripción</h5>
+          <p>Famoso juego conocido como SQWORD. Compite para ser el mejor.</p>
+        </div>
+
+        <div class="card_proyecto_links">
+          <!--*********icono de -->
+          <!--dentro del href se pone el link del GitHub  donde esta subido mi trabajo -->
+          <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
+          <a
+            href="https://github.com/jose-giithub/DevChalleng_SQWORD"
+            target="_blank"
+            >GitHub
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <span class="infoCard sqWord" data-info-texto="Inspirado en el famoso y polémico juego de palabras, Sqword es un juego de lógica y vocabulario creado desde cero usando HTML, CSS y JavaScript.
+
+          Instrucciones de juego:
+          • Coloca letras en la cuadrícula para formar tantas palabras de 3, 4 y 5 letras como puedas. Las palabras se pueden formar en horizontal (de izquierda a derecha) o en vertical (de arriba a abajo), para un máximo de 50 puntos.
+          • Una vez que una letra se coloca en la cuadrícula, no se puede mover.
+          • Cuando hayas usado todas las letras, tu tablero será evaluado. Cada palabra se califica según su longitud (por ejemplo, una palabra de 4 letras vale 4 puntos) y cada línea se califica según la palabra más larga que contenga.
+          • ¡No olvides compartir tu puntuación y regresar mañana para obtener un nuevo desafío!">
+            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+          </span>
+          <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
+          <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
+        </div>
+        <div class="proyects_details_content">
+          <!--*********boton -->
+          <button id="botonCards" class="project-details-button">
+            <a href="sqWord\index.html"  target="_blank"
+              >Ir al proyecto
+            </a>
+          </button>
+        </div>
+      </div>
+      <!--FINAL copia javascript 1 -->
+
+      <!--******************copia javascript 2-->
+      <div class="card" data-language="javascript">
+        <div class="card-img-js"></div>
+        <div class="card_title">
+          <h2>Juego del ahorcado</h2>
+          <br>
+          <h4>Descripción</h5>
+          <p>
+            Juego del ahorcado con JavaScript y un poco de HTML y CSS ¿Salvaras
+            al monstruo?
+          </p>
+        </div>
+
+        <div class="card_proyecto_links">
+          <!--*********icono de -->
+          <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
+          <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
+          <a
+            href="https://github.com/jose-giithub/Ahorcado-JavaScript"
+            target="_blank"
+            >GitHub
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <span class="infoCard ahorcado" data-info-texto="Versión en catalán del clásico juego de ahorcado, donde el objetivo es salvar a nuestro querido Frankenstein.
+          Desarrollado en HTML, CSS y JavaScript.">
+            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+          </span>
+          <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
+          <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
+        </div>
+        <div class="proyects_details_content">
+          <!--*********boton -->
+          <button id="botonCards" class="project-details-button">
+            <a href="ahorcado\index.html" target="_blank"
+              >Ir al proyecto
+            </a>
+          </button>
+        </div>
+      </div>
+      <!--FINAL copia javascript 2 -->
+      <!--******************copia javascript 3-->
+      <div class="card" data-language="javascript">
+        <div class="card-img-js"></div>
+
+        <div class="card_title">
+          <h2>Árbol de navidad</h2>
+          <br>
+          <h4>Descripción</h5>
+          <p>
+            Árbol  de navidad interactivo en JavaScript, HTML y CSS navideña para manipular
+            el DOM.
+          </p>
+        </div>
+
+        <div class="card_proyecto_links">
+          <!--*********icono de -->
+          <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
+          <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
+          <a
+            href="https://github.com/jose-giithub/-rbol-de-navidad-JavaScript/tree/main"
+            target="_blank"
+          >
+          GitHub
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <span class="infoCard arbolNavidad" data-info-texto="Proyecto interactivo de temática navideña en el que puedes personalizar un árbol de Navidad usando HTML, CSS y JavaScript.
+
+          Funciones interactivas:
+          • Encender y apagar la estrella en la cima del árbol.
+          • Controlar las luces de las bombillas para iluminarlas o apagarlas.
+          • Agregar guirnaldas para decorar el árbol.
+          • Colocar regalos debajo del árbol para darle un toque especial.">
+            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+          </span>
+          <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
+          <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
+        </div>
+        <div class="proyects_details_content">
+          <!--*********boton -->
+          <button id="botonCards" class="project-details-button">
+            <!-- <a href="https://arbolnavidad.jose-rodriguez-blanco.es/"
+              >Ir al proyecto
+            </a> -->
+            <a href="arbolNavidad\index.html" target="_blank"
+              >Ir al proyecto
+            </a>
+          </button>
+        </div>
+      </div>
+      <!--FINAL copia javascript 3 -->
+
+
+      <!--******************copia php 2-->
+      <div class="card" data-language="php">
+        <div class="card_img-php"></div>
+        <div class="card_title">
+          <h2>Fullcalendar en Laravel</h2>
+          <br>
+          <h4>Descripción</h5>
+          <p>
+            Proyecto en Laravel usando el ecosistema de login Jetstream y
+            fullcalendar
+          </p>
+        </div>
+        <div class="card_proyecto_links">
+          <!--*********icono de -->
+          <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
+          <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
+          <a
+            href="https://github.com/jose-giithub/LaravelFullCalendar"
+            target="_blank"
+            >GitHub<i class="fa-brands fa-github"></i>
+          </a>
+          <!-- Icono de info con la descripción del proyecto -->
+          <span class="infoCard infoFullCalendar" data-info-texto=" Este proyecto utiliza el framework Laravel y un ecosistema llamado Jetstream para gestionar el inicio de sesión de los usuarios. 
+          Una vez el usuario accede con su nombre y contraseña, dispone de un calendario personal para gestionar eventos. Este calendario está basado en la librería FullCalendar, la cual ha sido personalizada para estar en español, 
+          mostrar las fechas en el formato dd.mm.yyyy y permitir la configuración de los eventos, como el color, duración (en minutos, horas o días) y opciones para añadir, eliminar o modificar eventos. El lenguaje principal es PHP, complementado con HTML, CSS, JavaScript y Bootstrap.">
+            Info<i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+          </span>
+          <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
+          <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
+        </div>
+        <div class="proyects_details_content">
+          <!--*********boton -->
+          <button id="botonCards" class="project-details-button">
+            <a href="https://github.com/jose-giithub/LaravelFullCalendar"  target="_blank"
+              >Ir al proyecto</a>
+          </button>
+        </div>
+      </div>
+      <!--FINAL copia php 2-->
+    </div>
+  <!-- modal para mostrar la info de cada card  -->
+    <div class="modalContainer" id="modalContainer" style="display: none;">
+      <div class="modal">
+        <h1>Descripción del proyecto:</h1>
+        <!-- El texto se añade dinamicamente desde index.js capturando el texto desde  span class="infoCard infoFullCalendar" data-info-texto de cada card-->
+        <p>
+        </p>
+        <button id="bootonClose">Cerrar</button>
+      </div>
+    </div>
+
+  </body>
+</html>
