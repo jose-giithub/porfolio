@@ -1,9 +1,22 @@
 body {
-  background-color: #ffdab9;
+  background-color: #F5B027;
+}
+header{
+  background-color: white;
 }
 
+header h1 {
+  margin: 0; /* quita margen superior e inferior */
+  padding: 10px 0; /* opcional: controlas tú el espacio */
+}
+
+.message-container h2 {
+  margin: 0; 
+  padding: 5px 0; /* igual aquí defines tú el espacio */
+}
 .message-container {
-  margin-bottom: 20px;
+  background-color: white;
+  margin-bottom: 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -15,7 +28,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffdab9;
+  background-color: #F5B027;
   border-radius: 10px;
   margin-bottom: 10px; /* Ajusta el valor según la separación que desees */
 }
@@ -29,7 +42,7 @@ body {
   width: 80px;
   font-size: 60px;
   align-items: center;
-  background-color: #ffdab9;
+  background-color: white;
   border-radius: 10px;
   text-transform: uppercase;
   margin-bottom: 10px; /* Ajusta el valor según la separación que desees */
@@ -37,7 +50,7 @@ body {
 
 /*ESTILOS JOKER*/
 #contenedorJoker {
-  background-color: #ffdab9; /* Cambia al mismo color del fondo del body */
+  background-color: #F5B027; /* Cambia al mismo color del fondo del body */
   display: none;
   width: 800px;
 }
@@ -46,7 +59,7 @@ body {
   border: 2px solid #000;
   padding: 20px;
   border-radius: 10px;
-  background-color: #ffdab9; /* Cambia al mismo color del fondo del body */
+  background-color: #F5B027; /* Cambia al mismo color del fondo del body */
   box-shadow: 0 4px 8px rgba(0,0,0,.05);
 }
 
@@ -71,7 +84,7 @@ body {
   width: 70px; /* Ajusta el ancho según tus preferencias */
   height: 70px; /* Ajusta la altura según tus preferencias */
   text-align: center;
-  background-color: #ffdab9;
+  background-color:white;
   font-size: 50px; /* Ajusta el tamaño de la fuente según tus preferencias */
   text-transform: uppercase;
   color: #000;
@@ -85,7 +98,7 @@ input{
   width: 80px;
   height: 80px;
   text-align: center;
-  background-color:  #ffdab9;
+  background-color:  #F5B027;
   font-size: 60px;
   text-transform: uppercase;
   color: #000;
@@ -127,15 +140,27 @@ input{
   text-decoration: none;
   cursor: pointer;
   color: #fff;
-  background-color: #8d6f54;
+  background-color: #169716;
   border: 2px solid #000;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 }
 #mostarInstrucciones:hover {
   background-color: #0056b3;
+  transition: transform 1s ease, background-color 1s ease;
   color: #fff;
 }
+/* Contenedor de la puntuación y fecha final */
+.container-fluid{
+  margin-top: 100px;
+  display: none;
+  background-color: #F5B027;
+
+}
+.container-fluid p{
+  font-size: 18px;
+}
+
 
 /*CSS del resultado*/
 #resultados {

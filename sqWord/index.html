@@ -19,14 +19,15 @@
 
 
 <body>
+  <!-- Titulo principal,  se oculta cuando mostramos el resultado -->
   <header class="titulo">
     <h1 class="text-center">SQWORD</h1>
   </header>
-  <!-- Div que suaremos para cuando salgan los resultados ocultarlo todo -->
+  <!-- Subtitulo principal , se oculta cuando mostramos el resultado-->
   <div id="ocultar">
     <div class="message-container">
       <h2>Següent paraula:</h2>
-    </div>
+  </div>
 
     <!-- Donde se muestra la letra random -->
     <div id="contenedorLetraRandom">
@@ -74,8 +75,9 @@
   </div>
 
   <!-- Mostrar resultados con la hora -->
-  <div id="divPuntuacion" class="container-fluid" style="background-color:gray; display: none;">
-    <div class="row justify-content-center">
+  <!-- <div id="divPuntuacion" class="container-fluid" style="background-color:gray; display: none;"> -->
+  <div id="divPuntuacion" class="container-fluid">
+    <div class="row justify-content-center" id="textPuntuacion">
       <div class="col-6 text-center">
         <p><strong>Puntuación : </strong></p>
         <p id="Fecha"><strong>Fecha : </strong></p>
