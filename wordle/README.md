@@ -1,4 +1,4 @@
-# 🔤 Wordle Adaptado – ¡Adivina la Palabra Oculta!
+# 🔤 Wordle – ¡Adivina la Palabra Oculta!
 
 **Autor**: Jose Rodríguez & Cosmin Calin
 
@@ -12,7 +12,7 @@
 ----
 ******
 
-## 🤔 ¿Por qué un clon de Wordle en catalán?
+## 🤔 ¿Por qué un clon de Wordle?
 
 ¡Porque adivinar palabras es adictivo, y en pareja se codifica mejor! 🧠 Este proyecto es una versión personalizada del famoso puzzle, hecha a cuatro manos en clases de DAW del INS Baix Camp. Puro JS para eventos, validación y un toque local con diccionario catalán (incluyendo ñ y ç). Empieza con un formulario para tus datos, guarda stats en localStorage y te reta diario. ¿El twist? Popups para instrucciones, stats y reinicio – todo responsive para que juegues en cualquier pantalla.
 
@@ -61,7 +61,7 @@ Las reglas son simples: adivina la palabra oculta en 6 intentos. Cada intento de
 
 ---
 
-## 💡 ¿Por qué "Wordle Adaptado"?
+## 💡 ¿Por qué "Wordle"?
 
 Es un homenaje al original, pero con sabor local: catalán, colaborativo (gracias Cosmin!) y educativo para JS eventos. Hecho para demostrar onclick, keydown, localStorage y más – ¡sin complicaciones extras!
 
