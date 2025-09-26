@@ -333,6 +333,9 @@ p {
   font-size: larger;
   color: white;
 }
+.card_title h2{
+  margin-bottom: 10px;
+}
 .card_proyecto_links {
   /*logos */
   display: flex;
@@ -367,6 +370,7 @@ p {
   height: 45%;
   /*Estilos boton de las cards*/
   margin-bottom: 10px;
+  font-weight: bold;   /*Texto en negrita*/
 }
 #botonCards:hover {
   /*Cuando el cursor esta encima del boton el cambia de color*/
@@ -385,10 +389,44 @@ p {
   background-position: center; /* Centra la imagen en el contenedor */
   border: solid 4px cadetblue;
 }
+.card_img-tutoMySql{
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/logoMysql.png);
+  /* background-image: url(../img/logoJava.png); */
+  background-color: white; /* color fondo */
+  background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el contenedor */
+  border: solid 4px cadetblue;
+}
+.card_img-tutoGoAccess{
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/logoUbuntu.png);
+  /* background-image: url(../img/logoJava.png); */
+  background-color: white; /* color fondo */
+  background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el contenedor */
+  border: solid 4px cadetblue;
+}
 .card_img-laravel {
   width: 100%;
   height: 150px;
   background-image: url(../img/logo-laravel250x83.png);
+  /* background-image: url(../img/logoJava.png); */
+  background-color: white; /* color fondo */
+  background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el contenedor */
+  border: solid 4px cadetblue;
+}
+
+.card_img-tutoLaravel {
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/logoUbuntuLaravel.png);
   /* background-image: url(../img/logoJava.png); */
   background-color: white; /* color fondo */
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
