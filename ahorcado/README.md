@@ -4,9 +4,7 @@
 
 ## Redes sociales 🌐
 
-**Portfolio**🔗 [Enlace portfolio:](https://portfolio.jose-rodriguez-blanco.es)  
-**LinkedIn**🔗 [Enlace LinkedIn:](https://www.linkedin.com/in/joseperfil/)  
-**GitHub**🔗 [Enlace GitHub:](https://github.com/jose-giithub)
+**Portfolio**🔗 [Enlace portfolio:](https://portfolio.jose-rodriguez-blanco.es)   **LinkedIn**🔗 [Enlace LinkedIn:](https://www.linkedin.com/in/joseperfil/)  **GitHub**🔗 [Enlace GitHub:](https://github.com/jose-giithub)
 
 ******
 ----
