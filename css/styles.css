@@ -41,6 +41,13 @@ button {
   margin-top: -7px;
   padding-left: 8%;
 }
+/* Quitar los estilos por defecto del href de la j del titulo */
+.brand h2 a{
+  color: rgb(227, 246, 9);
+  text-decoration: none;
+  margin: 0;
+}
+
 
 .brand span {
   color: rgb(227, 246, 9);
