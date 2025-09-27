@@ -46,10 +46,26 @@ $(".infoCard").click(function() {
 /**
  * Al hacer click sobre el botón de cerrar del modal, se oculta el modal
  * Boton con id bootonClose
+ * Modifica el bolean boleanModalShow a false para cerrado saber que esta abierto el modal /pop-up con la info
  */
 $("#bootonClose").click(function() {
   $("#modalContainer").hide(); // Ocultar el modal
 });
+
+
+/**
+ * Función que cierra el modal de info de las cards al hacer click fuera del modal/ pop-up 
+ * Si se hace click fuera del modal (la clase 'modalContainer' ocupa toda la pantalla incluido el modal)
+ * se cierra el pop-up con la info de la card
+ */
+$("#modalContainer").click(function(e) { // 'e' un objeto que contiene información sobre el clic, como dónde se hizo exactamente
+ // 'e.target' es el elemento HTML específico donde el usuario hizo clic.
+ //Verificamos que se toco exactamente el contenedor general del modal y no un hijo como podría ser el modal.
+  if ($(e.target).is("#modalContainer")) { //Si se hizo click en modalContainer no en ninguno de sus hijos.
+    $(this).hide();//Oculto el modal
+  }
+});
+
 
   });//fin del DOMContentLoaded
 
