@@ -16,7 +16,13 @@ document.addEventListener("DOMContentLoaded", function () {
 // *************Filtro de proyectos*****************
 
 const botonFiltro = document.getElementById('botonFiltro');// capturo el boton de filtrar los proyectos
+// capturo todo el elemento que envuelve al modal de filtrar los proyectos
+const modalContainer = document.getElementById('modalContainer');
+modalContainer.style.display = 'none';//Oculto el modal con la info de las cardas defecto
 
+/**
+ * 
+ */
 botonFiltro.addEventListener('click', function () {//evento click del boton
   console.log('click');
   let  checkboxes = document.querySelectorAll('input[name="language"]:checked');//capturo los checkbox seleccionados
@@ -27,7 +33,6 @@ botonFiltro.addEventListener('click', function () {//evento click del boton
   });
   filterProjects(selectedLanguages);
 });
-
 
 
  /**
