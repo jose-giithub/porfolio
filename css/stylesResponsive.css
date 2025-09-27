@@ -392,29 +392,6 @@
     grid-template-columns: 1fr 1fr;
     height: auto;
   }
-  
-  .modalContainer {
-  position: fixed; /* Fija el contenedor en la pantalla */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
-  display: flex; /* Centra el modal */
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Asegura que esté por encima de todo */
-}
-
-.modal {
-  max-height: 80vh; /* Máximo 80% de la altura de la ventana */
-  overflow-y: auto; /* Scroll vertical si el contenido excede */
-  padding: 20px; /* Espacio interno para que no se pegue al borde */
-  background: #fff; /* Fondo claro para mejor legibilidad */
-  border-radius: 5px; /* Bordes redondeados, opcional */
-    position: relative; /* Relativo al contenedor fijo */
-  width: 80%; /* Ancho razonable, ajustable */
-  max-width: 600px; /* Límite máximo */
-}
+ 
 
 }
