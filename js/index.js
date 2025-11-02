@@ -12,25 +12,39 @@ document.addEventListener("DOMContentLoaded", function () {
   this.setAttribute('aria-expanded', !expanded);
 });
 
+/////////// CAPTURAR ELEMENTOS////////////////////
 
 // *************Filtro de proyectos*****************
 
 const botonFiltro = document.getElementById('botonFiltro');// capturo el boton de filtrar los proyectos
+
+// *************Mostrar pop-up de cada card*****************
 // capturo todo el elemento que envuelve al modal de filtrar los proyectos
+// para mostrarlo y ocultarlo, al hacer click fuera del modal. En este modal se muestra la info de las cards en un un pop-up
 const modalContainer = document.getElementById('modalContainer');
 modalContainer.style.display = 'none';//Oculto el modal con la info de las cardas defecto
 
 /**
- * 
+ * Evento click del boton de filtrar proyectos
+ * Capturo los checkbox seleccionados y filtro las cards que se muestran
+ * Crea un array con los valores de los checkbox seleccionados
+ * Llama a la función filterProjects pasandole el array de lenguajes seleccionados
+ * Los valores de los checkbox tienen un guion bajo en lugar de coma para evitar problemas al obtener el valor
+ * Ejemplo: php_html en lugar de php,html
  */
-botonFiltro.addEventListener('click', function () {//evento click del boton
-  console.log('click');
+botonFiltro.addEventListener('click', function () {//evento click del boton 'Filtrar'
+  //console.log('click');
   let  checkboxes = document.querySelectorAll('input[name="language"]:checked');//capturo los checkbox seleccionados
   //creo un array con los valores de los checkbox seleccionados
-  console.log(checkboxes);
-  let  selectedLanguages = Array.from(checkboxes).map(function(checkbox) {
+  //console.log(checkboxes);
+  //Convierte la colación de checkboxes del array 'checkboxes' en un array, y luego usa map para crear un nuevo array con los valores modificados
+  let  selectedLanguages = Array.from(checkboxes).map(function(checkbox) {//
+    //Reemplaza el guion '_' por una coma y retorna el array modificado con los valores seleccionados desde
+    // los checkbox en forma de array con comas, ejemplo: ['php', 'html', 'javascript']
     return checkbox.value.replace('_', ','); 
   });
+  //llama a la función que filtra las cards pasandole el array de lenguajes seleccionados en los checkbox.
+  //Como parametro le paso el array con los lenguajes seleccionados
   filterProjects(selectedLanguages);
 });
 

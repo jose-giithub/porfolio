@@ -9,17 +9,17 @@ function desplegarMenu() {
   menu.classList.toggle("show");
 }
 
-// *********** FUNCIONES DE  index.html***********
+// *********** FUNCIONES PARA FILTRAR LAS CARDS***********
 /**
  * Función que filtra los proyectos según los lenguajes seleccionados
- * Como parámetro recibe un array con los lenguajes seleccionados
- * @param {*} languages 
- * @returns 
+ * Como parámetro recibe un array con los lenguajes seleccionados en forma ejemplo: ['php', 'html', 'javascript']
+ * @param {*} selectedLanguages desde el index.html, estos valores se procesan previamente  desde index.js 
+ * @returns  las cards que coinciden con los lenguajes seleccionados
  */
-function filterProjects(languages) {
-  let cards = document.querySelectorAll('.card');//capturo todas las cards
-  // Si no se selecciona ningun lenguaje, muestro todas las cards
-  if (languages.length === 0) {
+function filterProjects(selectedLanguages) {
+  let cards = document.querySelectorAll('.card');//capturo todas las cards y creo un array con ellas
+  // Si no se selecciona ningún lenguaje, muestro todas las cards
+  if (selectedLanguages.length === 0) {
     cards.forEach(function(card) {
       card.style.display = '';
     });
@@ -30,7 +30,8 @@ function filterProjects(languages) {
     // Obtengo los lenguajes de las cards y los convierto en un array. El separador sera una coma
     let cardLanguages = card.getAttribute('data-language').split(',');
     // Compruebo si alguno de los lenguajes seleccionados coincide con los de la tarjeta
-    let isMatch = languages.some(function(lang) {
+    let isMatch = selectedLanguages.some(function(lang) {
+      //retorna si hay coincidencia y uso trim() para eliminar espacios en blanco
       return cardLanguages.includes(lang.trim()); 
     });
     // Muestro o no la card según si hay coincidencia
