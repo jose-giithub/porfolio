@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- REVISION T9 (20/10/2026): lang="en" cambiado a "es", el contenido está en español. Depende de: index.html -->
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicon  -->
     <link rel="icon" type="image/png" sizes="16x16" href="img/icons8-star-16.png">
-    <title>Portfolio</title>
+    <!-- REVISION T11 (20/10/2026): título descriptivo y meta description para SEO. Depende de: index.html -->
+    <title>José Luis Rodríguez Blanco | Técnico IT y desarrollador web junior</title>
+    <meta name="description" content="Portfolio de José Luis Rodríguez Blanco, técnico IT y desarrollador web junior: proyectos con Laravel, Docker, JavaScript, Java y PHP, tutoriales de servidores y juegos web." />
     <!-- <link rel="stylesheet" href="css/styles.css"> -->
-    <link rel="stylesheet" href="css/stylesInedex.css" />
+    <!-- REVISION T13 (20/10/2026): css/stylesInedex.css renombrado a css/stylesIndex.css (errata en el nombre). Depende de: css/stylesIndex.css -->
+    <!-- REVISION T14 (20/10/2026): se elimina la fuente Montserrat de Google Fonts (estaba como @import en css/stylesIndex.css): ningún elemento de index.html la usa (comprobado con los estilos calculados) y retrasaba el pintado. Depende de: css/stylesIndex.css -->
+    <link rel="stylesheet" href="css/stylesIndex.css" />
     <link rel="stylesheet" href="css/stylesResponsive.css" />
       <!-- cdn JQuery -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/funciones.js"></script>
+      <!-- REVISION T14 (20/10/2026): jQuery, index.js y funciones.js con defer para que no bloqueen el pintado (index.js ya espera a DOMContentLoaded y funciones.js solo define funciones; el orden se mantiene). Depende de: js/index.js, js/funciones.js -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="js/index.js"></script>
+    <script defer src="js/funciones.js"></script>
     <script
       src="https://kit.fontawesome.com/6359741856.js"
       crossorigin="anonymous"
@@ -28,7 +34,8 @@
       <header>
         <nav class="navbar">
           <div class="brand">
-            <h2>J<span>ose</span></h2>
+            <!-- REVISION T10 (20/10/2026): el logo deja de ser un h2 (solo debe haber un h1 y títulos en orden). Depende de: css/stylesIndex.css -->
+            <div class="brand-name">J<span>ose</span></div>
           </div>
           <!-- Boton con icono que solo se muestra en pantallas pequeñas -->
           <button class="hamburger" aria-label="Menu" aria-expanded="false">
@@ -50,17 +57,22 @@
             Mi nombre es <span> Jose L. Rodríguez </span> y has llegado a mi
             portfolio
           </h1>
-          <h3><p>Soy programador junior</p></h3>
-          <a class="hrefLinkedIn"  href="https://www.linkedin.com/in/joseperfil/"  target="_blank"
+          <!-- REVISION T14 (20/10/2026): aria-level="2" en el subtítulo y aria-level="3" en los dos h4 de "Sobre mí" para que Lighthouse vea el orden de encabezados h1, h2, h3 sin saltos; no cambia el aspecto. Depende de: index.html -->
+          <h3 aria-level="2"><p>Técnico IT y desarrollador web junior</p></h3>
+          <!-- REVISION T14 (20/10/2026): todos los enlaces con target="_blank" llevan rel="noopener noreferrer" (y se corrige la falta de espacio entre target y rel, E2). Depende de: index.html -->
+          <a class="hrefLinkedIn"  href="https://www.linkedin.com/in/joseperfil/"  target="_blank" rel="noopener noreferrer"
             ><!-- En download le pones el nombre del archivo a descargar y se descarga solo-->
             <button class="redirectLinkedIn">Ir a mi LinkedIn</button>
           </a>
         </div>
         <!---->
+        <!-- REVISION T15 (20/10/2026): avatar nuevo (foto-jose-cabecera.webp, 960x1102) en lugar del dibujo; alt descriptivo y ancho/alto para reservar el hueco. El tamaño visible se fija en css/stylesIndex.css (#imgMain). Los PNG antiguos siguen en img/. Depende de: css/stylesIndex.css, css/stylesResponsive.css -->
         <img
           id="imgMain"
-          src="./img/joseSimpsoms 300x300.png"
-          alt="homer Simpson"
+          src="./img/foto-jose-cabecera.webp"
+          alt="Retrato de José Luis Rodríguez Blanco"
+          width="960"
+          height="1102"
         />
         <!--alt texto alternativo para la imagen-->
       </main>
@@ -70,19 +82,22 @@
 
     <!--**********Segunda parte debajo del texto de presentación e imagen -->
     <div class="about">
-      <img id="imgSegunda" src="./img/joseSimpoms2 300x300.png" alt="" />
+      <!-- REVISION T14 (20/10/2026): loading="lazy" (imagen fuera de la primera pantalla). Depende de: index.html -->
+      <!-- REVISION T15 (20/10/2026): foto nueva de "Sobre mí" (foto-jose-sobre-mi.webp, 960x1102) con alt descriptivo; el PNG antiguo sigue en img/. Depende de: css/stylesIndex.css (.about img), css/stylesResponsive.css -->
+      <img id="imgSegunda" src="./img/foto-jose-sobre-mi.webp" alt="José Luis Rodríguez Blanco señalando hacia arriba con una mano y con la otra a la sien" width="960" height="1102" loading="lazy" />
 
       <div class="about-info">
         <h2 id="info_personal">Sobre mí</h2>
         <div id="divider" class="divider"></div>
         <!--PAra crear una ralla debajo del titulo "Sobre mi"-->
-        <h4>
+        <h4 aria-level="3">
           <p>
-           Soy un programador junior apasionado por el mundo de la tecnología. Me he embarcado en el apasionante viaje de la programación y las TIC, 
+           <!-- REVISION T12 (20/10/2026): "programador junior" actualizado a "Técnico IT y desarrollador web junior". Depende de: index.html -->
+           Soy técnico IT y desarrollador web junior, apasionado por el mundo de la tecnología. Me he embarcado en el apasionante viaje de la programación, 
            disfrutando especialmente de todo lo relacionado con crear, mejorar y mantener proyectos que aporten valor.
           </p>
         </h4>
-        <h4><p>Aprieta el botón para descubrir mis habilidades.</p></h4>
+        <h4 aria-level="3"><p>Aprieta el botón para descubrir mis habilidades.</p></h4>
         <button class="botonSaberMas">
           <a href="info_personal.html">Saber más</a>
         </button>
@@ -133,12 +148,13 @@
         <div class="card" data-language="php,html,javascript,docker">
           <!--data-language para filtrar-->
           <div class="card_img-laravel"></div>
+          <!-- REVISION T10 (20/10/2026): en todas las tarjetas el título pasa de h2 a h3 (cuelga de "Mi portfolio") y <h4>Descripción</h5> se corrige a </h4>. Depende de: css/stylesIndex.css (.card_title h3) -->
           <div class="card_title">
-            <h2>Proyecto final</h2>
+            <h3>Proyecto final</h3>
             <br>
-            <h4>Descripción</h5>
+            <h4>Descripción</h4>
             <p>
-              Proyecto final usando el Framework  Laravel con ecosistema Breeze + PHP, HTML CSS, JavaScript, AQL, bootstrap  y algo de  tailwind.
+              Proyecto final usando el Framework Laravel con ecosistema Breeze + PHP, HTML CSS, JavaScript, SQL, bootstrap y algo de tailwind.
             </p>
           </div>
           
@@ -146,20 +162,22 @@
             <!--*********icono de -->
             <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
             <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
-            <a href="https://github.com/jose-giithub/FinalProject-Xavi-Jose/blob/main/README.md" target="_blank"
+            <a href="https://github.com/jose-giithub/FinalProject-Xavi-Jose/blob/main/README.md" target="_blank" rel="noopener noreferrer"
               >GitHub <i class="fa-brands fa-github"></i
             ></a>
              <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
               span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
               El código esta debajo de todas las cards -->
-            <span class="infoCard laravelProyecto" data-info-texto="Proyecto final de grado, realizado en colaboración con Francès Xavier Campos y desarrollado con el framework Laravel,
+            <!-- REVISION T14 (20/10/2026): los iconos de info de las tarjetas (span) pasan a ser operables con teclado: role="button", tabindex="0" y aria-label con el título del proyecto. Depende de: js/index.js (tecla Enter/Espacio), css/stylesIndex.css (:focus-visible) -->
+            <!-- REVISION T14 (20/10/2026): el color negro en línea de los 14 iconos de info se quita; el color de los iconos (blanco) se define en css/stylesIndex.css (.card_proyecto_links i). Depende de: css/stylesIndex.css -->
+            <span role="button" tabindex="0" aria-label="Más información: Proyecto final" class="infoCard laravelProyecto" data-info-texto="Proyecto final de grado, realizado en colaboración con Francès Xavier Campos y desarrollado con el framework Laravel,
             utilizando el ecosistema Laravel Breeze para la gestión de usuarios.
             La web también incorpora una integración de mapas mediante la API de Google Maps y una base de datos gestionada con phpMyAdmin. 
             Está diseñado en PHP, HTML, CSS, JavaScript, Bootstrap y Tailwind, y cuenta con un entorno en Docker junto con Nginx Proxy Manager.
             
             ¿Para qué es esta web?
             Este sitio conecta a propietarios de talleres con clientes potenciales, ofreciendo a los mecánicos una plataforma donde publicitar sus servicios y ofertas. Los usuarios pueden registrar sus vehículos para mantener un historial y acceder fácilmente a servicios mecánicos.">
-              <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+              <i class="fa-solid fa-circle-info"></i>
             </span>
             <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a>
             <a href="">img<i class="fa-solid fa-code"></i></a> -->
@@ -168,7 +186,7 @@
             <!--*********boton -->
             <button id="botonCards" class="project-details-button">
               <a
-                href="https://tu-taller-plus.jose-rodriguez-blanco.es/" target="_blank"
+                href="https://tu-taller-plus.jose-rodriguez-blanco.es/" target="_blank" rel="noopener noreferrer"
                 >Ir al proyecto
               </a>
             </button>
@@ -178,12 +196,12 @@
       
           <!--**************CARD CORREGIDA  Laravel tutorial**************-->
         <div class="card" data-language="php,docker"><!--data-language para filtrar-->
-          <div class="card_img-tutoLaravel"></div><!--la imagen se carga desde css archivo en: www\css\stylesInedex.css-->
+          <div class="card_img-tutoLaravel"></div><!--la imagen se carga desde css archivo en: www\css\stylesIndex.css-->
           <div class="card_title">
-            <h2>Tutorial Laravel+ Docker</h2>
+            <h3>Tutorial Laravel+ Docker</h3>
             <h4>Descripción</h4>
             <p>
-              Levantar una web en Laravel en un VPS con Docker y certificado https con Ngix Proxy Manager.
+              Levantar una web en Laravel en un VPS con Docker y certificado https con Nginx Proxy Manager.
             </p>
           </div>
           <div class="card_proyecto_links">
@@ -197,14 +215,14 @@
               <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
               span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
               El código esta debajo de todas las cards -->
-            <span class="infoCard laravelProyecto" data-info-texto="🤔¿Qué encontraremos en este tutorial?
+            <span role="button" tabindex="0" aria-label="Más información: Tutorial Laravel+ Docker" class="infoCard laravelProyecto" data-info-texto="🤔¿Qué encontraremos en este tutorial?
 
               Levantar una imagen de Laravel en un servidor Dockerizado, asegurando una conexión segura con certificado HTTPS gracias a Nginx Proxy Manager. 
               Integraremos una base de datos externa MariaDB y la interfaz web phpMyAdmin, previamente establecida, para una gestión eficiente de datos.
               Además, instalaremos herramientas esenciales como Docker Compose para la orquestación, junto con un paquete completo de desarrollo y testeo: nano, npm y Node.js. 
               Aunque se trata de un ejemplo, este setup está diseñado para ser funcional y escalable.">
               <!-- Icono info -->
-              <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+              <i class="fa-solid fa-circle-info"></i>
             </span>
           </div>
           <div class="proyects_details_content">
@@ -216,7 +234,7 @@
                 Ir al proyecto
             </a> -->
             <button id="botonCards" class="project-details-button">
-              <a href="https://test.jose-rodriguez-blanco.es/" target="_blank"rel="noopener noreferrer">
+              <a href="https://test.jose-rodriguez-blanco.es/" target="_blank" rel="noopener noreferrer">
                 Ir al proyecto
               </a>
             </button>
@@ -228,11 +246,11 @@
         <!--data-language para filtrar-->
         <div class="card_img-html"></div>
         <div class="card_title">
-          <h2>Mi Portfolio</h2>
+          <h3>Mi Portfolio</h3>
           <br>
-          <h4>Descripción</h5>
+          <h4>Descripción</h4>
           <p>
-            Este portfolio donde estas ahora mismo, creado desde 0 con HTML, CSS y un poco de JavaScript puros donde muestro algunos
+            Este portfolio donde estás ahora mismo, creado desde 0 con HTML, CSS y un poco de JavaScript puros donde muestro algunos
             de mis trabajos.
           </p>
         </div>
@@ -240,7 +258,7 @@
           <!--*********icono de -->
           <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
           <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
-          <a href="https://github.com/jose-giithub/porfolio" target="_blank">
+          <a href="https://github.com/jose-giithub/porfolio" target="_blank" rel="noopener noreferrer">
             GitHub 
             <i class="fa-brands fa-github"></i>
           </a>
@@ -248,9 +266,9 @@
             <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
               span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
               El código esta debajo de todas las cards -->
-          <span class="infoCard portFolio" data-info-texto="Este proyecto es un portfolio personal diseñado desde cero usando HTML, CSS, JavaScript, jQuery y Docker.
-          Incluye distintas secciones donde puedes encontrar mis redes sociales, mi currículum y una muestra de algunos de mis proyectos escolares, con opciones para filtrar según el lenguaje de programación..">
-            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+          <span role="button" tabindex="0" aria-label="Más información: Mi Portfolio" class="infoCard portFolio" data-info-texto="Este proyecto es un portfolio personal diseñado desde cero usando HTML, CSS, JavaScript, jQuery y Docker.
+          Incluye distintas secciones donde puedes encontrar mis redes sociales, mi currículum y una muestra de algunos de mis proyectos escolares, con opciones para filtrar según el lenguaje de programación.">
+            <i class="fa-solid fa-circle-info"></i>
           </span>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a>
           <a href="">img<i class="fa-solid fa-code"></i></a> -->
@@ -258,9 +276,10 @@
         <div class="proyects_details_content">
           <!--*********boton -->
           <button id="botonCards" class="project-details-button">
+            <!-- REVISION T1 (20/10/2026): href="#" sustituido por el repo del portfolio. Depende de: index.html -->
             <a
-              href="#"
-              target="_blank"
+              href="https://github.com/jose-giithub/porfolio"
+              target="_blank" rel="noopener noreferrer"
               >Ir al proyecto
             </a>
           </button>
@@ -271,8 +290,8 @@
         <!--data-language para filtrar-->
         <div class="card_img-nodeJs"></div>
         <div class="card_title">
-          <h2>Piedra, papel, tijeras, ++</h2>
-          <h4>Descripción</h5>
+          <h3>Piedra, papel, tijeras, ++</h3>
+          <h4>Descripción</h4>
           <p>
             Juego piedra, papel, tijeras, lagarto o Spock para jugar en dos pantallas separadas. Creado con node.js, html css y Bootstrap.
           </p>
@@ -281,7 +300,7 @@
           <!--*********icono de -->
           <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
           <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
-          <a href="https://github.com/jose-giithub/piedra-papel-tijera-lagarto-spock" target="_blank">
+          <a href="https://github.com/jose-giithub/piedra-papel-tijera-lagarto-spock" target="_blank" rel="noopener noreferrer">
             GitHub 
             <i class="fa-brands fa-github"></i>
           </a>
@@ -289,12 +308,12 @@
           <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-          <span class="infoCard nodeJs" data-info-texto="Todo el mundo conoce el clásico juego de 'Piedra, Papel o Tijeras', pero ¿has probado 'Piedra, Papel, Tijeras, Lagarto, Spock'?
-          Este proyecto está desarrollado con el framework Node.js, utilizando HTML, CSS, Bootstrap y presupuestos JavaScript.
+          <span role="button" tabindex="0" aria-label="Más información: Piedra, papel, tijeras, ++" class="infoCard nodeJs" data-info-texto="Todo el mundo conoce el clásico juego de 'Piedra, Papel o Tijeras', pero ¿has probado 'Piedra, Papel, Tijeras, Lagarto, Spock'?
+          Este proyecto está desarrollado con el framework Node.js, utilizando HTML, CSS, Bootstrap y JavaScript.
 
           ¿Cómo jugar?
           Simplemente abre la URL y compártela con alguien con quien quieras jugar en tiempo real. ¡Listo para disfrutar!">
-            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+            <i class="fa-solid fa-circle-info"></i>
           </span>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a>
           <a href="">img<i class="fa-solid fa-code"></i></a> -->
@@ -303,7 +322,7 @@
           <!--*********boton -->
           <button id="botonCards" class="project-details-button">
             <a
-              href="https://janken.jose-rodriguez-blanco.es/" target="_blank"
+              href="https://janken.jose-rodriguez-blanco.es/" target="_blank" rel="noopener noreferrer"
               >Ir al proyecto web
             </a>
           </button>
@@ -312,12 +331,12 @@
        <!-- FINAL CARD NODE.JS -->
           <!--**************CARD CORREGIDA   TUTORIAL DOCKER + SERVIDOR **************-->
         <div class="card" data-language="php,docker"><!--data-language para filtrar-->
-          <div class="card_img-tutoGoAccess"></div><!--la imagen se carga desde css archivo en: www\css\stylesInedex.css-->
+          <div class="card_img-tutoGoAccess"></div><!--la imagen se carga desde css archivo en: www\css\stylesIndex.css-->
           <div class="card_title">
-            <h2>Tutorial Ubuntu server</h2>
+            <h3>Tutorial Ubuntu server</h3>
             <h4>Descripción</h4>
             <p>
-              🛠️Configurar un servidor Ubuntu server desde 0 paso a paso, con Dockers, Portainer y Nginx Proxy Manager y mucho mas.
+              🛠️Configurar un servidor Ubuntu server desde 0 paso a paso, con Dockers, Portainer y Nginx Proxy Manager y mucho más.
             </p>
           </div>
           <div class="card_proyecto_links">
@@ -331,16 +350,16 @@
             <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-            <span class="infoCard laravelProyecto" data-info-texto="🤔¿Qué encontraremos en este tutorial?
+            <span role="button" tabindex="0" aria-label="Más información: Tutorial Ubuntu server" class="infoCard laravelProyecto" data-info-texto="🤔¿Qué encontraremos en este tutorial?
 
               Guía paso a paso en la configuración de tu servidor VPS con Ubuntu.
-              Crear un entorno robusto, seguro y superoptimizado y para alojar aplicaciones, incluyendo la instalación de Docker 🐳 y Portainer ⚓ para la gestión de contenedores, y Nginx Proxy Manager 👮 para la configuración de dominios y certificados SSL.
+              Crear un entorno robusto, seguro y superoptimizado para alojar aplicaciones, incluyendo la instalación de Docker 🐳 y Portainer ⚓ para la gestión de contenedores, y Nginx Proxy Manager 👮 para la configuración de dominios y certificados SSL.
               Automatización de tareas de seguridad 🛡️ y mantenimiento 🧹 con scripts. 
-              La implementación de backups automáticos 💾 con Duplicati, y la integración de GoAccess 📈 para el análisis las estadísticas principales y muchos extras como base de datos MariaDB etc.
+              La implementación de backups automáticos 💾 con Duplicati, y la integración de GoAccess 📈 para el análisis de las estadísticas principales y muchos extras como base de datos MariaDB etc.
               Al finalizar, tendrás un servidor preparado, seguro y optimizado para tus proyectos. ¡Listo para desplegar tus webs! 🚀🌐
               ">
               <!-- Icono info -->
-              <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+              <i class="fa-solid fa-circle-info"></i>
             </span>
           </div>
           <div class="proyects_details_content">
@@ -352,7 +371,7 @@
                 Ir al proyecto
             </a> -->
             <button id="botonCards" class="project-details-button">
-              <a href="https://github.com/jose-giithub/vps-demo/blob/main/README.md" target="_blank"rel="noopener noreferrer">
+              <a href="https://github.com/jose-giithub/vps-demo/blob/main/README.md" target="_blank" rel="noopener noreferrer">
                 Ir al proyecto
               </a>
             </button>
@@ -361,9 +380,9 @@
         <!--**************FINAL  TUTORIAL DOCKER + SERVIDOR **************-->
           <!--**************CARD CORREGIDA  TUTORIAL BASE DE DATOS MariaDB**************-->
         <div class="card" data-language="php,docker"><!--data-language para filtrar-->
-          <div class="card_img-tutoMySql"></div><!--la imagen se carga desde css archivo en: www\css\stylesInedex.css-->
+          <div class="card_img-tutoMySql"></div><!--la imagen se carga desde css archivo en: www\css\stylesIndex.css-->
           <div class="card_title">
-            <h2>Tutorial MariaDB+ Docker</h2>
+            <h3>Tutorial MariaDB+ Docker</h3>
             <h4>Descripción</h4>
             <p>
               Levantar una base de datos MariaDB e interfaz web PhpMyAdmin dockerizada 🐳
@@ -380,11 +399,11 @@
            <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-            <span class="infoCard laravelProyecto" data-info-texto="🤔¿Qué encontraremos en este tutorial?
+            <span role="button" tabindex="0" aria-label="Más información: Tutorial MariaDB+ Docker" class="infoCard laravelProyecto" data-info-texto="🤔¿Qué encontraremos en este tutorial?
             
               Guía paso a paso para levantar en nuestro servidor VPS un servicio de base de datos MariaDB junto con una interfaz web PhpMyAdmin usando Docker y Docker Compose, de forma segura y organizada.">
               <!-- Icono info -->
-              <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+              <i class="fa-solid fa-circle-info"></i>
             </span>
           </div>
           <div class="proyects_details_content">
@@ -396,7 +415,7 @@
                 Ir al proyecto
             </a> -->
             <button id="botonCards" class="project-details-button">
-              <a href="https://github.com/jose-giithub/vps-demo/tree/main/servers/database" target="_blank"rel="noopener noreferrer">
+              <a href="https://github.com/jose-giithub/vps-demo/tree/main/servers/database" target="_blank" rel="noopener noreferrer">
                 Ir al proyecto
               </a>
             </button>
@@ -405,12 +424,12 @@
         <!--**************FINAL  BASE DE DATOS MariaDB **************-->
          <!--**************CARD CORREGIDA  TUTORIAL GoAccess**************-->
         <div class="card" data-language="php,docker"><!--data-language para filtrar-->
-          <div class="card_img-tutoGoAccess"></div><!--la imagen se carga desde css archivo en: www\css\stylesInedex.css-->
+          <div class="card_img-tutoGoAccess"></div><!--la imagen se carga desde css archivo en: www\css\stylesIndex.css-->
           <div class="card_title">
-            <h2>Tutorial análisis de registros web</h2>
+            <h3>Tutorial análisis de registros web</h3>
             <h4>Descripción</h4>
             <p>
-              Levantar una servicio de análisis de registros web en tiempo real dockerizado 🐳
+              Levantar un servicio de análisis de registros web en tiempo real dockerizado 🐳
             </p>
           </div>
           <div class="card_proyecto_links">
@@ -424,14 +443,14 @@
            <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
              span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
              El código esta debajo de todas las cards -->
-            <span class="infoCard laravelProyecto" data-info-texto="🤔¿Qué encontraremos en este tutorial?
+            <span role="button" tabindex="0" aria-label="Más información: Tutorial análisis de registros web" class="infoCard laravelProyecto" data-info-texto="🤔¿Qué encontraremos en este tutorial?
             
-              Guía completa para montar una imagen GoAccess Dockerizado con interface web en un servidor VPN previamente montado. 
-              Gracias a GoAccess tendrás un analizador de registros para tus webs desde tu interface web.
+              Guía completa para montar una imagen GoAccess Dockerizado con interfaz web en un servidor VPS previamente montado. 
+              Gracias a GoAccess tendrás un analizador de registros para tus webs desde tu interfaz web.
               Estará dockerizado y manejado desde un Nginx. Tendrás autenticación básica. 
-              El contenedor no se actualiza a tiempo real sino de hora en hora, haciendo que apenas consuma recursos en tu servidor">
+              El contenedor no se actualiza en tiempo real sino de hora en hora, haciendo que apenas consuma recursos en tu servidor">
               <!-- Icono info -->
-              <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+              <i class="fa-solid fa-circle-info"></i>
             </span>
           </div>
           <div class="proyects_details_content">
@@ -443,7 +462,7 @@
                 Ir al proyecto
             </a> -->
             <button id="botonCards" class="project-details-button">
-              <a href="https://github.com/jose-giithub/vps-demo/blob/main/servers/goAccess/README.md" target="_blank"rel="noopener noreferrer">
+              <a href="https://github.com/jose-giithub/vps-demo/blob/main/servers/goAccess/README.md" target="_blank" rel="noopener noreferrer">
                 Ir al proyecto
               </a>
             </button>
@@ -455,11 +474,11 @@
         <div class="card-img-js"></div>
 
         <div class="card_title">
-          <h2>Juego WORDLE</h2>
+          <h3>Juego WORDLE</h3>
           <br>
-          <h4>Descripción</h5>
-          <p>WORDLE, en catalán. Creado con Html, JavaScript, CSS.
-             Ademas se guarda la info en local storage para guardar tus puntuaciones.</p>
+          <h4>Descripción</h4>
+          <p>WORDLE, en catalán. Creado con HTML, JavaScript, CSS.
+             Además se guarda la info en local storage para guardar tus puntuaciones.</p>
         </div>
 
         <div class="card_proyecto_links">
@@ -468,7 +487,7 @@
           <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
           <a
             href="https://github.com/jose-giithub/porfolio/tree/main/wordle"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             >GitHub
             <i class="fa-brands fa-github"></i>
           </a>
@@ -476,10 +495,10 @@
           <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-          <span class="infoCard wordle" data-info-texto="¿Conoces el juego WORDLE? Aquí tienes el mio.
-          Proyecto creado con la Colaboración de Cosmin Calin. Juego creado desde 0 en html, CSS y JavasCript.
+          <span role="button" tabindex="0" aria-label="Más información: Juego WORDLE" class="infoCard wordle" data-info-texto="¿Conoces el juego WORDLE? Aquí tienes el mío.
+          Proyecto creado con la colaboración de Cosmin Calin. Juego creado desde 0 en HTML, CSS y JavaScript.
           Tiene un formulario y luego puedes jugar tus partidas y los datos de estas son guardados en LocalStorage para tener un registro de ellas. Las palabras a descubrir están en catalán.">
-            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+            <i class="fa-solid fa-circle-info"></i>
           </span>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
           <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
@@ -490,7 +509,8 @@
             <!-- <a href="https://wordle.jose-rodriguez-blanco.es/"  target="_blank"
               >Ir al proyecto
             </a> -->
-            <a href="wordle\index.html#"  target="_blank"
+            <!-- REVISION T2 (20/10/2026): barra invertida y "#" sobrante corregidos en la ruta. Depende de: wordle/index.html -->
+            <a href="wordle/index.html"  target="_blank" rel="noopener noreferrer"
               >Ir al proyecto
             </a>
           </button>
@@ -504,17 +524,17 @@
         <div class="card_img-html"></div>
 
         <div class="card_title">
-          <h2>Animaciones CSS</h2>
+          <h3>Animaciones CSS</h3>
           <br>
-          <h4>Descripción</h5>
-          <p>Pequeña ejemplo de web dockerizada con HTML y animaciones CSS.</p>
+          <h4>Descripción</h4>
+          <p>Pequeño ejemplo de web dockerizada con HTML y animaciones CSS.</p>
           <br />
         </div>
         <div class="card_proyecto_links">
           <!--*********icono de -->
           <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
           <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
-          <a href="https://github.com/jose-giithub/porfolio/tree/main/animacionCss" target="_blank">
+          <a href="https://github.com/jose-giithub/porfolio/tree/main/animacionCss" target="_blank" rel="noopener noreferrer">
             GitHub
             <i class="fa-brands fa-github"></i>
           </a>
@@ -522,8 +542,8 @@
           <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-          <span class="infoCard animacionCss" data-info-texto="Bonita actividad en HTML y CSS donde se muestra una sucesión de animaciones CSS.">
-            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+          <span role="button" tabindex="0" aria-label="Más información: Animaciones CSS" class="infoCard animacionCss" data-info-texto="Bonita actividad en HTML y CSS donde se muestra una sucesión de animaciones CSS.">
+            <i class="fa-solid fa-circle-info"></i>
           </span>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a>
           <a href="">img<i class="fa-solid fa-code"></i></a> -->
@@ -535,9 +555,10 @@
               href="https://animacioncss.jose-rodriguez-blanco.es/"
               target="_blank">Ir al proyecto
             </a> -->
+            <!-- REVISION T2 (20/10/2026): barra invertida corregida en la ruta. Depende de: animacionCss/index.html -->
             <a
-              href="animacionCss\index.html"
-              target="_blank">Ir al proyecto
+              href="animacionCss/index.html"
+              target="_blank" rel="noopener noreferrer">Ir al proyecto
             </a>
           </button>
         </div>
@@ -549,18 +570,18 @@
         <div class="card_img-java"></div>
 
         <div class="card_title">
-          <h2>Juego Cazador de puntos</h2>
+          <h3>Juego Cazador de puntos</h3>
           <br>
-          <h4>Descripción</h5>
+          <h4>Descripción</h4>
           <p>
-            Juego busca minas personalizado, titulado 'Cazador de puntos'. Creado con Java en interfice gráfica Scene Builder.
+            Juego busca minas personalizado, titulado 'Cazador de puntos'. Creado con Java en interfaz gráfica Scene Builder.
           </p>
         </div>
         <div class="card_proyecto_links">
           <!--*********icono de -->
           <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
           <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
-          <a href="https://github.com/jose-giithub/Cazador-de-punts" target="_blank">
+          <a href="https://github.com/jose-giithub/Cazador-de-punts" target="_blank" rel="noopener noreferrer">
             GitHub 
             <i class="fa-brands fa-github"></i>
           </a>
@@ -568,7 +589,7 @@
           <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-          <span  style="text-align: left;" class="infoCard cazaPuntos" data-info-texto="Juego desarrollado en Java, utilizando JavaFX y la herramienta gráfica SceneBuilder. 
+          <span role="button" tabindex="0" aria-label="Más información: Juego Cazador de puntos"  style="text-align: left;" class="infoCard cazaPuntos" data-info-texto="Juego desarrollado en Java, utilizando JavaFX y la herramienta gráfica SceneBuilder. 
 
           Reglas del juego:
           • Al inicio, todas las casillas muestran un símbolo de interrogación y el botón Reiniciar pantalla muestra el texto Empezar.
@@ -576,7 +597,7 @@
           • La partida termina si aparece una 'X'.
           • Puedes pulsar Reiniciar pantalla en cualquier momento, y las casillas volverán a mostrar el interrogante y su contenido será reordenado aleatoriamente sin perder puntos.
           ¿Cuál será tu récord?">
-            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+            <i class="fa-solid fa-circle-info"></i>
           </span>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
           <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
@@ -584,7 +605,7 @@
         <div class="proyects_details_content">
           <!--*********boton -->
           <button id="botonCards" class="project-details-button">
-            <a href="https://github.com/jose-giithub/Cazador-de-punts" target="_blank"
+            <a href="https://github.com/jose-giithub/Cazador-de-punts" target="_blank" rel="noopener noreferrer"
               >Ir al proyecto
             </a>
           </button>
@@ -597,9 +618,9 @@
         <div class="card-img-js"></div>
 
         <div class="card_title">
-          <h2>Juego SQWORD</h2>
+          <h3>Juego SQWORD</h3>
           <br>
-          <h4>Descripción</h5>
+          <h4>Descripción</h4>
           <p>Famoso juego conocido como SQWORD. Compite para ser el mejor.</p>
         </div>
 
@@ -607,7 +628,7 @@
           <!--*********icono de -->
           <!--dentro del href se pone el link del GitHub  donde esta subido mi trabajo -->
           <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
-          <a href="https://github.com/jose-giithub/porfolio/tree/main/sqWord" target="_blank" >
+          <a href="https://github.com/jose-giithub/porfolio/tree/main/sqWord" target="_blank" rel="noopener noreferrer" >
             GitHub
             <i class="fa-brands fa-github"></i>
           </a>
@@ -615,14 +636,14 @@
           <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-          <span class="infoCard sqWord" data-info-texto="Inspirado en el famoso y polémico juego de palabras, Sqword es un juego de lógica y vocabulario creado desde cero usando HTML, CSS y JavaScript.
+          <span role="button" tabindex="0" aria-label="Más información: Juego SQWORD" class="infoCard sqWord" data-info-texto="Inspirado en el famoso y polémico juego de palabras, Sqword es un juego de lógica y vocabulario creado desde cero usando HTML, CSS y JavaScript.
 
           Instrucciones de juego:
           • Coloca letras en la cuadrícula para formar tantas palabras de 3, 4 y 5 letras como puedas. Las palabras se pueden formar en horizontal (de izquierda a derecha) o en vertical (de arriba a abajo), para un máximo de 50 puntos.
           • Una vez que una letra se coloca en la cuadrícula, no se puede mover.
           • Cuando hayas usado todas las letras, tu tablero será evaluado. Cada palabra se califica según su longitud (por ejemplo, una palabra de 4 letras vale 4 puntos) y cada línea se califica según la palabra más larga que contenga.
           • ¡No olvides compartir tu puntuación y regresar mañana para obtener un nuevo desafío!">
-            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+            <i class="fa-solid fa-circle-info"></i>
           </span>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
           <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
@@ -630,7 +651,8 @@
         <div class="proyects_details_content">
           <!--*********boton -->
           <button id="botonCards" class="project-details-button">
-            <a href="sqWord\index.html"  target="_blank"
+            <!-- REVISION T2 (20/10/2026): barra invertida corregida en la ruta. Depende de: sqWord/index.html -->
+            <a href="sqWord/index.html"  target="_blank" rel="noopener noreferrer"
               >Ir al proyecto
             </a>
           </button>
@@ -642,11 +664,11 @@
       <div class="card" data-language="javascript">
         <div class="card-img-js"></div>
         <div class="card_title">
-          <h2>Juego del ahorcado</h2>
+          <h3>Juego del ahorcado</h3>
           <br>
-          <h4>Descripción</h5>
+          <h4>Descripción</h4>
           <p>
-            Juego del ahorcado con JavaScript y un poco de HTML y CSS ¿Salvaras
+            Juego del ahorcado con JavaScript y un poco de HTML y CSS ¿Salvarás
             al monstruo?
           </p>
         </div>
@@ -655,7 +677,7 @@
           <!--*********icono de -->
           <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
           <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
-          <a href="https://github.com/jose-giithub/porfolio/tree/main/ahorcado" target="_blank" >
+          <a href="https://github.com/jose-giithub/porfolio/tree/main/ahorcado" target="_blank" rel="noopener noreferrer" >
             GitHub
             <i class="fa-brands fa-github"></i>
           </a>
@@ -663,9 +685,9 @@
           <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-          <span class="infoCard ahorcado" data-info-texto="Versión en catalán del clásico juego de ahorcado, donde el objetivo es salvar a nuestro querido Frankenstein.
+          <span role="button" tabindex="0" aria-label="Más información: Juego del ahorcado" class="infoCard ahorcado" data-info-texto="Versión en catalán del clásico juego de ahorcado, donde el objetivo es salvar a nuestro querido Frankenstein.
           Desarrollado en HTML, CSS y JavaScript.">
-            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+            <i class="fa-solid fa-circle-info"></i>
           </span>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
           <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
@@ -673,7 +695,8 @@
         <div class="proyects_details_content">
           <!--*********boton -->
           <button id="botonCards" class="project-details-button">
-            <a href="ahorcado\index.html" target="_blank"
+            <!-- REVISION T2 (20/10/2026): barra invertida corregida en la ruta. Depende de: ahorcado/index.html -->
+            <a href="ahorcado/index.html" target="_blank" rel="noopener noreferrer"
               >Ir al proyecto
             </a>
           </button>
@@ -685,9 +708,9 @@
         <div class="card-img-js"></div>
 
         <div class="card_title">
-          <h2>Árbol de navidad</h2>
+          <h3>Árbol de navidad</h3>
           <br>
-          <h4>Descripción</h5>
+          <h4>Descripción</h4>
           <p>
             Árbol  de navidad interactivo en JavaScript, HTML y CSS navideña para manipular
             el DOM.
@@ -698,7 +721,7 @@
           <!--*********icono de -->
           <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
           <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
-          <a href="https://github.com/jose-giithub/porfolio/tree/main/arbolNavidad" target="_blank" >
+          <a href="https://github.com/jose-giithub/porfolio/tree/main/arbolNavidad" target="_blank" rel="noopener noreferrer" >
           GitHub
             <i class="fa-brands fa-github"></i>
           </a>
@@ -706,14 +729,14 @@
           <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-          <span class="infoCard arbolNavidad" data-info-texto="Proyecto interactivo de temática navideña en el que puedes personalizar un árbol de Navidad usando HTML, CSS y JavaScript.
+          <span role="button" tabindex="0" aria-label="Más información: Árbol de navidad" class="infoCard arbolNavidad" data-info-texto="Proyecto interactivo de temática navideña en el que puedes personalizar un árbol de Navidad usando HTML, CSS y JavaScript.
 
           Funciones interactivas:
           • Encender y apagar la estrella en la cima del árbol.
           • Controlar las luces de las bombillas para iluminarlas o apagarlas.
           • Agregar guirnaldas para decorar el árbol.
           • Colocar regalos debajo del árbol para darle un toque especial.">
-            <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+            <i class="fa-solid fa-circle-info"></i>
           </span>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
           <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
@@ -724,7 +747,8 @@
             <!-- <a href="https://arbolnavidad.jose-rodriguez-blanco.es/"
               >Ir al proyecto
             </a> -->
-            <a href="arbolNavidad\index.html" target="_blank"
+            <!-- REVISION T2 (20/10/2026): barra invertida corregida en la ruta. Depende de: arbolNavidad/index.html -->
+            <a href="arbolNavidad/index.html" target="_blank" rel="noopener noreferrer"
               >Ir al proyecto
             </a>
           </button>
@@ -737,9 +761,9 @@
       <div class="card" data-language="php">
         <div class="card_img-php"></div>
         <div class="card_title">
-          <h2>Fullcalendar en Laravel</h2>
+          <h3>Fullcalendar en Laravel</h3>
           <br>
-          <h4>Descripción</h5>
+          <h4>Descripción</h4>
           <p>
             Proyecto en Laravel usando el ecosistema de login Jetstream y
             fullcalendar.
@@ -749,17 +773,17 @@
           <!--*********icono de -->
           <!--dentro del href se pone el link del GitHub donde esta subido mi trabajo -->
           <!--también se puede que al tocar se abre otra ventana con la propiedad target -->
-          <a href="https://github.com/jose-giithub/LaravelFullCalendar" target="_blank" >GitHub
+          <a href="https://github.com/jose-giithub/LaravelFullCalendar" target="_blank" rel="noopener noreferrer" >GitHub
             <i class="fa-brands fa-github"></i>
           </a>
           <!-- Pop-up cuando haces click sobre el icono 'info'. Contiene la descripción del proyecto -->
           <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-          <span class="infoCard infoFullCalendar" data-info-texto=" Este proyecto utiliza el framework Laravel y un ecosistema llamado Jetstream para gestionar el inicio de sesión de los usuarios. 
+          <span role="button" tabindex="0" aria-label="Más información: Fullcalendar en Laravel" class="infoCard infoFullCalendar" data-info-texto=" Este proyecto utiliza el framework Laravel y un ecosistema llamado Jetstream para gestionar el inicio de sesión de los usuarios. 
           Una vez el usuario accede con su nombre y contraseña, dispone de un calendario personal para gestionar eventos. Este calendario está basado en la librería FullCalendar, la cual ha sido personalizada para estar en español, 
           mostrar las fechas en el formato dd.mm.yyyy y permitir la configuración de los eventos, como el color, duración (en minutos, horas o días) y opciones para añadir, eliminar o modificar eventos. El lenguaje principal es PHP, complementado con HTML, CSS, JavaScript y Bootstrap.">
-            Info<i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+            Info<i class="fa-solid fa-circle-info"></i>
           </span>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a> -->
           <!-- <a href="">img<i class="fa-solid fa-code"></i></a> -->
@@ -767,7 +791,7 @@
         <div class="proyects_details_content">
           <!--*********boton -->
           <button id="botonCards" class="project-details-button">
-            <a href="https://github.com/jose-giithub/LaravelFullCalendar"  target="_blank"
+            <a href="https://github.com/jose-giithub/LaravelFullCalendar"  target="_blank" rel="noopener noreferrer"
               >Ir al proyecto</a>
           </button>
         </div>
@@ -777,7 +801,8 @@
   <!-- modal para mostrar la info de cada card  -->
     <div class="modalContainer" id="modalContainer" style="display: none;">
       <div class="modal">
-        <h1>Descripción del proyecto:</h1>
+        <!-- REVISION T10 (20/10/2026): h1 pasa a h2, el h1 único es el de bienvenida. Depende de: css/stylesIndex.css (.modal h2), js/index.js -->
+        <h2>Descripción del proyecto:</h2>
         <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
          span class="infoCard infoFullCalendar" data-info-texto de cada card-->
         <p>

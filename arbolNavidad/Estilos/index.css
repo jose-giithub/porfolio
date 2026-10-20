@@ -97,26 +97,12 @@ body {
     }
   }
   @media (max-width: 650px) {
-    .divPAdreiconos {
-    }
     .tree {
       margin-top: 100px;
     }
   }
 
-  @media (max-width: 600px) {
-    .divPAdreiconos {
-      margin: 0;
-      display: grid;
-      grid-template-columns: 190px 190px 150px;
-      gap: 5px;
-    }
-    .icono {
-      height: auto;
-      width: auto;
-      margin: 0;
-    }
-  }
+  /* REVISION E13 (20/10/2026): eliminado un bloque @media (max-width: 600px) repetido (rejilla de 3 columnas, siempre anulada por el siguiente de 49% 49%) y una regla vacía del bloque de 650px. Depende de: arbolNavidad/index.html */
   @media (max-width: 600px) {
     .divPAdreiconos {
       margin: 0;
@@ -134,3 +120,26 @@ body {
       margin-top: 70px;
     }
   }
+
+/* REVISION T5 (20/10/2026): .tree tenía min-width: 600px y, centrado con translate, se salía de pantallas menores (hasta 540px de ancho en 360px).
+   Hasta 600px se quita el mínimo y el árbol ocupa el ancho de la pantalla; las casillas ya escalan con vw, así que no se deforma.
+   Depende de: arbolNavidad/index.html */
+@media (max-width: 600px) {
+  .tree {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+/* REVISION T10 (20/10/2026): oculta el h1 de arbolNavidad/index.html visualmente pero lo deja para lectores de pantalla. Depende de: arbolNavidad/index.html */
+.solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

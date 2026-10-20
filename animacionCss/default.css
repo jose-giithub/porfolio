@@ -405,12 +405,13 @@
         position: relative;
         overflow: hidden;/*evitar desbordamiento*/
     }
-    /***********************imagenTermial el la id de las 3 imágenes*/
-    #imagenTermial{
+    /* REVISION E14 (20/10/2026): .imagenTermial es ahora una clase (antes id repetido en las 3 imágenes). Depende de: animacionCss/index.html */
+    /***********************imagenTermial es la clase de las 3 imágenes*/
+    .imagenTermial{
         transition: transform 1s; /*rapidez de movimiento */
         position: relative; /
     }
-    #imagenTermial:hover {
+    .imagenTermial:hover {
         transform: rotate(360deg); /* grados que gira */
         position: relative;
         z-index: 1; /* Coloca la imagen en la parte posterior */
@@ -442,3 +443,76 @@
       a.button:hover {
         background: #C4376B; /*color del cambio*/
     }
+
+/* REVISION T6 (20/10/2026): la página tenía anchos fijos (.container 1200px, columnas de 384px, cabecera y menú absolutos) y medía 1200px en cualquier pantalla.
+   Hasta 1240px el contenedor se adapta al ancho; hasta 800px las columnas se apilan; el menú pasa a flex con salto de línea.
+   No cambia el aspecto en pantallas de más de 1240px. Depende de: animacionCss/index.html */
+@media (max-width: 1240px) {
+	.container {
+		width: auto;
+		max-width: 1200px;
+		padding-left: 1em;
+		padding-right: 1em;
+		box-sizing: border-box;
+	}
+	/* los #id tienen padding lateral 0 y ganan a .container: se pone aquí el margen lateral */
+	#page,
+	#featured,
+	#copyright {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	#header {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2em 1em;
+	}
+	#logo,
+	#menu {
+		position: static;
+	}
+	#menu ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#menu li {
+		float: none;
+	}
+	.boxA,
+	.boxB,
+	.boxC {
+		width: calc((100% - 40px) / 3);
+	}
+	#featured .align-left {
+		width: 30%;
+	}
+	#featured .align-right {
+		width: 65%;
+	}
+}
+
+@media (max-width: 800px) {
+	#header {
+		justify-content: center;
+		text-align: center;
+	}
+	#menu li:before {
+		padding: 1em 0.5em;
+	}
+	.boxA,
+	.boxB,
+	.boxC,
+	#featured .align-left,
+	#featured .align-right {
+		float: none;
+		width: auto;
+		margin-right: 0;
+	}
+	.boxA,
+	.boxB,
+	.boxC {
+		margin-bottom: 3em;
+	}
+}

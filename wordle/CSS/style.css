@@ -38,6 +38,8 @@ background-color:  rgb(189, 194, 142);;
     color: #000;
     border: solid 3px black;
     margin: 1px 1px 1px 1px;
+    /* REVISION T3.3 (20/10/2026): Bootstrap (.row > *) añadía 12px de padding lateral y la W (50px) quedaba cortada en 70px de casilla. Depende de: wordle/index.html */
+    padding: 0;
   }
 
   
@@ -68,3 +70,58 @@ background-color:  rgb(189, 194, 142);;
     height: 50px;
   }
 
+/* REVISION T3.3 / E8 (20/10/2026): las teclas medían 100px fijos y se apilaban en filas partidas; ahora cada fila reparte el ancho entre sus teclas,
+   con 5px de aire entre filas. Hasta 600px las teclas son pequeñas (máx. 44px); desde 601px, más grandes (máx. 60px, letra 20px). Antes la regla solo valía hasta 1100px
+   y en escritorio (1366px) las filas se partían en 2 líneas. Solo afecta al teclado virtual. Depende de: wordle/index.html */
+.container.text-center .row {
+  margin-bottom: 5px;
+}
+.container.text-center .col-12 {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+.container.text-center .btn-secondary {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 44px;
+  margin: 0 !important;
+  padding: 0;
+  font-size: 16px;
+}
+.container.text-center #Backspace,
+.container.text-center #Enter {
+  flex: 0 1 90px;
+  max-width: none;
+}
+@media (min-width: 601px) {
+  .container.text-center .btn-secondary {
+    max-width: 60px;
+    font-size: 20px;
+  }
+  .container.text-center #Backspace,
+  .container.text-center #Enter {
+    flex: 0 1 100px;
+    max-width: none;
+  }
+}
+
+/* REVISION T3.3 / E7 (20/10/2026): la cuadrícula medía 430px fijos y desbordaba en móvil. Ahora ocupa el ancho disponible y las casillas
+   se reducen con el ancho de pantalla (de 70px a un mínimo de 48px; letra proporcional). Depende de: wordle/index.html */
+@media (max-width: 480px) {
+  #cuadricula {
+    --lado: clamp(48px, 15vw, 70px);
+    width: 100%;
+    height: auto;
+  }
+  /* cada columna mide lo que su casilla (+2px de margen) para que la cuadrícula quede centrada */
+  #cuadricula .row {
+    flex: 0 0 calc(var(--lado) + 2px);
+    margin: 0;
+  }
+  .cell {
+    width: var(--lado);
+    height: var(--lado);
+    font-size: calc(var(--lado) * 0.7);
+  }
+}

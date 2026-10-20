@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Fvicon -->
     <link rel="icon" type="image/png" sizes="16x16" href="img/icons8-star-16.png">
     <!-- Jquery -->
+    <!-- REVISION T3.4/T3.5 (20/10/2026): lang="ca" (el juego es catalán); jQuery 3.3.1 pasa a 3.7.1 (como index.html) y Bootstrap JS 5.3.3 pasa a 5.3.2 (como el CSS y sqWord). Depende de: wordle/JS/main.js, wordle/JS/funciones.js, sqWord/index.html -->
     <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs"
       crossorigin="anonymous"
     ></script>
     <!-- js bootstrap -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
     <!-- mi js -->
@@ -50,7 +51,8 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <!-- Contenedor fluido para la barra de navegación, se usa para un ancho completo -->
           <div class="container-fluid">
-            <button id="botonEstadisticas">
+            <!-- REVISION T14 (20/10/2026): aria-label en los 3 botones que solo tienen icono (catalán, como el resto del juego). Depende de: wordle/JS/main.js -->
+            <button id="botonEstadisticas" aria-label="Estadístiques">
               <i
                 class="fa-solid fa-chart-simple fa-fade fa-xl"
                 style="color: #000000"
@@ -60,13 +62,13 @@
             <!-- Botón que se muestra para pantallas pequeñas, activa la navegación colapsable -->
 
             <a class="navbar-brand" href="#">WORDLE Jose & Cosmin</a>
-            <button id="botonReiniciar">
+            <button id="botonReiniciar" aria-label="Reiniciar la partida">
               <i
                 class="fa-sharp fa-solid fa-arrows-rotate fa-spin fa-flip-horizontal fa-xl"
                 style="color: #000000"
               ></i>
             </button>
-            <button id="botonInstrucciones">
+            <button id="botonInstrucciones" aria-label="Instruccions">
               <i
                 class="fa-solid fa-circle-question fa-bounce fa-xl"
                 style="color: #000000"

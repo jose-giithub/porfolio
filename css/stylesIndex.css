@@ -1,5 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap"); /*Fuente */
-
+/* REVISION T14 (20/10/2026): se elimina el @import de la fuente Montserrat (nadie la usaba en index.html y bloqueaba el pintado). Depende de: index.html */
+/* REVISION T14 / E18 (20/10/2026): el color de las tarjetas (antes cadetblue) está en una sola variable; cambia aquí el tono.
+   Para que el texto blanco se lea bien (WCAG AA) el contraste con el fondo debe ser de 4,5:1 o más. Depende de: index.html */
+:root {
+  --color-tarjeta: #686d79;
+}
 * {
   /*Toda la pagina */
   margin: 0;
@@ -42,6 +46,11 @@ button {
   padding-left: 8%;
 }
 
+/* REVISION T10 (20/10/2026): sustituye al antiguo h2 del logo en index.html (mismo tamaño y peso). Depende de: index.html */
+.brand-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
 .brand span {
   color: rgb(227, 246, 9);
 }
@@ -89,6 +98,7 @@ button {
   border: none;
   color: white;
   cursor: pointer;
+  min-width: 24px; /* REVISION T14 (20/10/2026): objetivo táctil de al menos 24px de ancho (antes 22px). Depende de: index.html */
   position: relative; /* Posicionamiento relativo dentro del navbar */
   z-index: 2; /* Asegura que el botón esté sobre el menú desplegado */
 }
@@ -135,7 +145,9 @@ p {
 }
 
 #imgMain {
-  width: auto; /* 40% del espacio del contenedor `.main` */
+  /* REVISION T15 (20/10/2026): la foto nueva mide 960px de ancho natural; antes el PNG medía 300px y 'auto' bastaba. Se fija 300px de ancho y la altura sigue la proporción. Depende de: index.html, css/stylesResponsive.css */
+  width: 300px;
+  height: auto;
   margin: 0;
   margin-left: 35px;
   outline: none; /* Elimina el borde al enfocar */
@@ -187,6 +199,8 @@ p {
 .about img {
   grid-column: 1 / 6; /* Ajusta según sea necesario */
   width: 99%;
+  /* REVISION T15 (20/10/2026): la foto de Sobre mí ya no crece con la columna (hasta 427px a 1366px); tope de 375px, valor ajustado por José. Depende de: index.html, css/stylesResponsive.css */
+  max-width: 375px;
   height: auto; /* Mantiene la proporción de la imagen */
   border: 4px solid rgb(227, 246, 9);
 }
@@ -217,6 +231,11 @@ p {
 .botonSaberMas a {
   text-decoration: none;
   color: black;
+  /* REVISION T14 (20/10/2026): el enlace ocupa todo el botón (antes solo el texto, de 14px de alto). Depende de: index.html */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 /***************Fin Estilos about*/
 
@@ -289,6 +308,18 @@ p {
 #botonFiltro:focus {
   outline: none; /* Asegura que no haya contorno cuando el botón es enfocado */
 }
+/* REVISION T14 (20/10/2026): foco visible al navegar con teclado (solo :focus-visible, el clic con ratón no muestra aro). Mismo amarillo de la página. Depende de: index.html */
+a:focus-visible,
+button:focus-visible,
+.infoCard:focus-visible,
+.custom-checkbox input:focus-visible {
+  outline: 3px solid rgb(227, 246, 9);
+  outline-offset: 2px;
+}
+#botonFiltro:focus-visible {
+  outline: 3px solid rgb(227, 246, 9);
+  outline-offset: 2px;
+}
 /* ******** INICIO CARDS*/
 /* contenedor padre de todas las cards */
 .container {
@@ -308,7 +339,7 @@ p {
   width: 27%;
   height: 500px;
   color: aliceblue;
-  background-color: cadetblue;
+  background-color: var(--color-tarjeta);
   /* superior, derecha, inferior e izquierda */
   margin: 10px 15px 20px 15px;
   float: left;
@@ -325,7 +356,7 @@ p {
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .card_title {
   margin-left: 5px;
@@ -333,7 +364,9 @@ p {
   font-size: larger;
   color: white;
 }
-.card_title h2{
+/* REVISION T10 (20/10/2026): el título de tarjeta ya es h3 en index.html; se mantiene el tamaño que tenía como h2 (1.5em). Depende de: index.html */
+.card_title h3{
+  font-size: 1.5em;
   margin-bottom: 10px;
 }
 .card_proyecto_links {
@@ -349,7 +382,8 @@ p {
 .card_proyecto_links i {
   /*logos cartas*/
   font-size: 1.6em;
-  color: black;
+  /* REVISION T14 (20/10/2026): iconos de GitHub e Info en blanco (en negro tenían poco contraste con el fondo gris, 4,05:1; en blanco 5,18:1). Depende de: index.html */
+  color: white;
   margin: 10px;
 }
 .proyects_details_content {
@@ -372,12 +406,13 @@ p {
   margin-bottom: 10px;
   font-weight: bold;   /*Texto en negrita*/
 }
-#botonCards:hover {
-  /*Cuando el cursor esta encima del boton el cambia de color*/
-  background-color: rgb(246, 100, 9);
-  box-shadow: none;
-  transition: ease-in 0.5s;
+/* REVISION T14 (20/10/2026): el enlace ocupa todo el botón (antes solo el texto, de 14px de alto, y el resto del botón no navegaba; Lighthouse lo marcaba como objetivo táctil pequeño). Depende de: index.html */
+#botonCards a {
+  display: block;
+  margin: -5px -15px;
+  padding: 5px 15px;
 }
+/* REVISION T14 (20/10/2026): se elimina el hover naranja de #botonCards; ahora hereda el azul #5eacd9 del grupo de botones de arriba (regla compartida cerca de la línea 167). Depende de: index.html */
 .card_img-nodeJs {
   width: 100%;
   height: 150px;
@@ -387,7 +422,7 @@ p {
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .card_img-tutoMySql{
   width: 100%;
@@ -398,7 +433,7 @@ p {
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .card_img-tutoGoAccess{
   width: 100%;
@@ -409,7 +444,7 @@ p {
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .card_img-laravel {
   width: 100%;
@@ -420,7 +455,7 @@ p {
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 
 .card_img-tutoLaravel {
@@ -432,7 +467,7 @@ p {
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .card_img-java {
   width: 100%;
@@ -443,7 +478,7 @@ p {
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .card_img-html {
   width: 100%;
@@ -453,7 +488,7 @@ p {
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .card-img-js {
   width: 100%;
@@ -463,7 +498,7 @@ p {
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .card_img-php {
   width: 100%;
@@ -473,7 +508,7 @@ p {
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .project-details-button {
   text-decoration: none;
@@ -532,8 +567,10 @@ p {
   background-color: rgba(255, 255, 255); 
 
 } */
- .modal h1{
+ /* REVISION T10 (20/10/2026): el título del modal pasa de h1 a h2; se conserva el aspecto del h1 (altura de línea 1.6). Depende de: index.html */
+ .modal h2{
   font-size: 1.2em;
+  line-height: 1.6;
 }
 
 /* Botón para cerrar el modal */
