@@ -145,7 +145,9 @@ p {
 }
 
 #imgMain {
-  width: auto; /* 40% del espacio del contenedor `.main` */
+  /* REVISION T15 (20/10/2026): la foto nueva mide 960px de ancho natural; antes el PNG medía 300px y 'auto' bastaba. Se fija 300px de ancho y la altura sigue la proporción. Depende de: index.html, css/stylesResponsive.css */
+  width: 300px;
+  height: auto;
   margin: 0;
   margin-left: 35px;
   outline: none; /* Elimina el borde al enfocar */
@@ -197,6 +199,8 @@ p {
 .about img {
   grid-column: 1 / 6; /* Ajusta según sea necesario */
   width: 99%;
+  /* REVISION T15 (20/10/2026): la foto de Sobre mí ya no crece con la columna (hasta 427px a 1366px); tope de 375px, valor ajustado por José. Depende de: index.html, css/stylesResponsive.css */
+  max-width: 375px;
   height: auto; /* Mantiene la proporción de la imagen */
   border: 4px solid rgb(227, 246, 9);
 }

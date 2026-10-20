@@ -174,7 +174,9 @@
   }
 
   .about img {
-    width: auto;
+    /* REVISION T15 (20/10/2026): la foto nueva mide 960px de ancho natural; con 'auto' ocupaba más que la pantalla. Se fija en 150px (mitad de los 300px del PNG antiguo, a petición de José) y se reduce si no cabe. Depende de: index.html */
+    width: 300px; /* igual que la foto de cabecera (300px), a petición de José, para que ambas queden uniformes */
+    max-width: 100%;
     height: auto;
     border: 4px solid rgb(227, 246, 9);
     margin-left: 20%;
@@ -338,15 +340,21 @@
     /* REVISION T7 / E15 (20/10/2026): el avatar (300px + borde) desbordaba su caja a 320px. Depende de: index.html, info_personal.html (#imgHabilidades) */
     max-width: 100%;
   }
+  /* REVISION T15 (20/10/2026): en móvil el avatar nuevo mantiene 300px (como el PNG antiguo) y se reduce solo si no cabe (max-width); altura proporcional. Depende de: index.html */
+  #imgMain {
+    width: min(300px, 83vw); /* misma medida que .about img, para que las dos fotos queden iguales */
+    height: auto;
+  }
 
   /* *******ABOUT INFO PERSONAL */
   .about {
     margin-left: 8%;
-    width: 90%;
+    /* REVISION T15 (20/10/2026): 88% (antes 90%) como el bloque .main de la cabecera, para que las dos fotos queden centradas en el mismo eje. Depende de: index.html, info_personal.html (.about) */
+    width: 88%;
     margin-bottom: 20px;
   }
   .about img {
-    width: auto;
+    width: min(300px, 83vw); /* REVISION T15 (20/10/2026): misma medida que la foto de cabecera (#imgMain) para que ambas queden iguales en móvil: 300px, o el 83% del ancho de pantalla si no cabe. Depende de: index.html */
     height: auto;
     /* REVISION T7 / E15 (20/10/2026): la imagen (300px + borde) era más ancha que su caja a 320px y la página tenía scroll horizontal. Depende de: index.html, info_personal.html (ambas usan .about) */
     max-width: 100%;
@@ -400,4 +408,12 @@
   }
  
 
+}
+
+/* REVISION T15 (20/10/2026): en tablet (601px a 1000px) el texto y la foto de cabecera quedaban pegados a los bordes de la pantalla (la foto, al borde derecho). Se añade un margen lateral de 16px a .main solo en ese tramo. Depende de: index.html (.main, #imgMain) */
+@media (min-width: 601px) and (max-width: 1000px) {
+  .main {
+    box-sizing: border-box;
+    padding: 0 16px;
+  }
 }
