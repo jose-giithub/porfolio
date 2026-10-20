@@ -353,8 +353,10 @@
     margin: 10px auto;
   }
   /************ESTILOS BUSCADOR POR LENGUAJE********/
+  /* REVISION T7 (20/10/2026): height 100px fijo no cabía para las 5 casillas y Docker tapaba el botón Filtrar; ahora el bloque crece con su contenido.
+     Depende de: index.html (info_personal.html carga este CSS pero no usa .language-selection) */
   .language-selection {
-    height: 100px;
+    height: auto;
     display: grid;
   }
   /* ************ESTILOS CARDS */
