@@ -134,3 +134,13 @@ body {
       margin-top: 70px;
     }
   }
+
+/* REVISION T5 (20/10/2026): .tree tenía min-width: 600px y, centrado con translate, se salía de pantallas menores (hasta 540px de ancho en 360px).
+   Hasta 600px se quita el mínimo y el árbol ocupa el ancho de la pantalla; las casillas ya escalan con vw, así que no se deforma.
+   Depende de: arbolNavidad/index.html */
+@media (max-width: 600px) {
+  .tree {
+    min-width: 0;
+    width: 100%;
+  }
+}
