@@ -11,7 +11,8 @@
     <title>José Luis Rodríguez Blanco | Técnico IT y desarrollador web junior</title>
     <meta name="description" content="Portfolio de José Luis Rodríguez Blanco, técnico IT y desarrollador web junior: proyectos con Laravel, Docker, JavaScript, Java y PHP, tutoriales de servidores y juegos web." />
     <!-- <link rel="stylesheet" href="css/styles.css"> -->
-    <link rel="stylesheet" href="css/stylesInedex.css" />
+    <!-- REVISION T13 (20/10/2026): css/stylesInedex.css renombrado a css/stylesIndex.css (errata en el nombre). Depende de: css/stylesIndex.css -->
+    <link rel="stylesheet" href="css/stylesIndex.css" />
     <link rel="stylesheet" href="css/stylesResponsive.css" />
       <!-- cdn JQuery -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -31,7 +32,7 @@
       <header>
         <nav class="navbar">
           <div class="brand">
-            <!-- REVISION T10 (20/10/2026): el logo deja de ser un h2 (solo debe haber un h1 y títulos en orden). Depende de: css/stylesInedex.css -->
+            <!-- REVISION T10 (20/10/2026): el logo deja de ser un h2 (solo debe haber un h1 y títulos en orden). Depende de: css/stylesIndex.css -->
             <div class="brand-name">J<span>ose</span></div>
           </div>
           <!-- Boton con icono que solo se muestra en pantallas pequeñas -->
@@ -138,7 +139,7 @@
         <div class="card" data-language="php,html,javascript,docker">
           <!--data-language para filtrar-->
           <div class="card_img-laravel"></div>
-          <!-- REVISION T10 (20/10/2026): en todas las tarjetas el título pasa de h2 a h3 (cuelga de "Mi portfolio") y <h4>Descripción</h5> se corrige a </h4>. Depende de: css/stylesInedex.css (.card_title h3) -->
+          <!-- REVISION T10 (20/10/2026): en todas las tarjetas el título pasa de h2 a h3 (cuelga de "Mi portfolio") y <h4>Descripción</h5> se corrige a </h4>. Depende de: css/stylesIndex.css (.card_title h3) -->
           <div class="card_title">
             <h3>Proyecto final</h3>
             <br>
@@ -184,7 +185,7 @@
       
           <!--**************CARD CORREGIDA  Laravel tutorial**************-->
         <div class="card" data-language="php,docker"><!--data-language para filtrar-->
-          <div class="card_img-tutoLaravel"></div><!--la imagen se carga desde css archivo en: www\css\stylesInedex.css-->
+          <div class="card_img-tutoLaravel"></div><!--la imagen se carga desde css archivo en: www\css\stylesIndex.css-->
           <div class="card_title">
             <h3>Tutorial Laravel+ Docker</h3>
             <h4>Descripción</h4>
@@ -319,7 +320,7 @@
        <!-- FINAL CARD NODE.JS -->
           <!--**************CARD CORREGIDA   TUTORIAL DOCKER + SERVIDOR **************-->
         <div class="card" data-language="php,docker"><!--data-language para filtrar-->
-          <div class="card_img-tutoGoAccess"></div><!--la imagen se carga desde css archivo en: www\css\stylesInedex.css-->
+          <div class="card_img-tutoGoAccess"></div><!--la imagen se carga desde css archivo en: www\css\stylesIndex.css-->
           <div class="card_title">
             <h3>Tutorial Ubuntu server</h3>
             <h4>Descripción</h4>
@@ -368,7 +369,7 @@
         <!--**************FINAL  TUTORIAL DOCKER + SERVIDOR **************-->
           <!--**************CARD CORREGIDA  TUTORIAL BASE DE DATOS MariaDB**************-->
         <div class="card" data-language="php,docker"><!--data-language para filtrar-->
-          <div class="card_img-tutoMySql"></div><!--la imagen se carga desde css archivo en: www\css\stylesInedex.css-->
+          <div class="card_img-tutoMySql"></div><!--la imagen se carga desde css archivo en: www\css\stylesIndex.css-->
           <div class="card_title">
             <h3>Tutorial MariaDB+ Docker</h3>
             <h4>Descripción</h4>
@@ -412,7 +413,7 @@
         <!--**************FINAL  BASE DE DATOS MariaDB **************-->
          <!--**************CARD CORREGIDA  TUTORIAL GoAccess**************-->
         <div class="card" data-language="php,docker"><!--data-language para filtrar-->
-          <div class="card_img-tutoGoAccess"></div><!--la imagen se carga desde css archivo en: www\css\stylesInedex.css-->
+          <div class="card_img-tutoGoAccess"></div><!--la imagen se carga desde css archivo en: www\css\stylesIndex.css-->
           <div class="card_title">
             <h3>Tutorial análisis de registros web</h3>
             <h4>Descripción</h4>
@@ -789,7 +790,7 @@
   <!-- modal para mostrar la info de cada card  -->
     <div class="modalContainer" id="modalContainer" style="display: none;">
       <div class="modal">
-        <!-- REVISION T10 (20/10/2026): h1 pasa a h2, el h1 único es el de bienvenida. Depende de: css/stylesInedex.css (.modal h2), js/index.js -->
+        <!-- REVISION T10 (20/10/2026): h1 pasa a h2, el h1 único es el de bienvenida. Depende de: css/stylesIndex.css (.modal h2), js/index.js -->
         <h2>Descripción del proyecto:</h2>
         <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
          span class="infoCard infoFullCalendar" data-info-texto de cada card-->
