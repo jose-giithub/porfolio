@@ -372,7 +372,8 @@ button:focus-visible,
 .card_proyecto_links i {
   /*logos cartas*/
   font-size: 1.6em;
-  color: black;
+  /* REVISION T14 (20/10/2026): iconos de GitHub e Info en blanco (en negro tenían poco contraste con el fondo gris, 4,05:1; en blanco 5,18:1). Depende de: index.html */
+  color: white;
   margin: 10px;
 }
 .proyects_details_content {
@@ -395,12 +396,7 @@ button:focus-visible,
   margin-bottom: 10px;
   font-weight: bold;   /*Texto en negrita*/
 }
-#botonCards:hover {
-  /*Cuando el cursor esta encima del boton el cambia de color*/
-  background-color: rgb(246, 100, 9);
-  box-shadow: none;
-  transition: ease-in 0.5s;
-}
+/* REVISION T14 (20/10/2026): se elimina el hover naranja de #botonCards; ahora hereda el azul #5eacd9 del grupo de botones de arriba (regla compartida cerca de la línea 167). Depende de: index.html */
 .card_img-nodeJs {
   width: 100%;
   height: 150px;
