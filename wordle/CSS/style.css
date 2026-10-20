@@ -95,3 +95,23 @@ background-color:  rgb(189, 194, 142);;
     max-width: none;
   }
 }
+
+/* REVISION T3.3 / E7 (20/10/2026): la cuadrícula medía 430px fijos y desbordaba en móvil. Ahora ocupa el ancho disponible y las casillas
+   se reducen con el ancho de pantalla (de 70px a un mínimo de 48px; letra proporcional). Depende de: wordle/index.html */
+@media (max-width: 480px) {
+  #cuadricula {
+    --lado: clamp(48px, 15vw, 70px);
+    width: 100%;
+    height: auto;
+  }
+  /* cada columna mide lo que su casilla (+2px de margen) para que la cuadrícula quede centrada */
+  #cuadricula .row {
+    flex: 0 0 calc(var(--lado) + 2px);
+    margin: 0;
+  }
+  .cell {
+    width: var(--lado);
+    height: var(--lado);
+    font-size: calc(var(--lado) * 0.7);
+  }
+}
