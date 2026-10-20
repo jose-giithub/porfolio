@@ -51,7 +51,8 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <!-- Contenedor fluido para la barra de navegación, se usa para un ancho completo -->
           <div class="container-fluid">
-            <button id="botonEstadisticas">
+            <!-- REVISION T14 (20/10/2026): aria-label en los 3 botones que solo tienen icono (catalán, como el resto del juego). Depende de: wordle/JS/main.js -->
+            <button id="botonEstadisticas" aria-label="Estadístiques">
               <i
                 class="fa-solid fa-chart-simple fa-fade fa-xl"
                 style="color: #000000"
@@ -61,13 +62,13 @@
             <!-- Botón que se muestra para pantallas pequeñas, activa la navegación colapsable -->
 
             <a class="navbar-brand" href="#">WORDLE Jose & Cosmin</a>
-            <button id="botonReiniciar">
+            <button id="botonReiniciar" aria-label="Reiniciar la partida">
               <i
                 class="fa-sharp fa-solid fa-arrows-rotate fa-spin fa-flip-horizontal fa-xl"
                 style="color: #000000"
               ></i>
             </button>
-            <button id="botonInstrucciones">
+            <button id="botonInstrucciones" aria-label="Instruccions">
               <i
                 class="fa-solid fa-circle-question fa-bounce fa-xl"
                 style="color: #000000"

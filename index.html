@@ -161,7 +161,8 @@
              <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
               span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
               El código esta debajo de todas las cards -->
-            <span class="infoCard laravelProyecto" data-info-texto="Proyecto final de grado, realizado en colaboración con Francès Xavier Campos y desarrollado con el framework Laravel,
+            <!-- REVISION T14 (20/10/2026): los iconos de info de las tarjetas (span) pasan a ser operables con teclado: role="button", tabindex="0" y aria-label con el título del proyecto. Depende de: js/index.js (tecla Enter/Espacio), css/stylesIndex.css (:focus-visible) -->
+            <span role="button" tabindex="0" aria-label="Más información: Proyecto final" class="infoCard laravelProyecto" data-info-texto="Proyecto final de grado, realizado en colaboración con Francès Xavier Campos y desarrollado con el framework Laravel,
             utilizando el ecosistema Laravel Breeze para la gestión de usuarios.
             La web también incorpora una integración de mapas mediante la API de Google Maps y una base de datos gestionada con phpMyAdmin. 
             Está diseñado en PHP, HTML, CSS, JavaScript, Bootstrap y Tailwind, y cuenta con un entorno en Docker junto con Nginx Proxy Manager.
@@ -206,7 +207,7 @@
               <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
               span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
               El código esta debajo de todas las cards -->
-            <span class="infoCard laravelProyecto" data-info-texto="🤔¿Qué encontraremos en este tutorial?
+            <span role="button" tabindex="0" aria-label="Más información: Tutorial Laravel+ Docker" class="infoCard laravelProyecto" data-info-texto="🤔¿Qué encontraremos en este tutorial?
 
               Levantar una imagen de Laravel en un servidor Dockerizado, asegurando una conexión segura con certificado HTTPS gracias a Nginx Proxy Manager. 
               Integraremos una base de datos externa MariaDB y la interfaz web phpMyAdmin, previamente establecida, para una gestión eficiente de datos.
@@ -257,7 +258,7 @@
             <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
               span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
               El código esta debajo de todas las cards -->
-          <span class="infoCard portFolio" data-info-texto="Este proyecto es un portfolio personal diseñado desde cero usando HTML, CSS, JavaScript, jQuery y Docker.
+          <span role="button" tabindex="0" aria-label="Más información: Mi Portfolio" class="infoCard portFolio" data-info-texto="Este proyecto es un portfolio personal diseñado desde cero usando HTML, CSS, JavaScript, jQuery y Docker.
           Incluye distintas secciones donde puedes encontrar mis redes sociales, mi currículum y una muestra de algunos de mis proyectos escolares, con opciones para filtrar según el lenguaje de programación.">
             <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
           </span>
@@ -299,7 +300,7 @@
           <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-          <span class="infoCard nodeJs" data-info-texto="Todo el mundo conoce el clásico juego de 'Piedra, Papel o Tijeras', pero ¿has probado 'Piedra, Papel, Tijeras, Lagarto, Spock'?
+          <span role="button" tabindex="0" aria-label="Más información: Piedra, papel, tijeras, ++" class="infoCard nodeJs" data-info-texto="Todo el mundo conoce el clásico juego de 'Piedra, Papel o Tijeras', pero ¿has probado 'Piedra, Papel, Tijeras, Lagarto, Spock'?
           Este proyecto está desarrollado con el framework Node.js, utilizando HTML, CSS, Bootstrap y JavaScript.
 
           ¿Cómo jugar?
@@ -341,7 +342,7 @@
             <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-            <span class="infoCard laravelProyecto" data-info-texto="🤔¿Qué encontraremos en este tutorial?
+            <span role="button" tabindex="0" aria-label="Más información: Tutorial Ubuntu server" class="infoCard laravelProyecto" data-info-texto="🤔¿Qué encontraremos en este tutorial?
 
               Guía paso a paso en la configuración de tu servidor VPS con Ubuntu.
               Crear un entorno robusto, seguro y superoptimizado para alojar aplicaciones, incluyendo la instalación de Docker 🐳 y Portainer ⚓ para la gestión de contenedores, y Nginx Proxy Manager 👮 para la configuración de dominios y certificados SSL.
@@ -390,7 +391,7 @@
            <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-            <span class="infoCard laravelProyecto" data-info-texto="🤔¿Qué encontraremos en este tutorial?
+            <span role="button" tabindex="0" aria-label="Más información: Tutorial MariaDB+ Docker" class="infoCard laravelProyecto" data-info-texto="🤔¿Qué encontraremos en este tutorial?
             
               Guía paso a paso para levantar en nuestro servidor VPS un servicio de base de datos MariaDB junto con una interfaz web PhpMyAdmin usando Docker y Docker Compose, de forma segura y organizada.">
               <!-- Icono info -->
@@ -434,7 +435,7 @@
            <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
              span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
              El código esta debajo de todas las cards -->
-            <span class="infoCard laravelProyecto" data-info-texto="🤔¿Qué encontraremos en este tutorial?
+            <span role="button" tabindex="0" aria-label="Más información: Tutorial análisis de registros web" class="infoCard laravelProyecto" data-info-texto="🤔¿Qué encontraremos en este tutorial?
             
               Guía completa para montar una imagen GoAccess Dockerizado con interfaz web en un servidor VPS previamente montado. 
               Gracias a GoAccess tendrás un analizador de registros para tus webs desde tu interfaz web.
@@ -486,7 +487,7 @@
           <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-          <span class="infoCard wordle" data-info-texto="¿Conoces el juego WORDLE? Aquí tienes el mío.
+          <span role="button" tabindex="0" aria-label="Más información: Juego WORDLE" class="infoCard wordle" data-info-texto="¿Conoces el juego WORDLE? Aquí tienes el mío.
           Proyecto creado con la colaboración de Cosmin Calin. Juego creado desde 0 en HTML, CSS y JavaScript.
           Tiene un formulario y luego puedes jugar tus partidas y los datos de estas son guardados en LocalStorage para tener un registro de ellas. Las palabras a descubrir están en catalán.">
             <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
@@ -533,7 +534,7 @@
           <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-          <span class="infoCard animacionCss" data-info-texto="Bonita actividad en HTML y CSS donde se muestra una sucesión de animaciones CSS.">
+          <span role="button" tabindex="0" aria-label="Más información: Animaciones CSS" class="infoCard animacionCss" data-info-texto="Bonita actividad en HTML y CSS donde se muestra una sucesión de animaciones CSS.">
             <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
           </span>
           <!-- <a href=""> info<i class="fa-solid fa-globe"></i> </a>
@@ -580,7 +581,7 @@
           <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-          <span  style="text-align: left;" class="infoCard cazaPuntos" data-info-texto="Juego desarrollado en Java, utilizando JavaFX y la herramienta gráfica SceneBuilder. 
+          <span role="button" tabindex="0" aria-label="Más información: Juego Cazador de puntos"  style="text-align: left;" class="infoCard cazaPuntos" data-info-texto="Juego desarrollado en Java, utilizando JavaFX y la herramienta gráfica SceneBuilder. 
 
           Reglas del juego:
           • Al inicio, todas las casillas muestran un símbolo de interrogación y el botón Reiniciar pantalla muestra el texto Empezar.
@@ -627,7 +628,7 @@
           <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-          <span class="infoCard sqWord" data-info-texto="Inspirado en el famoso y polémico juego de palabras, Sqword es un juego de lógica y vocabulario creado desde cero usando HTML, CSS y JavaScript.
+          <span role="button" tabindex="0" aria-label="Más información: Juego SQWORD" class="infoCard sqWord" data-info-texto="Inspirado en el famoso y polémico juego de palabras, Sqword es un juego de lógica y vocabulario creado desde cero usando HTML, CSS y JavaScript.
 
           Instrucciones de juego:
           • Coloca letras en la cuadrícula para formar tantas palabras de 3, 4 y 5 letras como puedas. Las palabras se pueden formar en horizontal (de izquierda a derecha) o en vertical (de arriba a abajo), para un máximo de 50 puntos.
@@ -676,7 +677,7 @@
           <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-          <span class="infoCard ahorcado" data-info-texto="Versión en catalán del clásico juego de ahorcado, donde el objetivo es salvar a nuestro querido Frankenstein.
+          <span role="button" tabindex="0" aria-label="Más información: Juego del ahorcado" class="infoCard ahorcado" data-info-texto="Versión en catalán del clásico juego de ahorcado, donde el objetivo es salvar a nuestro querido Frankenstein.
           Desarrollado en HTML, CSS y JavaScript.">
             <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
           </span>
@@ -720,7 +721,7 @@
           <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-          <span class="infoCard arbolNavidad" data-info-texto="Proyecto interactivo de temática navideña en el que puedes personalizar un árbol de Navidad usando HTML, CSS y JavaScript.
+          <span role="button" tabindex="0" aria-label="Más información: Árbol de navidad" class="infoCard arbolNavidad" data-info-texto="Proyecto interactivo de temática navideña en el que puedes personalizar un árbol de Navidad usando HTML, CSS y JavaScript.
 
           Funciones interactivas:
           • Encender y apagar la estrella en la cima del árbol.
@@ -771,7 +772,7 @@
           <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
             span class="infoCard..." data-info-texto de cada card y se implanta en .modalContainer, .modal. 
             El código esta debajo de todas las cards -->
-          <span class="infoCard infoFullCalendar" data-info-texto=" Este proyecto utiliza el framework Laravel y un ecosistema llamado Jetstream para gestionar el inicio de sesión de los usuarios. 
+          <span role="button" tabindex="0" aria-label="Más información: Fullcalendar en Laravel" class="infoCard infoFullCalendar" data-info-texto=" Este proyecto utiliza el framework Laravel y un ecosistema llamado Jetstream para gestionar el inicio de sesión de los usuarios. 
           Una vez el usuario accede con su nombre y contraseña, dispone de un calendario personal para gestionar eventos. Este calendario está basado en la librería FullCalendar, la cual ha sido personalizada para estar en español, 
           mostrar las fechas en el formato dd.mm.yyyy y permitir la configuración de los eventos, como el color, duración (en minutos, horas o días) y opciones para añadir, eliminar o modificar eventos. El lenguaje principal es PHP, complementado con HTML, CSS, JavaScript y Bootstrap.">
             Info<i class="fa-solid fa-circle-info" style="color: #000000;"></i>

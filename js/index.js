@@ -62,6 +62,14 @@ $(".infoCard").click(function() {
     $("#modalContainer").show(); // Mostrar el modal
 });
 
+// REVISION T14 (20/10/2026): los iconos de info son span con role="button"; con Enter o Espacio abren el modal igual que el clic. Depende de: index.html
+$(".infoCard").on("keydown", function(e) {
+    if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault(); // evita que Espacio haga scroll
+        $(this).trigger("click");
+    }
+});
+
 /**
  * Al hacer click sobre el botón de cerrar del modal, se oculta el modal
  * Boton con id bootonClose

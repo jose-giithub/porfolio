@@ -294,6 +294,18 @@ p {
 #botonFiltro:focus {
   outline: none; /* Asegura que no haya contorno cuando el botón es enfocado */
 }
+/* REVISION T14 (20/10/2026): foco visible al navegar con teclado (solo :focus-visible, el clic con ratón no muestra aro). Mismo amarillo de la página. Depende de: index.html */
+a:focus-visible,
+button:focus-visible,
+.infoCard:focus-visible,
+.custom-checkbox input:focus-visible {
+  outline: 3px solid rgb(227, 246, 9);
+  outline-offset: 2px;
+}
+#botonFiltro:focus-visible {
+  outline: 3px solid rgb(227, 246, 9);
+  outline-offset: 2px;
+}
 /* ******** INICIO CARDS*/
 /* contenedor padre de todas las cards */
 .container {
