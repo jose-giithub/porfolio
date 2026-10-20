@@ -1,5 +1,9 @@
+/* REVISION E11 (20/10/2026): el color de fondo (antes naranja #F5B027) está en una sola variable, cambia aquí el tono. Depende de: sqWord/index.html */
+:root {
+  --fondo: #D9E2EC;
+}
 body {
-  background-color: #F5B027;
+  background-color: var(--fondo);
 }
 header{
   background-color: white;
@@ -28,7 +32,7 @@ header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F5B027;
+  background-color: var(--fondo);
   border-radius: 10px;
   margin-bottom: 10px; /* Ajusta el valor según la separación que desees */
 }
@@ -50,16 +54,18 @@ header h1 {
 
 /*ESTILOS JOKER*/
 #contenedorJoker {
-  background-color: #F5B027; /* Cambia al mismo color del fondo del body */
+  background-color: var(--fondo); /* Cambia al mismo color del fondo del body */
   display: none;
+  /* REVISION E11 (20/10/2026): 800px fijos desbordaban en móvil. Depende de: sqWord/index.html */
   width: 800px;
+  max-width: 100%;
 }
 
 .card-custom {
   border: 2px solid #000;
   padding: 20px;
   border-radius: 10px;
-  background-color: #F5B027; /* Cambia al mismo color del fondo del body */
+  background-color: var(--fondo); /* Cambia al mismo color del fondo del body */
   box-shadow: 0 4px 8px rgba(0,0,0,.05);
 }
 
@@ -98,7 +104,7 @@ input{
   width: 80px;
   height: 80px;
   text-align: center;
-  background-color:  #F5B027;
+  background-color:  var(--fondo);
   font-size: 60px;
   text-transform: uppercase;
   color: #000;
@@ -176,7 +182,7 @@ input{
 .container-fluid{
   margin-top: 100px;
   display: none;
-  background-color: #F5B027;
+  background-color: var(--fondo);
 
 }
 .container-fluid p{
