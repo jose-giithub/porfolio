@@ -272,11 +272,12 @@ function teclasPresionada(event) {
 }
 
 /**
- * Función que da un num aleatorio enjtre  y 11033
+ * Función que da un num aleatorio entre 0 y el número de palabras del diccionario
  * @returns numero aleatorio
  */
 function numeroAleatorio() {
   let numeroAleatorio = Math.random();
-  let numeroFinal = Math.floor(numeroAleatorio * 11033);
+  // REVISION T3 / E5 (20/10/2026): antes era un 11033 fijo y no llegaba a las últimas palabras (o salía undefined); ahora usa dic.length. Depende de: wordle/JS/main.js, wordle/JS/diccionari.js
+  let numeroFinal = Math.floor(numeroAleatorio * dic.length);
   return numeroFinal;
 }
