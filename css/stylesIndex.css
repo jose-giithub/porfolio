@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap"); /*Fuente */
-
+/* REVISION T14 / E18 (20/10/2026): el color de las tarjetas (antes cadetblue) está en una sola variable; cambia aquí el tono.
+   Para que el texto blanco se lea bien (WCAG AA) el contraste con el fondo debe ser de 4,5:1 o más. Depende de: index.html */
+:root {
+  --color-tarjeta: #686d79;
+}
 * {
   /*Toda la pagina */
   margin: 0;
@@ -325,7 +329,7 @@ button:focus-visible,
   width: 27%;
   height: 500px;
   color: aliceblue;
-  background-color: cadetblue;
+  background-color: var(--color-tarjeta);
   /* superior, derecha, inferior e izquierda */
   margin: 10px 15px 20px 15px;
   float: left;
@@ -342,7 +346,7 @@ button:focus-visible,
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .card_title {
   margin-left: 5px;
@@ -406,7 +410,7 @@ button:focus-visible,
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .card_img-tutoMySql{
   width: 100%;
@@ -417,7 +421,7 @@ button:focus-visible,
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .card_img-tutoGoAccess{
   width: 100%;
@@ -428,7 +432,7 @@ button:focus-visible,
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .card_img-laravel {
   width: 100%;
@@ -439,7 +443,7 @@ button:focus-visible,
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 
 .card_img-tutoLaravel {
@@ -451,7 +455,7 @@ button:focus-visible,
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .card_img-java {
   width: 100%;
@@ -462,7 +466,7 @@ button:focus-visible,
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .card_img-html {
   width: 100%;
@@ -472,7 +476,7 @@ button:focus-visible,
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .card-img-js {
   width: 100%;
@@ -482,7 +486,7 @@ button:focus-visible,
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .card_img-php {
   width: 100%;
@@ -492,7 +496,7 @@ button:focus-visible,
   background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el contenedor */
-  border: solid 4px cadetblue;
+  border: solid 4px var(--color-tarjeta);
 }
 .project-details-button {
   text-decoration: none;
