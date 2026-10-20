@@ -97,26 +97,12 @@ body {
     }
   }
   @media (max-width: 650px) {
-    .divPAdreiconos {
-    }
     .tree {
       margin-top: 100px;
     }
   }
 
-  @media (max-width: 600px) {
-    .divPAdreiconos {
-      margin: 0;
-      display: grid;
-      grid-template-columns: 190px 190px 150px;
-      gap: 5px;
-    }
-    .icono {
-      height: auto;
-      width: auto;
-      margin: 0;
-    }
-  }
+  /* REVISION E13 (20/10/2026): eliminado un bloque @media (max-width: 600px) repetido (rejilla de 3 columnas, siempre anulada por el siguiente de 49% 49%) y una regla vacía del bloque de 650px. Depende de: arbolNavidad/index.html */
   @media (max-width: 600px) {
     .divPAdreiconos {
       margin: 0;

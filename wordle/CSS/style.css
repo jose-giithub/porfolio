@@ -70,28 +70,38 @@ background-color:  rgb(189, 194, 142);;
     height: 50px;
   }
 
-/* REVISION T3.3 (20/10/2026): en pantallas pequeñas las teclas (100px fijos) se apilaban de dos en dos y no formaban filas.
-   Ahora cada fila reparte el ancho entre sus teclas, con 5px de aire entre filas. Solo afecta al teclado virtual. Depende de: wordle/index.html */
-@media (max-width: 1100px) {
-  .container.text-center .row {
-    margin-bottom: 5px;
-  }
-  .container.text-center .col-12 {
-    display: flex;
-    justify-content: center;
-    gap: 3px;
-  }
+/* REVISION T3.3 / E8 (20/10/2026): las teclas medían 100px fijos y se apilaban en filas partidas; ahora cada fila reparte el ancho entre sus teclas,
+   con 5px de aire entre filas. Hasta 600px las teclas son pequeñas (máx. 44px); desde 601px, más grandes (máx. 60px, letra 20px). Antes la regla solo valía hasta 1100px
+   y en escritorio (1366px) las filas se partían en 2 líneas. Solo afecta al teclado virtual. Depende de: wordle/index.html */
+.container.text-center .row {
+  margin-bottom: 5px;
+}
+.container.text-center .col-12 {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+.container.text-center .btn-secondary {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 44px;
+  margin: 0 !important;
+  padding: 0;
+  font-size: 16px;
+}
+.container.text-center #Backspace,
+.container.text-center #Enter {
+  flex: 0 1 90px;
+  max-width: none;
+}
+@media (min-width: 601px) {
   .container.text-center .btn-secondary {
-    flex: 1 1 0;
-    min-width: 0;
-    max-width: 44px;
-    margin: 0 !important;
-    padding: 0;
-    font-size: 16px;
+    max-width: 60px;
+    font-size: 20px;
   }
   .container.text-center #Backspace,
   .container.text-center #Enter {
-    flex: 0 1 90px;
+    flex: 0 1 100px;
     max-width: none;
   }
 }
