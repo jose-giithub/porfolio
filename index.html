@@ -29,7 +29,8 @@
       <header>
         <nav class="navbar">
           <div class="brand">
-            <h2>J<span>ose</span></h2>
+            <!-- REVISION T10 (20/10/2026): el logo deja de ser un h2 (solo debe haber un h1 y títulos en orden). Depende de: css/stylesInedex.css -->
+            <div class="brand-name">J<span>ose</span></div>
           </div>
           <!-- Boton con icono que solo se muestra en pantallas pequeñas -->
           <button class="hamburger" aria-label="Menu" aria-expanded="false">
@@ -134,10 +135,11 @@
         <div class="card" data-language="php,html,javascript,docker">
           <!--data-language para filtrar-->
           <div class="card_img-laravel"></div>
+          <!-- REVISION T10 (20/10/2026): en todas las tarjetas el título pasa de h2 a h3 (cuelga de "Mi portfolio") y <h4>Descripción</h5> se corrige a </h4>. Depende de: css/stylesInedex.css (.card_title h3) -->
           <div class="card_title">
-            <h2>Proyecto final</h2>
+            <h3>Proyecto final</h3>
             <br>
-            <h4>Descripción</h5>
+            <h4>Descripción</h4>
             <p>
               Proyecto final usando el Framework Laravel con ecosistema Breeze + PHP, HTML CSS, JavaScript, SQL, bootstrap y algo de tailwind.
             </p>
@@ -181,7 +183,7 @@
         <div class="card" data-language="php,docker"><!--data-language para filtrar-->
           <div class="card_img-tutoLaravel"></div><!--la imagen se carga desde css archivo en: www\css\stylesInedex.css-->
           <div class="card_title">
-            <h2>Tutorial Laravel+ Docker</h2>
+            <h3>Tutorial Laravel+ Docker</h3>
             <h4>Descripción</h4>
             <p>
               Levantar una web en Laravel en un VPS con Docker y certificado https con Nginx Proxy Manager.
@@ -229,9 +231,9 @@
         <!--data-language para filtrar-->
         <div class="card_img-html"></div>
         <div class="card_title">
-          <h2>Mi Portfolio</h2>
+          <h3>Mi Portfolio</h3>
           <br>
-          <h4>Descripción</h5>
+          <h4>Descripción</h4>
           <p>
             Este portfolio donde estás ahora mismo, creado desde 0 con HTML, CSS y un poco de JavaScript puros donde muestro algunos
             de mis trabajos.
@@ -273,8 +275,8 @@
         <!--data-language para filtrar-->
         <div class="card_img-nodeJs"></div>
         <div class="card_title">
-          <h2>Piedra, papel, tijeras, ++</h2>
-          <h4>Descripción</h5>
+          <h3>Piedra, papel, tijeras, ++</h3>
+          <h4>Descripción</h4>
           <p>
             Juego piedra, papel, tijeras, lagarto o Spock para jugar en dos pantallas separadas. Creado con node.js, html css y Bootstrap.
           </p>
@@ -316,7 +318,7 @@
         <div class="card" data-language="php,docker"><!--data-language para filtrar-->
           <div class="card_img-tutoGoAccess"></div><!--la imagen se carga desde css archivo en: www\css\stylesInedex.css-->
           <div class="card_title">
-            <h2>Tutorial Ubuntu server</h2>
+            <h3>Tutorial Ubuntu server</h3>
             <h4>Descripción</h4>
             <p>
               🛠️Configurar un servidor Ubuntu server desde 0 paso a paso, con Dockers, Portainer y Nginx Proxy Manager y mucho más.
@@ -365,7 +367,7 @@
         <div class="card" data-language="php,docker"><!--data-language para filtrar-->
           <div class="card_img-tutoMySql"></div><!--la imagen se carga desde css archivo en: www\css\stylesInedex.css-->
           <div class="card_title">
-            <h2>Tutorial MariaDB+ Docker</h2>
+            <h3>Tutorial MariaDB+ Docker</h3>
             <h4>Descripción</h4>
             <p>
               Levantar una base de datos MariaDB e interfaz web PhpMyAdmin dockerizada 🐳
@@ -409,7 +411,7 @@
         <div class="card" data-language="php,docker"><!--data-language para filtrar-->
           <div class="card_img-tutoGoAccess"></div><!--la imagen se carga desde css archivo en: www\css\stylesInedex.css-->
           <div class="card_title">
-            <h2>Tutorial análisis de registros web</h2>
+            <h3>Tutorial análisis de registros web</h3>
             <h4>Descripción</h4>
             <p>
               Levantar un servicio de análisis de registros web en tiempo real dockerizado 🐳
@@ -457,9 +459,9 @@
         <div class="card-img-js"></div>
 
         <div class="card_title">
-          <h2>Juego WORDLE</h2>
+          <h3>Juego WORDLE</h3>
           <br>
-          <h4>Descripción</h5>
+          <h4>Descripción</h4>
           <p>WORDLE, en catalán. Creado con HTML, JavaScript, CSS.
              Además se guarda la info en local storage para guardar tus puntuaciones.</p>
         </div>
@@ -507,9 +509,9 @@
         <div class="card_img-html"></div>
 
         <div class="card_title">
-          <h2>Animaciones CSS</h2>
+          <h3>Animaciones CSS</h3>
           <br>
-          <h4>Descripción</h5>
+          <h4>Descripción</h4>
           <p>Pequeño ejemplo de web dockerizada con HTML y animaciones CSS.</p>
           <br />
         </div>
@@ -553,9 +555,9 @@
         <div class="card_img-java"></div>
 
         <div class="card_title">
-          <h2>Juego Cazador de puntos</h2>
+          <h3>Juego Cazador de puntos</h3>
           <br>
-          <h4>Descripción</h5>
+          <h4>Descripción</h4>
           <p>
             Juego busca minas personalizado, titulado 'Cazador de puntos'. Creado con Java en interfaz gráfica Scene Builder.
           </p>
@@ -601,9 +603,9 @@
         <div class="card-img-js"></div>
 
         <div class="card_title">
-          <h2>Juego SQWORD</h2>
+          <h3>Juego SQWORD</h3>
           <br>
-          <h4>Descripción</h5>
+          <h4>Descripción</h4>
           <p>Famoso juego conocido como SQWORD. Compite para ser el mejor.</p>
         </div>
 
@@ -647,9 +649,9 @@
       <div class="card" data-language="javascript">
         <div class="card-img-js"></div>
         <div class="card_title">
-          <h2>Juego del ahorcado</h2>
+          <h3>Juego del ahorcado</h3>
           <br>
-          <h4>Descripción</h5>
+          <h4>Descripción</h4>
           <p>
             Juego del ahorcado con JavaScript y un poco de HTML y CSS ¿Salvarás
             al monstruo?
@@ -691,9 +693,9 @@
         <div class="card-img-js"></div>
 
         <div class="card_title">
-          <h2>Árbol de navidad</h2>
+          <h3>Árbol de navidad</h3>
           <br>
-          <h4>Descripción</h5>
+          <h4>Descripción</h4>
           <p>
             Árbol  de navidad interactivo en JavaScript, HTML y CSS navideña para manipular
             el DOM.
@@ -744,9 +746,9 @@
       <div class="card" data-language="php">
         <div class="card_img-php"></div>
         <div class="card_title">
-          <h2>Fullcalendar en Laravel</h2>
+          <h3>Fullcalendar en Laravel</h3>
           <br>
-          <h4>Descripción</h5>
+          <h4>Descripción</h4>
           <p>
             Proyecto en Laravel usando el ecosistema de login Jetstream y
             fullcalendar.
@@ -784,7 +786,8 @@
   <!-- modal para mostrar la info de cada card  -->
     <div class="modalContainer" id="modalContainer" style="display: none;">
       <div class="modal">
-        <h1>Descripción del proyecto:</h1>
+        <!-- REVISION T10 (20/10/2026): h1 pasa a h2, el h1 único es el de bienvenida. Depende de: css/stylesInedex.css (.modal h2), js/index.js -->
+        <h2>Descripción del proyecto:</h2>
         <!-- El texto se añade dinámicamente desde index.js capturando el texto desde  
          span class="infoCard infoFullCalendar" data-info-texto de cada card-->
         <p>

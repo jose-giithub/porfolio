@@ -42,6 +42,11 @@ button {
   padding-left: 8%;
 }
 
+/* REVISION T10 (20/10/2026): sustituye al antiguo h2 del logo en index.html (mismo tamaño y peso). Depende de: index.html */
+.brand-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
 .brand span {
   color: rgb(227, 246, 9);
 }
@@ -333,7 +338,9 @@ p {
   font-size: larger;
   color: white;
 }
-.card_title h2{
+/* REVISION T10 (20/10/2026): el título de tarjeta ya es h3 en index.html; se mantiene el tamaño que tenía como h2 (1.5em). Depende de: index.html */
+.card_title h3{
+  font-size: 1.5em;
   margin-bottom: 10px;
 }
 .card_proyecto_links {
@@ -532,8 +539,10 @@ p {
   background-color: rgba(255, 255, 255); 
 
 } */
- .modal h1{
+ /* REVISION T10 (20/10/2026): el título del modal pasa de h1 a h2; se conserva el aspecto del h1 (altura de línea 1.6). Depende de: index.html */
+ .modal h2{
   font-size: 1.2em;
+  line-height: 1.6;
 }
 
 /* Botón para cerrar el modal */

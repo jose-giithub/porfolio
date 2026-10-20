@@ -144,3 +144,16 @@ body {
     width: 100%;
   }
 }
+
+/* REVISION T10 (20/10/2026): oculta el h1 de arbolNavidad/index.html visualmente pero lo deja para lectores de pantalla. Depende de: arbolNavidad/index.html */
+.solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
