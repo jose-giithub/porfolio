@@ -105,6 +105,28 @@ input{
 }
 /*FINAL ESTILO CUADRICULA DINÁMICA */
 
+/* REVISION T4 (20/10/2026): la cuadrícula medía 430px fijos y la página desbordaba a 360 y 390px (llegaba a 430px).
+   Hasta 480px ocupa el ancho disponible y las casillas se reducen (de 70px a un mínimo de 48px, letra proporcional).
+   Depende de: sqWord/index.html, sqWord/JavaScript/main.js (crea #contenedor, #rowN y .cuadrado) */
+@media (max-width: 480px) {
+  #contenedor {
+    --lado: clamp(48px, 15vw, 70px);
+    width: 100%;
+    height: auto;
+  }
+  /* cada columna mide lo que su casilla (+6px de margen) para que la cuadrícula quede centrada */
+  #contenedor > div {
+    flex: 0 0 calc(var(--lado) + 6px);
+  }
+  .cuadrado {
+    width: var(--lado);
+    height: var(--lado);
+    font-size: calc(var(--lado) * 0.7);
+    margin: 3px;
+    padding: 0;
+  }
+}
+
 /* Estilo para el pop-up */
 .popup {
   display: none;
