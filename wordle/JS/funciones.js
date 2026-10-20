@@ -220,6 +220,8 @@ function borrarUltimaLetra() {
 function teclasPresionada(event) {
   //recive el evento keydown
   let teclaPresionada = event.key; //Guardo la letra presionada
+  // REVISION T3 / E10 (20/10/2026): el autocompletado del navegador lanza keydown sin tecla y fallaba toLowerCase(). Depende de: wordle/index.html, wordle/JS/main.js
+  if (!teclaPresionada) return;
 
   //Array con las letras validas
   const letrasValidas = [
