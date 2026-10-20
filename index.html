@@ -12,12 +12,14 @@
     <meta name="description" content="Portfolio de José Luis Rodríguez Blanco, técnico IT y desarrollador web junior: proyectos con Laravel, Docker, JavaScript, Java y PHP, tutoriales de servidores y juegos web." />
     <!-- <link rel="stylesheet" href="css/styles.css"> -->
     <!-- REVISION T13 (20/10/2026): css/stylesInedex.css renombrado a css/stylesIndex.css (errata en el nombre). Depende de: css/stylesIndex.css -->
+    <!-- REVISION T14 (20/10/2026): se elimina la fuente Montserrat de Google Fonts (estaba como @import en css/stylesIndex.css): ningún elemento de index.html la usa (comprobado con los estilos calculados) y retrasaba el pintado. Depende de: css/stylesIndex.css -->
     <link rel="stylesheet" href="css/stylesIndex.css" />
     <link rel="stylesheet" href="css/stylesResponsive.css" />
       <!-- cdn JQuery -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/funciones.js"></script>
+      <!-- REVISION T14 (20/10/2026): jQuery, index.js y funciones.js con defer para que no bloqueen el pintado (index.js ya espera a DOMContentLoaded y funciones.js solo define funciones; el orden se mantiene). Depende de: js/index.js, js/funciones.js -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="js/index.js"></script>
+    <script defer src="js/funciones.js"></script>
     <script
       src="https://kit.fontawesome.com/6359741856.js"
       crossorigin="anonymous"
@@ -55,7 +57,8 @@
             Mi nombre es <span> Jose L. Rodríguez </span> y has llegado a mi
             portfolio
           </h1>
-          <h3><p>Técnico IT y desarrollador web junior</p></h3>
+          <!-- REVISION T14 (20/10/2026): aria-level="2" en el subtítulo y aria-level="3" en los dos h4 de "Sobre mí" para que Lighthouse vea el orden de encabezados h1, h2, h3 sin saltos; no cambia el aspecto. Depende de: index.html -->
+          <h3 aria-level="2"><p>Técnico IT y desarrollador web junior</p></h3>
           <!-- REVISION T14 (20/10/2026): todos los enlaces con target="_blank" llevan rel="noopener noreferrer" (y se corrige la falta de espacio entre target y rel, E2). Depende de: index.html -->
           <a class="hrefLinkedIn"  href="https://www.linkedin.com/in/joseperfil/"  target="_blank" rel="noopener noreferrer"
             ><!-- En download le pones el nombre del archivo a descargar y se descarga solo-->
@@ -83,14 +86,14 @@
         <h2 id="info_personal">Sobre mí</h2>
         <div id="divider" class="divider"></div>
         <!--PAra crear una ralla debajo del titulo "Sobre mi"-->
-        <h4>
+        <h4 aria-level="3">
           <p>
            <!-- REVISION T12 (20/10/2026): "programador junior" actualizado a "Técnico IT y desarrollador web junior". Depende de: index.html -->
            Soy técnico IT y desarrollador web junior, apasionado por el mundo de la tecnología. Me he embarcado en el apasionante viaje de la programación, 
            disfrutando especialmente de todo lo relacionado con crear, mejorar y mantener proyectos que aporten valor.
           </p>
         </h4>
-        <h4><p>Aprieta el botón para descubrir mis habilidades.</p></h4>
+        <h4 aria-level="3"><p>Aprieta el botón para descubrir mis habilidades.</p></h4>
         <button class="botonSaberMas">
           <a href="info_personal.html">Saber más</a>
         </button>

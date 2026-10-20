@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap"); /*Fuente */
+/* REVISION T14 (20/10/2026): se elimina el @import de la fuente Montserrat (nadie la usaba en index.html y bloqueaba el pintado). Depende de: index.html */
 /* REVISION T14 / E18 (20/10/2026): el color de las tarjetas (antes cadetblue) está en una sola variable; cambia aquí el tono.
    Para que el texto blanco se lea bien (WCAG AA) el contraste con el fondo debe ser de 4,5:1 o más. Depende de: index.html */
 :root {
@@ -98,6 +98,7 @@ button {
   border: none;
   color: white;
   cursor: pointer;
+  min-width: 24px; /* REVISION T14 (20/10/2026): objetivo táctil de al menos 24px de ancho (antes 22px). Depende de: index.html */
   position: relative; /* Posicionamiento relativo dentro del navbar */
   z-index: 2; /* Asegura que el botón esté sobre el menú desplegado */
 }
@@ -226,6 +227,11 @@ p {
 .botonSaberMas a {
   text-decoration: none;
   color: black;
+  /* REVISION T14 (20/10/2026): el enlace ocupa todo el botón (antes solo el texto, de 14px de alto). Depende de: index.html */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 /***************Fin Estilos about*/
 
@@ -395,6 +401,12 @@ button:focus-visible,
   /*Estilos boton de las cards*/
   margin-bottom: 10px;
   font-weight: bold;   /*Texto en negrita*/
+}
+/* REVISION T14 (20/10/2026): el enlace ocupa todo el botón (antes solo el texto, de 14px de alto, y el resto del botón no navegaba; Lighthouse lo marcaba como objetivo táctil pequeño). Depende de: index.html */
+#botonCards a {
+  display: block;
+  margin: -5px -15px;
+  padding: 5px 15px;
 }
 /* REVISION T14 (20/10/2026): se elimina el hover naranja de #botonCards; ahora hereda el azul #5eacd9 del grupo de botones de arriba (regla compartida cerca de la línea 167). Depende de: index.html */
 .card_img-nodeJs {
