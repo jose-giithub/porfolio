@@ -36,6 +36,14 @@ function agregarLetra(letraPresionada) {
   }
 }
 
+// REVISION T3.2 (20/10/2026): se comparan palabras sin tildes ni mayúsculas ("pais" vale para "país").
+// El diccionario normalizado se crea la primera vez porque diccionari.js se carga después de este archivo.
+// Depende de: wordle/index.html, wordle/JS/diccionari.js, wordle/JS/main.js
+let dicNormalizado;
+function normalizar(texto) {
+  return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
 /**
  *  Función que verifica la palabra 
  */
@@ -46,10 +54,13 @@ function validarPalabra() {
     return;
   }
 //si la palabra existe en el diccionario
-  if (dic.includes(palabra)) {
+  if (!dicNormalizado) {
+    dicNormalizado = new Set(dic.map(normalizar));
+  }
+  if (dicNormalizado.has(normalizar(palabra))) {
     console.log("La palabra existe en el diccionario.");
     //ademas de existir es igual a la palabra aleatoria
-    if (palabra === palabraAleatoria) {
+    if (normalizar(palabra) === normalizar(palabraAleatoria)) {
       console.log("¡Correcto! La palabra es igual a la palabra aleatoria.");
       window.alert("|Correcto!");
       palabraCorrecta();
@@ -88,6 +99,7 @@ function verificarLetras(palabraIngresada) {
   intentos += 1;
   localStorage.setItem("intentos", intentos);
   console.log("Intentos: ", intentos);
+  const respuesta = normalizar(palabraAleatoria); // REVISION T3.2 (20/10/2026): letras sin tilde
   //recorro la palabra ingresada, guardo la letra y el id de la celda actual
   for (let i = 0; i < palabraIngresada.length; i++) {
     const letra = palabraIngresada[i];
@@ -95,11 +107,11 @@ function verificarLetras(palabraIngresada) {
     const celdaActual = document.getElementById(idCeldaActual);
 
     // Si la letra está en la palabra y en la posición correcta, la marcamos en verde
-    if (letra === palabraAleatoria[i]) {
+    if (letra === respuesta[i]) {
       celdaActual.classList.add("perfect"); // Agrega clase para letra en posición correcta
     }
     // Si la letra está en la palabra pero no en la posición correcta, la marcamos en amarillo
-    else if (palabraAleatoria.includes(letra)) {
+    else if (respuesta.includes(letra)) {
       celdaActual.classList.add("coincide"); // Agrega clase para letra noCoincide pero en posición incorrecta
     //no concede las letras morco en gris
     } else {
