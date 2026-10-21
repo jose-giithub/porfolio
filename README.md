@@ -4,7 +4,7 @@
 
 ## Redes sociales 🌐
 
-**Portfolio**🔗 [Enlace portfolio:](https://portfolio.jose-rodriguez-blanco.es)   **LinkedIn**🔗 [Enlace LinkedIn:](https://www.linkedin.com/in/joseperfil/)  **GitHub**🔗 [Enlace GitHub:](https://github.com/jose-giithub)
+**Portfolio**🔗 [Enlace portfolio:](https://jose-rodriguez-blanco.es)   **LinkedIn**🔗 [Enlace LinkedIn:](https://www.linkedin.com/in/joseperfil/)  **GitHub**🔗 [Enlace GitHub:](https://github.com/jose-giithub)
 
 ******
 ----
@@ -62,6 +62,6 @@ Porque la vida es demasiado seria para un CV en PDF aburrido, ¿no? 🧑‍💻 
 
 ## 🚀 ¿Quieres verlo?
 
-1. 📂 **Opción 1**: Visítalo online y filtra proyectos como un pro.  **Portfolio**🔗 [Enlace:](https://portfolio.jose-rodriguez-blanco.es) 
+1. 📂 **Opción 1**: Visítalo online y filtra proyectos como un pro.  **Portfolio**🔗 [Enlace:](https://jose-rodriguez-blanco.es) 
 
 2. 🎮 **Opción 2**: Entra en GitHub y podras ver las entrañas del mismo.  **GitHub**🔗 [Enlace:](https://github.com/jose-giithub) 
