@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jose-rodriguez-blanco.es/sitemap.xml
