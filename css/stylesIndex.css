@@ -510,6 +510,17 @@ button:focus-visible,
   background-position: center; /* Centra la imagen en el contenedor */
   border: solid 4px var(--color-tarjeta);
 }
+/* REVISION LV2 (29/10/2026, retocado 29/10/2026): imagen de la tarjeta Lector de texto a voz (PNG recortado al contenido para que llene la caja); resto idéntico a .card_img-html (contain, fondo blanco). Depende de: index.html (tarjeta LV3; info_personal.html carga este CSS pero no la usa) */
+.card_img-lectorVoz {
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/lector_Voz_recortada.png);
+  background-color: white; /* color fondo */
+  background-size: contain; /* La imagen se ajusta al contenedor y mantiene su proporción */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el contenedor */
+  border: solid 4px var(--color-tarjeta);
+}
 .project-details-button {
   text-decoration: none;
   padding: 10px 20px;

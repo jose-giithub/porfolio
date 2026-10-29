@@ -151,6 +151,44 @@
 <!-- ////////***************CARDS ******************************************** -->
     <div class="container" id="porfolio">
 
+        <!-- REVISION LV3 (29/10/2026): tarjeta nueva "Lector de texto a voz", la primera de la lista. Copia el patrón de las demás tarjetas. Depende de: css/stylesIndex.css (.card_img-lectorVoz), js/index.js (modal .infoCard), js/funciones.js (filtro, data-language="python") -->
+        <!--******************LECTOR DE TEXTO A VOZ-->
+        <div class="card" data-language="python">
+          <!--data-language para filtrar-->
+          <div class="card_img-lectorVoz"></div>
+          <div class="card_title">
+            <h3>Lector de texto a voz</h3>
+            <h4>Descripción</h4>
+            <p>
+              App de escritorio para Windows que lee en voz alta el texto que seleccionas en cualquier programa. Creada con Python, tkinter y edge-tts.
+            </p>
+          </div>
+          <div class="card_proyecto_links">
+            <a href="https://github.com/jose-giithub/Lector-Texto-a-Voz-para-todo" target="_blank" rel="noopener noreferrer"
+              >GitHub <i class="fa-brands fa-github"></i
+            ></a>
+            <!-- El texto se añade dinámicamente desde index.js capturando el texto de data-info-texto (se muestra en el modal) -->
+            <span role="button" tabindex="0" aria-label="Más información: Lector de texto a voz" class="infoCard lectorVoz" data-info-texto="Aplicación de escritorio para Windows que lee en voz alta cualquier texto que tengas seleccionado: en el navegador, en un PDF, en Word o en cualquier otra aplicación.
+
+            ¿Qué incluye?
+            Atajos globales (Alt+G para iniciar, pausar o reanudar; Alt+F para finalizar), control de velocidad y volumen, icono en la bandeja del sistema y registro de errores.
+
+            Tecnologías: Python, tkinter, edge-tts, pygame y pystray. Se empaqueta en un .exe con PyInstaller.
+
+            Nota: usa una voz neural de Microsoft, así que necesita conexión a internet.">
+              <i class="fa-solid fa-circle-info"></i>
+            </span>
+          </div>
+          <div class="proyects_details_content">
+            <!--*********boton -->
+            <button id="botonCards" class="project-details-button">
+              <a
+                href="https://github.com/jose-giithub/Lector-Texto-a-Voz-para-todo/releases/latest/download/LectorVoz.exe" target="_blank" rel="noopener noreferrer"
+                >Descargar
+              </a>
+            </button>
+          </div>
+        </div>
          <!--******************copia LARAVEL  1-->
         <div class="card" data-language="php,html,javascript,docker">
           <!--data-language para filtrar-->
